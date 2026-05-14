@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,7 +48,10 @@ export default function RootLayout({
           __html: `try{if(localStorage.getItem("sc900-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}`
         }} />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900 font-sans dark:bg-slate-900">{children}</body>
+      <body className="min-h-full bg-gray-50 text-gray-900 font-sans dark:bg-slate-900">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

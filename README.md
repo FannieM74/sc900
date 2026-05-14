@@ -33,3 +33,4 @@ Output is in `out/` — pure HTML/CSS/JS, serve with any static server.
 ## Deploy
 
 Push to GitHub, import into Vercel — Vercel auto-detects Next.js. The `output: "export"` config generates a fully static site.
+# sc900

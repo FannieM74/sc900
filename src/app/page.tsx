@@ -2,24 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import questions from "@/lib/questions.json";
-import type { Question } from "@/lib/api";
-import { getQuizHistory, getDarkMode, setDarkMode, type QuizRecord } from "@/lib/storage";
+import allQuestions from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
+import { getQuizHistory } from "@/lib/storage";
+import { getDarkMode, setDarkMode } from "@/lib/dark";
+import type { QuizRecord } from "@/lib/types";
+import { TOPIC_LABELS } from "@/lib/topics";
 import TopicBadge from "@/components/TopicBadge";
 
-const qs = questions as Question[];
+const qs = allQuestions as Question[];
 
 const topicsTotal: Record<string, number> = {};
 for (const q of qs) topicsTotal[q.topic] = (topicsTotal[q.topic] || 0) + 1;
 
 const COUNT_OPTIONS = [5, 10, 15, 20, 25, 30, 50, 131];
-const TOPIC_LABELS: Record<string, string> = {
-  "": "All Topics",
-  "security-concepts": "Security Concepts",
-  "identity": "Identity",
-  "compliance": "Compliance",
-  "azure-security": "Azure Security",
-};
 
 export default function HomePage() {
   const [history, setHistory] = useState<QuizRecord[]>([]);

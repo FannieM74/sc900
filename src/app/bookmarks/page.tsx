@@ -2,26 +2,21 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import type { Question } from "@/lib/api";
-import { fetchQuestion } from "@/lib/api";
+import allQuestions from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
 import { getBookmarks } from "@/lib/storage";
+import { optionLetter } from "@/lib/helpers";
 import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
 
 export default function BookmarksPage() {
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [allQ, setAllQ] = useState<Question[]>([]);
 
   useEffect(() => {
-    const load = async () => {
-      const ids = getBookmarks();
-      const results: Question[] = [];
-      for (const id of ids) {
-        const q = await fetchQuestion(id);
-        if (q) results.push(q);
-      }
-      setQuestions(results);
-    };
-    load();
+    const ids = getBookmarks();
+    const qs = allQuestions as Question[];
+    const idSet = new Set(ids);
+    setAllQ(qs.filter((q) => idSet.has(q.id)));
   }, []);
 
   return (
@@ -33,7 +28,7 @@ export default function BookmarksPage() {
 
         <h1 className="text-2xl font-bold text-gray-900 mb-6">★ Bookmarks</h1>
 
-        {questions.length === 0 ? (
+        {allQ.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-400 text-lg mb-2">No bookmarked questions yet</p>
             <p className="text-gray-400 text-sm mb-4">Star questions during the quiz to save them here</p>
@@ -46,7 +41,7 @@ export default function BookmarksPage() {
           </div>
         ) : (
           <div className="space-y-4">
-            {questions.map((q) => (
+            {allQ.map((q) => (
               <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <TopicBadge topic={q.topic} />
@@ -59,7 +54,7 @@ export default function BookmarksPage() {
                   </summary>
                   <div className="mt-2 p-3 bg-green-50 rounded-lg border border-green-200">
                     <p className="text-sm font-medium text-green-800">
-                      Answer: {String.fromCharCode(65 + q.correctAnswer)}. {q.options[q.correctAnswer]}
+                      Answer: {optionLetter(q.correctAnswer)}. {q.options[q.correctAnswer]}
                     </p>
                     <p className="text-sm text-gray-600 mt-2">{linkify(q.explanation)}</p>
                   </div>

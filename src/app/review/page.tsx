@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import type { Question } from "@/lib/api";
-import { fetchQuestionsByIds } from "@/lib/api";
+import allQuestions from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
 import { getMissedQuestions, clearMissedQuestions, removeMissedQuestion } from "@/lib/storage";
+import { optionLetter } from "@/lib/helpers";
 import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
 
@@ -19,10 +20,10 @@ export default function ReviewPage() {
       setLoading(false);
       return;
     }
-    fetchQuestionsByIds(ids)
-      .then(setQuestions)
-      .catch(() => {})
-      .finally(() => setLoading(false));
+    const qs = allQuestions as Question[];
+    const idSet = new Set(ids);
+    setQuestions(qs.filter((q) => idSet.has(q.id)));
+    setLoading(false);
   }, []);
 
   const handleClear = () => {
@@ -101,7 +102,7 @@ export default function ReviewPage() {
                             ? "bg-green-50 border border-green-200 text-green-800"
                             : "bg-gray-50 border border-gray-200 text-gray-700"
                         }`}>
-                          <span className="font-medium mr-2">{String.fromCharCode(65 + i)}.</span>
+                          <span className="font-medium mr-2">{optionLetter(i)}.</span>
                           {opt}
                         </div>
                       ))}

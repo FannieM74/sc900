@@ -1,34 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import questions from "@/lib/questions.json";
-import type { Question } from "@/lib/api";
+import allQuestions from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
+import { TOPIC_LABELS } from "@/lib/topics";
 import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
+import { optionLetter } from "@/lib/helpers";
 
-const TOPIC_LABELS: Record<string, string> = {
-  "security-concepts": "Security Concepts",
-  "identity": "Identity",
-  "compliance": "Compliance",
-  "azure-security": "Azure Security",
-};
-
-const qs = questions as Question[];
+const qs = allQuestions as Question[];
 
 const topicsList = [...new Set(qs.map((q) => q.topic))];
 
 export default function StudyPage() {
   const [selectedTopic, setSelectedTopic] = useState("");
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
-    const filtered = selectedTopic ? qs.filter((q) => q.topic === selectedTopic) : qs;
-    setQuestions(filtered);
-    setLoading(false);
-  }, [selectedTopic]);
+  const filtered = selectedTopic ? qs.filter((q) => q.topic === selectedTopic) : qs;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -48,49 +36,39 @@ export default function StudyPage() {
           </select>
         </div>
 
-        {loading && (
-          <div className="flex items-center justify-center py-12">
-            <div className="w-6 h-6 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
-          </div>
-        )}
+        <p className="text-sm text-gray-500 mb-4">{filtered.length} question{filtered.length !== 1 ? "s" : ""}</p>
 
-        {!loading && (
-          <p className="text-sm text-gray-500 mb-4">{questions.length} question{questions.length !== 1 ? "s" : ""}</p>
-        )}
-
-        {!loading && (
-          <div className="space-y-4">
-            {questions.map((q) => {
-              const correct = q.options[q.correctAnswer];
-              return (
-                <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                  <p className="text-gray-900 font-medium mb-2">{q.question}</p>
-                  <div className="flex items-center gap-2 mb-3">
-                    <TopicBadge topic={q.topic} />
-                  </div>
-                  <div className="space-y-2">
-                    {q.options.map((opt, i) => (
-                      <div key={i} className={`p-2.5 rounded-lg text-sm ${
-                        i === q.correctAnswer
-                          ? "bg-green-50 border border-green-200 text-green-800 font-medium"
-                          : "bg-gray-50 border border-gray-200 text-gray-700"
-                      }`}>
-                        <span className="font-medium mr-2">{String.fromCharCode(65 + i)}.</span>
-                        {opt}
-                        {i === q.correctAnswer && (
-                          <span className="ml-2 text-xs text-green-600">✓ Correct</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
-                    {linkify(q.explanation)}
-                  </div>
+        <div className="space-y-4">
+          {filtered.map((q) => {
+            const correct = q.options[q.correctAnswer];
+            return (
+              <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+                <p className="text-gray-900 font-medium mb-2">{q.question}</p>
+                <div className="flex items-center gap-2 mb-3">
+                  <TopicBadge topic={q.topic} />
                 </div>
-              );
-            })}
-          </div>
-        )}
+                <div className="space-y-2">
+                  {q.options.map((opt, i) => (
+                    <div key={i} className={`p-2.5 rounded-lg text-sm ${
+                      i === q.correctAnswer
+                        ? "bg-green-50 border border-green-200 text-green-800 font-medium"
+                        : "bg-gray-50 border border-gray-200 text-gray-700"
+                    }`}>
+                      <span className="font-medium mr-2">{optionLetter(i)}.</span>
+                      {opt}
+                      {i === q.correctAnswer && (
+                        <span className="ml-2 text-xs text-green-600">✓ Correct</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
+                  {linkify(q.explanation)}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

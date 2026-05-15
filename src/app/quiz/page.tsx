@@ -4,29 +4,13 @@ import { useEffect, useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import allQuestions from "@/lib/questions.json";
-import type { Question } from "@/lib/api";
+import type { Question } from "@/lib/types";
 import { saveQuizRecord, addMissedQuestions, recordAttempt } from "@/lib/storage";
 import { shuffleArray, dateSeed } from "@/lib/random";
+import { TOPIC_LABELS } from "@/lib/topics";
 import QuestionCard from "@/components/QuestionCard";
 import ProgressBar from "@/components/ProgressBar";
 import { CardSkeleton } from "@/components/Skeleton";
-
-const TOPIC_LABELS: Record<string, string> = {
-  "": "All Topics",
-  "security-concepts": "Security Concepts",
-  "identity": "Identity",
-  "compliance": "Compliance",
-  "azure-security": "Azure Security",
-};
-
-function fisherYates<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
 
 function shuffleOptions(q: Question): Question {
   const paired = q.options.map((opt, i) => ({ opt, i }));
@@ -60,7 +44,7 @@ function QuizContent() {
     setLoading(true);
     setError(null);
     const all = topic ? qs.filter((q) => q.topic === topic) : qs;
-    const shuffled = daily ? shuffleArray(all, dateSeed()) : fisherYates(all);
+    const shuffled = daily ? shuffleArray(all, dateSeed()) : shuffleArray(all, Date.now());
     const selected = shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
     setQuestions(selected);
     setLoading(false);

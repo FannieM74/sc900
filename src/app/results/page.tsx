@@ -3,7 +3,9 @@
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { getQuizHistory, type QuizRecord } from "@/lib/storage";
+import { getQuizHistory } from "@/lib/storage";
+import { TOPIC_LABELS } from "@/lib/topics";
+import type { QuizRecord } from "@/lib/types";
 
 function ResultsContent() {
   const searchParams = useSearchParams();
@@ -20,16 +22,7 @@ function ResultsContent() {
 
   const latestMessage = latestPct >= 80 ? "Excellent!" : latestPct >= 60 ? "Good effort!" : "Keep practicing!";
 
-  const topicLabel = (t?: string) => {
-    if (!t) return "All Topics";
-    const labels: Record<string, string> = {
-      "security-concepts": "Security Concepts",
-      "identity": "Identity",
-      "compliance": "Compliance",
-      "azure-security": "Azure Security",
-    };
-    return labels[t] || t;
-  };
+  const topicLabel = (t?: string) => TOPIC_LABELS[t || ""] || t || "";
 
   const today = new Date().toDateString();
 

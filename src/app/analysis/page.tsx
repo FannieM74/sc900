@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { fetchStats, fetchQuestions } from "@/lib/api";
-import type { Question } from "@/lib/api";
+import allQuestionsData from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
 import { getQuizHistory, getAttempts } from "@/lib/storage";
+import { TOPIC_LABELS } from "@/lib/topics";
 import TopicBadge from "@/components/TopicBadge";
 
 interface TopicAnalysis {
@@ -26,13 +27,6 @@ interface QuestionStats {
   total: number;
   pct: number;
 }
-
-const TOPIC_LABELS: Record<string, string> = {
-  "security-concepts": "Security Concepts",
-  "identity": "Identity",
-  "compliance": "Compliance",
-  "azure-security": "Azure Security",
-};
 
 function TrendChart({ history }: { history: { pct: number; date: string }[] }) {
   const w = 320;
@@ -92,74 +86,65 @@ export default function AnalysisPage() {
   const [questionStats, setQuestionStats] = useState<QuestionStats[]>([]);
 
   useEffect(() => {
-    let cancelled = false;
-    const load = async () => {
-      const history = getQuizHistory();
-      const attempts = getAttempts();
-      const stats = await fetchStats().catch(() => null);
+    const qs = allQuestionsData as Question[];
 
-      if (cancelled) return;
+    const topicsTotal: Record<string, number> = {};
+    for (const q of qs) topicsTotal[q.topic] = (topicsTotal[q.topic] || 0) + 1;
 
-      // topic grouping from history
-      const grouped: Record<string, { score: number; total: number; count: number }> = {};
-      for (const r of history) {
-        const key = r.topic || "all";
-        if (!grouped[key]) grouped[key] = { score: 0, total: 0, count: 0 };
-        grouped[key].score += r.score;
-        grouped[key].total += r.total;
-        grouped[key].count += 1;
-      }
+    const history = getQuizHistory();
+    const attempts = getAttempts();
 
-      const tResult: TopicAnalysis[] = Object.entries(grouped)
-        .filter(([k]) => k !== "all")
-        .map(([key, g]) => ({
-          key,
-          label: TOPIC_LABELS[key] || key,
-          totalQuestions: stats?.topics?.[key] ?? 0,
-          totalScore: g.score,
-          totalPossible: g.total,
-          attempts: g.count,
-          avgPct: g.total > 0 ? Math.round((g.score / g.total) * 100) : 0,
-        }))
-        .sort((a, b) => a.avgPct - b.avgPct);
+    // topic grouping from history
+    const grouped: Record<string, { score: number; total: number; count: number }> = {};
+    for (const r of history) {
+      const key = r.topic || "all";
+      if (!grouped[key]) grouped[key] = { score: 0, total: 0, count: 0 };
+      grouped[key].score += r.score;
+      grouped[key].total += r.total;
+      grouped[key].count += 1;
+    }
 
-      if (!cancelled) setTopicAnalysis(tResult);
+    const tResult: TopicAnalysis[] = Object.entries(grouped)
+      .filter(([k]) => k !== "all")
+      .map(([key, g]) => ({
+        key,
+        label: TOPIC_LABELS[key] || key,
+        totalQuestions: topicsTotal[key] ?? 0,
+        totalScore: g.score,
+        totalPossible: g.total,
+        attempts: g.count,
+        avgPct: g.total > 0 ? Math.round((g.score / g.total) * 100) : 0,
+      }))
+      .sort((a, b) => a.avgPct - b.avgPct);
 
-      // per-question stats from attempts
-      const attemptIds = Object.keys(attempts).map(Number);
-      if (attemptIds.length > 0) {
-        let questions: Question[] = [];
-        try {
-          questions = await fetchQuestions();
-        } catch {}
-        if (cancelled) return;
-        if (!cancelled) setAllQuestions(questions);
+    setTopicAnalysis(tResult);
+    setAllQuestions(qs);
 
-        const qMap = new Map(questions.map((q) => [q.id, q]));
-        const qStats: QuestionStats[] = attemptIds
-          .map((id) => {
-            const a = attempts[id];
-            const q = qMap.get(id);
-            const total = a.correct + a.incorrect;
-            return {
-              id,
-              question: q?.question ?? `Question #${id}`,
-              topic: q?.topic ?? "unknown",
-              correct: a.correct,
-              incorrect: a.incorrect,
-              total,
-              pct: total > 0 ? Math.round((a.correct / total) * 100) : 0,
-            };
-          })
-          .filter((q) => q.total > 0)
-          .sort((a, b) => a.pct - b.pct);
-        if (!cancelled) setQuestionStats(qStats);
-      }
+    // per-question stats from attempts
+    const attemptIds = Object.keys(attempts).map(Number);
+    if (attemptIds.length > 0) {
+      const qMap = new Map(qs.map((q) => [q.id, q]));
+      const qStats: QuestionStats[] = attemptIds
+        .map((id) => {
+          const a = attempts[id];
+          const q = qMap.get(id);
+          const total = a.correct + a.incorrect;
+          return {
+            id,
+            question: q?.question ?? `Question #${id}`,
+            topic: q?.topic ?? "unknown",
+            correct: a.correct,
+            incorrect: a.incorrect,
+            total,
+            pct: total > 0 ? Math.round((a.correct / total) * 100) : 0,
+          };
+        })
+        .filter((q) => q.total > 0)
+        .sort((a, b) => a.pct - b.pct);
+      setQuestionStats(qStats);
+    }
 
-      if (!cancelled) setLoading(false);
-    };
-    load();
-    return () => { cancelled = true; };
+    setLoading(false);
   }, []);
 
   const history = getQuizHistory();

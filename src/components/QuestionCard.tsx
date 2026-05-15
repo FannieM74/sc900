@@ -1,10 +1,11 @@
 "use client";
 
-import type { Question } from "@/lib/api";
+import type { Question } from "@/lib/types";
 import { isBookmarked, toggleBookmark, isFlagged, toggleFlag } from "@/lib/storage";
 import { useState, useEffect, useCallback } from "react";
-import TopicBadge from "./TopicBadge";
+import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
+import { optionLetter } from "@/lib/helpers";
 
 interface Props {
   question: Question;
@@ -103,7 +104,7 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
                   ? "border-blue-500 bg-blue-500 text-white"
                   : "border-gray-300 text-gray-500"
               }`}>
-                {String.fromCharCode(65 + idx)}
+                {optionLetter(idx)}
               </span>
               {option}
             </button>

@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { fetchQuestionsByIds } from "@/lib/api";
+import allQuestions from "@/lib/questions.json";
 import { getFlagged, toggleFlag } from "@/lib/storage";
-import type { Question } from "@/lib/api";
+import type { Question } from "@/lib/types";
+import { optionLetter } from "@/lib/helpers";
 import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
 
@@ -20,10 +21,10 @@ export default function FlaggedPage() {
       return;
     }
     setLoading(true);
-    fetchQuestionsByIds(ids)
-      .then(setQuestions)
-      .catch(() => {})
-      .finally(() => setLoading(false));
+    const qs = allQuestions as Question[];
+    const idSet = new Set(ids);
+    setQuestions(qs.filter((q) => idSet.has(q.id)));
+    setLoading(false);
   };
 
   useEffect(() => { refresh(); }, []);
@@ -82,7 +83,7 @@ export default function FlaggedPage() {
                         ? "bg-green-50 border border-green-200 text-green-800"
                         : "bg-gray-50 border border-gray-200 text-gray-700"
                     }`}>
-                      <span className="font-medium mr-2">{String.fromCharCode(65 + i)}.</span>
+                      <span className="font-medium mr-2">{optionLetter(i)}.</span>
                       {opt}
                     </div>
                   ))}

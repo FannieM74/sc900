@@ -1,11 +1,12 @@
 "use client";
 
+import type { QuizRecord } from "@/lib/types";
+
 const BOOKMARKS_KEY = "sc900-bookmarks";
 const HISTORY_KEY = "sc900-history";
 const MISSED_KEY = "sc900-missed";
 const FLAGGED_KEY = "sc900-flagged";
 const ATTEMPTS_KEY = "sc900-attempts";
-const DARK_KEY = "sc900-dark";
 
 // -- Bookmarks --
 export function getBookmarks(): number[] {
@@ -36,12 +37,6 @@ export function isBookmarked(id: number): boolean {
 }
 
 // -- Quiz History --
-export interface QuizRecord {
-  date: string;
-  score: number;
-  total: number;
-  topic?: string;
-}
 
 export function saveQuizRecord(record: QuizRecord): void {
   const history = getQuizHistory();
@@ -137,17 +132,3 @@ export function clearAttempts(): void {
   } catch {}
 }
 
-// -- Dark Mode --
-export function getDarkMode(): boolean {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem(DARK_KEY) === "true";
-}
-
-export function setDarkMode(enabled: boolean): void {
-  localStorage.setItem(DARK_KEY, enabled ? "true" : "false");
-  if (enabled) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-}

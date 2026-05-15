@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
@@ -43,12 +44,16 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-        <script dangerouslySetInnerHTML={{
-          __html: `try{if(localStorage.getItem("sc900-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}`
-        }} />
+        <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
       </head>
       <body className="min-h-full bg-gray-50 text-gray-900 font-sans dark:bg-slate-900">
+        <Script
+          id="dark-mode-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("sc900-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}`
+          }}
+        />
         {children}
         <SpeedInsights />
       </body>

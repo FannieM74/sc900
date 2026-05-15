@@ -2,8 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import type { Question } from "@/lib/api";
-import { searchQuestions } from "@/lib/api";
+import allQuestions from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
+import { optionLetter } from "@/lib/helpers";
 import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
 
@@ -26,15 +27,17 @@ export default function SearchPage() {
       setSearched(false);
       return;
     }
-    timer.current = setTimeout(async () => {
+    timer.current = setTimeout(() => {
       setLoading(true);
       setSearched(true);
-      try {
-        const res = await searchQuestions(q);
-        setResults(res);
-      } catch {
-        setResults([]);
-      }
+      const qs = allQuestions as Question[];
+      const lower = q.toLowerCase();
+      const res = qs.filter(
+        (qq) =>
+          qq.question.toLowerCase().includes(lower) ||
+          qq.explanation.toLowerCase().includes(lower)
+      );
+      setResults(res);
       setLoading(false);
     }, 300);
   };
@@ -88,7 +91,7 @@ export default function SearchPage() {
                           ? "bg-green-50 border border-green-200 text-green-800"
                           : "bg-gray-50 border border-gray-200 text-gray-700"
                       }`}>
-                        <span className="font-medium mr-2">{String.fromCharCode(65 + i)}.</span>
+                        <span className="font-medium mr-2">{optionLetter(i)}.</span>
                         {opt}
                       </div>
                     ))}

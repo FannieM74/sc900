@@ -1,120 +1,69 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import allQuestions from "@/lib/questions.json";
 import type { Question } from "@/lib/types";
-import { getMissedQuestions, clearMissedQuestions, removeMissedQuestion } from "@/lib/storage";
-import { optionLetter } from "@/lib/helpers";
-import TopicBadge from "@/components/TopicBadge";
-import { linkify } from "@/lib/linkify";
+import { getMissedQuestions, clearMissedQuestions } from "@/lib/storage";
+import QuestionCard from "@/components/QuestionCard";
+import Skeleton from "@/components/Skeleton";
+
+const qs = allQuestions as Question[];
 
 export default function ReviewPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
-  const [cleared, setCleared] = useState(false);
 
-  useEffect(() => {
+  const refresh = () => {
     const ids = getMissedQuestions();
     if (ids.length === 0) {
       setLoading(false);
+      setQuestions([]);
       return;
     }
-    const qs = allQuestions as Question[];
-    const idSet = new Set(ids);
-    setQuestions(qs.filter((q) => idSet.has(q.id)));
+    const qMap = new Map(qs.map((q) => [q.id, q]));
+    setQuestions(ids.map((id) => qMap.get(id)).filter(Boolean) as Question[]);
     setLoading(false);
-  }, []);
+  };
+
+  useEffect(() => { refresh(); }, []);
 
   const handleClear = () => {
     clearMissedQuestions();
-    setQuestions([]);
-    setCleared(true);
-  };
-
-  const handleRemove = (id: number) => {
-    removeMissedQuestion(id);
-    setQuestions((prev) => prev.filter((q) => q.id !== id));
+    refresh();
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+      <div className="mx-auto max-w-2xl px-4 py-8">
+        <Link href="/" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }} className="inline-block mb-4">
           ← Home
         </Link>
 
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">❌ Review Mistakes</h1>
+        <div className="flex items-center justify-between mb-2">
+          <h1 className="text-2xl font-bold" style={{ fontWeight: 700, lineHeight: 1.19 }}>❌ Review Mistakes</h1>
           {questions.length > 0 && (
-            <button onClick={handleClear}
-              className="text-sm text-red-600 hover:text-red-800 font-medium">
-              Clear all
-            </button>
+            <button onClick={handleClear} className="btn-ghost" style={{ color: "var(--color-steel)" }}>Clear all</button>
           )}
         </div>
+        <p className="mb-6" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }}>
+          {questions.length > 0 ? `${questions.length} question${questions.length > 1 ? "s" : ""} to review` : "No missed questions — great job!"}
+        </p>
 
-        {loading && (
-          <div className="flex items-center justify-center py-12">
-            <div className="w-6 h-6 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
-          </div>
-        )}
-
-        {!loading && questions.length === 0 && (
+        {loading ? (
+          <div className="space-y-6"><Skeleton /><Skeleton /><Skeleton /></div>
+        ) : questions.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg mb-2">
-              {cleared ? "Cleared! No mistakes to review." : "No mistakes recorded yet."}
-            </p>
-            <p className="text-gray-400 text-sm mb-4">
-              Mistakes are automatically saved when you finish a quiz.
-            </p>
-            <Link href="/"
-              className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-              Take a Quiz
-            </Link>
+            <p className="mb-2" style={{ color: "var(--color-steel)", fontSize: "1.125rem" }}>All clear!</p>
+            <p className="mb-4" style={{ color: "var(--color-muted)", fontSize: "0.875rem" }}>No questions to review right now.</p>
+            <Link href="/quiz" className="btn-primary">Take a Quiz</Link>
           </div>
-        )}
-
-        {!loading && questions.length > 0 && (
-          <>
-            <p className="text-sm text-gray-500 mb-4">
-              {questions.length} question{questions.length > 1 ? "s" : ""} to review
-            </p>
-            <div className="space-y-4">
-              {questions.map((q) => {
-                const correct = q.options[q.correctAnswer];
-                return (
-                  <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="flex-1 min-w-0">
-                        <p className="text-gray-900 font-medium mb-2">{q.question}</p>
-                        <TopicBadge topic={q.topic} />
-                      </div>
-                      <button onClick={() => handleRemove(q.id)}
-                        className="text-gray-400 hover:text-green-600 text-sm shrink-0 mt-1">
-                        ✓ Got it
-                      </button>
-                    </div>
-                    <div className="mt-3 space-y-2">
-                      {q.options.map((opt, i) => (
-                        <div key={i} className={`p-2.5 rounded-lg text-sm ${
-                          i === q.correctAnswer
-                            ? "bg-green-50 border border-green-200 text-green-800"
-                            : "bg-gray-50 border border-gray-200 text-gray-700"
-                        }`}>
-                          <span className="font-medium mr-2">{optionLetter(i)}.</span>
-                          {opt}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
-                      {linkify(q.explanation)}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </>
+        ) : (
+          <div className="space-y-6">
+            {questions.map((q) => (
+              <QuestionCard key={q.id} question={q} selected={null} onSelect={() => {}} mode="review" />
+            ))}
+          </div>
         )}
       </div>
     </div>

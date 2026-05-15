@@ -103,12 +103,14 @@ function QuizContent() {
   );
   const pct = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0;
 
+  const topicLabel = topic ? ` · ${TOPIC_LABELS[topic]}` : "";
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-2xl mx-auto px-4 py-8">
-          <div className="h-4 bg-gray-200 rounded w-16 mb-6 animate-pulse" />
-          <div className="h-3 bg-gray-200 rounded w-32 mb-6 animate-pulse" />
+      <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+        <div className="mx-auto max-w-2xl px-4 py-8">
+          <div className="h-4 w-16 mb-6" style={{ backgroundColor: "var(--color-hairline)", borderRadius: "var(--rounded-md)" }} />
+          <div className="h-3 w-32 mb-6" style={{ backgroundColor: "var(--color-hairline)", borderRadius: "var(--rounded-md)" }} />
           <CardSkeleton />
         </div>
       </div>
@@ -117,53 +119,45 @@ function QuizContent() {
 
   if (error || questions.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 gap-4 px-4">
-        <p className="text-gray-500 text-lg">{error || "No questions found"}</p>
-        <Link href="/" className="text-blue-600 hover:underline">Back home</Link>
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4" style={{ backgroundColor: "var(--color-canvas)" }}>
+        <p style={{ color: "var(--color-slate)", fontSize: "1.125rem" }}>{error || "No questions found"}</p>
+        <Link href="/" style={{ color: "var(--color-brand-green-dark)" }} className="hover:underline">Back home</Link>
       </div>
     );
   }
 
   if (phase === "review") {
+    const msg = pct >= 80 ? "Excellent!" : pct >= 60 ? "Good effort!" : "Keep practicing!";
+    const emoji = pct >= 80 ? "🎉" : pct >= 60 ? "👍" : "💪";
+    const barColor = pct >= 80 ? "var(--color-brand-green)" : pct >= 60 ? "var(--color-accent-blue)" : "#d29922";
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-2xl mx-auto px-4 py-8">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center mb-8">
-            <p className="text-6xl mb-4">{pct >= 80 ? "🎉" : pct >= 60 ? "👍" : "💪"}</p>
-            <h1 className={`text-3xl font-bold mb-2 ${pct >= 80 ? "text-green-600" : pct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
-              {pct >= 80 ? "Excellent!" : pct >= 60 ? "Good effort!" : "Keep practicing!"}
-            </h1>
-            <p className="text-gray-400 text-sm mb-2">{TOPIC_LABELS[topic]} · {questions.length} questions</p>
+      <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+        <div className="mx-auto max-w-2xl px-4 py-8">
+          <div className="card p-8 text-center mb-8" style={{ marginTop: "-0.5rem" }}>
+            <p className="text-6xl mb-4">{emoji}</p>
+            <h1 className="text-3xl font-bold mb-2" style={{ color: barColor }}>{msg}</h1>
+            <p className="mt-2 mb-4" style={{ color: "var(--color-muted)", fontSize: "0.875rem" }}>
+              {TOPIC_LABELS[topic]} · {questions.length} questions
+            </p>
             <div className="flex items-center justify-center gap-1 my-4">
-              <span className="text-5xl font-bold text-gray-900">{score}</span>
-              <span className="text-2xl text-gray-400">/</span>
-              <span className="text-3xl text-gray-500">{questions.length}</span>
+              <span className="text-5xl font-bold" style={{ color: "var(--color-ink)" }}>{score}</span>
+              <span className="text-2xl" style={{ color: "var(--color-muted)" }}>/</span>
+              <span className="text-3xl" style={{ color: "var(--color-muted)" }}>{questions.length}</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-3 mb-2 max-w-xs mx-auto overflow-hidden">
-              <div className={`h-full rounded-full ${pct >= 80 ? "bg-green-500" : pct >= 60 ? "bg-blue-500" : "bg-yellow-500"}`}
-                style={{ width: `${pct}%` }} />
+            <div className="w-full h-2 mb-2 max-w-xs mx-auto overflow-hidden progress-track" style={{ borderRadius: "9999px" }}>
+              <div className="h-full" style={{ width: `${pct}%`, backgroundColor: barColor, borderRadius: "9999px" }} />
             </div>
-            <p className="text-2xl font-bold text-gray-800 mb-6">{pct}%</p>
+            <p className="text-2xl font-bold mb-6" style={{ color: "var(--color-ink)" }}>{pct}%</p>
             <div className="flex gap-3 justify-center">
-              <Link href="/" className="px-6 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-                New Quiz
-              </Link>
-              <Link href="/results" className="px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
-                History
-              </Link>
+              <Link href="/" className="btn-primary">New Quiz</Link>
+              <Link href="/results" className="btn-secondary">History</Link>
             </div>
           </div>
 
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Review Answers</h2>
+          <h2 className="text-lg font-semibold mb-4" style={{ fontWeight: 600, lineHeight: 1.21 }}>Review Answers</h2>
           <div className="space-y-6">
             {questions.map((q) => (
-              <QuestionCard
-                key={q.id}
-                question={q}
-                selected={answers[q.id] ?? null}
-                onSelect={() => {}}
-                mode="review"
-              />
+              <QuestionCard key={q.id} question={q} selected={answers[q.id] ?? null} onSelect={() => {}} mode="review" />
             ))}
           </div>
         </div>
@@ -171,18 +165,14 @@ function QuizContent() {
     );
   }
 
-  const topicLabel = topic ? ` · ${TOPIC_LABELS[topic]}` : "";
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-2xl mx-auto px-4 py-6">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+      <div className="mx-auto max-w-2xl px-4 py-6">
         <div className="flex items-center justify-between mb-3">
-          <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
+          <Link href="/" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }}>
             ← Quit
           </Link>
-          <span className="text-sm text-gray-500">
-            {topicLabel} · {answered}/{questions.length}
-          </span>
+          <span className="micro-uppercase">{topicLabel} · {answered}/{questions.length}</span>
         </div>
 
         <ProgressBar current={currentIndex} total={questions.length} answered={answered} />
@@ -192,18 +182,25 @@ function QuizContent() {
         </div>
 
         <div className="flex items-center justify-between mt-6">
-          <button onClick={goPrev} disabled={currentIndex === 0}
-            className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors">
+          <button
+            onClick={goPrev}
+            disabled={currentIndex === 0}
+            className="btn-secondary"
+            style={{ padding: "8px 16px", fontSize: "0.875rem" }}
+          >
             ← Previous
           </button>
           {currentIndex < questions.length - 1 ? (
-            <button onClick={goNext}
-              className="px-4 py-2 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+            <button onClick={goNext} className="btn-primary" style={{ padding: "8px 16px", fontSize: "0.875rem" }}>
               Next →
             </button>
           ) : (
-            <button onClick={finishQuiz} disabled={!allAnswered}
-              className="px-4 py-2 text-sm font-medium rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+            <button
+              onClick={finishQuiz}
+              disabled={!allAnswered}
+              className="btn-primary"
+              style={{ padding: "8px 16px", fontSize: "0.875rem", opacity: allAnswered ? 1 : 0.4, cursor: allAnswered ? "pointer" : "not-allowed" }}
+            >
               {allAnswered ? "Finish Quiz" : `Answer all (${questions.length - answered} left)`}
             </button>
           )}
@@ -211,11 +208,19 @@ function QuizContent() {
 
         <div className="flex justify-center mt-4 gap-1.5">
           {questions.map((q, i) => (
-            <button key={q.id} onClick={() => setCurrentIndex(i)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                i === currentIndex ? "bg-blue-600 ring-2 ring-blue-300"
-                : answers[q.id] !== undefined ? "bg-green-400" : "bg-gray-300"
-              }`} />
+            <button
+              key={q.id}
+              onClick={() => setCurrentIndex(i)}
+              className="w-2.5 h-2.5 rounded-full transition-all"
+              style={{
+                backgroundColor: i === currentIndex
+                  ? "var(--color-accent-blue)"
+                  : answers[q.id] !== undefined
+                  ? "var(--color-brand-green)"
+                  : "var(--color-hairline)",
+                transform: i === currentIndex ? "scale(1.3)" : "scale(1)",
+              }}
+            />
           ))}
         </div>
       </div>
@@ -225,7 +230,7 @@ function QuizContent() {
 
 export default function QuizPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><p className="text-gray-500">Loading...</p></div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "var(--color-canvas)" }}><p style={{ color: "var(--color-steel)" }}>Loading...</p></div>}>
       <QuizContent />
     </Suspense>
   );

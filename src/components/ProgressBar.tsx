@@ -1,26 +1,21 @@
 interface Props {
   current: number;
   total: number;
-  answered: number;
+  answered?: number;
 }
 
 export default function ProgressBar({ current, total, answered }: Props) {
-  const pct = total > 0 ? Math.round((answered / total) * 100) : 0;
+  const value = answered ?? current;
+  const pct = total > 0 ? Math.round((value / total) * 100) : 0;
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between text-xs text-gray-500 mb-1">
-        <span>
-          Question {current + 1} of {total}
-        </span>
-        <span>{answered} answered</span>
+    <div className="flex items-center gap-3">
+      <div className="flex-1 h-2 overflow-hidden progress-track" style={{ borderRadius: "var(--rounded-pill)" }}>
+        <div className="h-full progress-fill" style={{ width: `${pct}%`, borderRadius: "var(--rounded-pill)" }} />
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-        <div
-          className="bg-blue-600 h-full rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${pct}%` }}
-        />
-      </div>
+      <span className="text-sm font-medium shrink-0" style={{ color: "var(--color-slate)" }}>
+        {answered ?? current}/{total}
+      </span>
     </div>
   );
 }

@@ -1,17 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+import { Outfit, JetBrains_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#2563eb",
+  themeColor: "#001e2b",
 };
 
 export default function RootLayout({
@@ -40,21 +41,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
+      className={`${outfit.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <head>
         <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900 font-sans dark:bg-slate-900">
-        <Script
-          id="dark-mode-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `try{if(localStorage.getItem("sc900-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}`
-          }}
-        />
-        {children}
+      <body className="min-h-full" style={{ fontFamily: "var(--font-sans)" }}>
+        <div id="app-root">{children}</div>
         <SpeedInsights />
       </body>
     </html>

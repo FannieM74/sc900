@@ -52,24 +52,24 @@ function TrendChart({ history }: { history: { pct: number; date: string }[] }) {
   const trend = last.pct - first.pct;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-6">
+    <div className="card p-5 mb-6">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="font-semibold text-gray-900">Score Trend</h3>
-        <span className={`text-sm font-bold ${trend >= 0 ? "text-green-600" : "text-red-600"}`}>
+        <h3 className="font-semibold" style={{ color: "var(--color-ink)", fontWeight: 600, lineHeight: 1.21 }}>Score Trend</h3>
+        <span className="text-sm font-bold" style={{ color: trend >= 0 ? "var(--color-brand-green)" : "var(--color-incorrect)" }}>
           {trend >= 0 ? "↑" : "↓"} {Math.abs(trend)}%
         </span>
       </div>
       <svg viewBox={`0 0 ${w} ${h}`} className="w-full max-w-sm mx-auto">
-        <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
+        <polyline fill="none" stroke="var(--color-brand-green)" strokeWidth="2" points={points} />
         {history.map((d, i) => (
-          <circle key={i} cx={xScale(i)} cy={yScale(d.pct)} r="3" fill={d.pct >= 80 ? "#22c55e" : d.pct >= 60 ? "#3b82f6" : "#eab308"} />
+          <circle key={i} cx={xScale(i)} cy={yScale(d.pct)} r="3" fill={d.pct >= 80 ? "var(--color-brand-green)" : d.pct >= 60 ? "var(--color-accent-blue)" : "#d29922"} />
         ))}
         {[0, history.length - 1].map((i) => (
           <g key={i}>
-            <text x={xScale(i)} y={h - 3} textAnchor={i === 0 ? "start" : "end"} className="text-[8px] fill-gray-400">
+            <text x={xScale(i)} y={h - 3} textAnchor={i === 0 ? "start" : "end"} style={{ fontSize: "8px", fill: "var(--color-muted)" }}>
               {new Date(history[i].date).toLocaleDateString(undefined, { month: "short", day: "numeric" })}
             </text>
-            <text x={xScale(i)} y={yScale(history[i].pct) - 6} textAnchor={i === 0 ? "start" : "end"} className="text-[9px] font-bold fill-gray-600">
+            <text x={xScale(i)} y={yScale(history[i].pct) - 6} textAnchor={i === 0 ? "start" : "end"} style={{ fontSize: "9px", fontWeight: "bold", fill: "var(--color-ink)" }}>
               {history[i].pct}%
             </text>
           </g>
@@ -81,7 +81,6 @@ function TrendChart({ history }: { history: { pct: number; date: string }[] }) {
 
 export default function AnalysisPage() {
   const [loading, setLoading] = useState(true);
-  const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [topicAnalysis, setTopicAnalysis] = useState<TopicAnalysis[]>([]);
   const [questionStats, setQuestionStats] = useState<QuestionStats[]>([]);
 
@@ -94,7 +93,6 @@ export default function AnalysisPage() {
     const history = getQuizHistory();
     const attempts = getAttempts();
 
-    // topic grouping from history
     const grouped: Record<string, { score: number; total: number; count: number }> = {};
     for (const r of history) {
       const key = r.topic || "all";
@@ -118,9 +116,7 @@ export default function AnalysisPage() {
       .sort((a, b) => a.avgPct - b.avgPct);
 
     setTopicAnalysis(tResult);
-    setAllQuestions(qs);
 
-    // per-question stats from attempts
     const attemptIds = Object.keys(attempts).map(Number);
     if (attemptIds.length > 0) {
       const qMap = new Map(qs.map((q) => [q.id, q]));
@@ -157,72 +153,63 @@ export default function AnalysisPage() {
   );
 
   const weakCount = topicAnalysis.filter((a) => a.avgPct < 60).length;
-  const hardQuestions = questionStats.filter(
-    (q) => q.pct < 60 && q.total >= 1,
-  );
+  const hardQuestions = questionStats.filter((q) => q.pct < 60 && q.total >= 1);
   const hasTopicData = topicAnalysis.length > 0;
   const hasAttemptData = questionStats.length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+      <div className="mx-auto max-w-2xl px-4 py-8">
+        <Link href="/" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }} className="inline-block mb-4">
           ← Home
         </Link>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">📈 Analysis</h1>
-        <p className="text-gray-500 text-sm mb-6">
+        <h1 className="text-2xl font-bold mb-2" style={{ fontWeight: 700, lineHeight: 1.19 }}>📈 Analysis</h1>
+        <p className="mb-6" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }}>
           Performance trends, topic breakdown, and specific questions to study.
         </p>
 
         {loading && (
           <div className="flex items-center justify-center py-12">
-            <div className="w-6 h-6 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-6 h-6 border-2 rounded-full animate-spin" style={{ borderColor: "var(--color-hairline)", borderTopColor: "var(--color-brand-green)" }} />
           </div>
         )}
 
         {!loading && !hasTopicData && !hasAttemptData && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg mb-2">No quiz data yet</p>
-            <p className="text-gray-400 text-sm mb-4">Complete a quiz to start tracking your progress.</p>
-            <Link href="/" className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-              Take a Quiz
-            </Link>
+            <p className="mb-2" style={{ color: "var(--color-steel)", fontSize: "1.125rem" }}>No quiz data yet</p>
+            <p className="mb-4" style={{ color: "var(--color-muted)", fontSize: "0.875rem" }}>Complete a quiz to start tracking your progress.</p>
+            <Link href="/" className="btn-primary">Take a Quiz</Link>
           </div>
         )}
 
         {!loading && (
           <>
-            {/* Trend chart */}
             {trendData.length >= 2 && <TrendChart history={trendData} />}
 
-            {/* Hard questions section */}
             {hardQuestions.length > 0 && (
               <div className="mb-6">
-                <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4 text-sm text-red-800">
+                <div className="p-4 mb-4 text-sm" style={{ borderRadius: "var(--rounded-md)", backgroundColor: "var(--color-surface)", border: "1px solid var(--color-hairline)", color: "var(--color-slate)" }}>
                   ⚠ <strong>{hardQuestions.length} question{hardQuestions.length > 1 ? "s" : ""}</strong> need study — accuracy below 60%.
-                  Review these in <Link href="/review" className="underline font-medium">Review Mistakes</Link> or <Link href="/study" className="underline font-medium">Study Mode</Link>.
+                  Review these in <Link href="/review" className="underline" style={{ color: "var(--color-brand-green-dark)" }}>Review Mistakes</Link> or <Link href="/study" className="underline" style={{ color: "var(--color-brand-green-dark)" }}>Study Mode</Link>.
                 </div>
 
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">📚 Questions to Study</h2>
+                <h2 className="text-lg font-semibold mb-4" style={{ fontWeight: 600, lineHeight: 1.21 }}>📚 Questions to Study</h2>
                 <div className="space-y-3">
                   {hardQuestions.map((q) => (
-                    <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+                    <div key={q.id} className="card p-4">
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm text-gray-900 font-medium mb-2">{q.question}</p>
+                          <p className="text-sm font-semibold mb-2" style={{ color: "var(--color-ink)", fontWeight: 600 }}>{q.question}</p>
                           <TopicBadge topic={q.topic} />
                         </div>
                         <div className="text-right shrink-0">
-                          <p className={`text-lg font-bold ${q.pct < 40 ? "text-red-600" : "text-yellow-600"}`}>
-                            {q.pct}%
-                          </p>
-                          <p className="text-xs text-gray-400">{q.correct}/{q.total}</p>
+                          <p className="text-lg font-bold" style={{ color: q.pct < 40 ? "var(--color-incorrect)" : "#d29922" }}>{q.pct}%</p>
+                          <p className="text-xs" style={{ color: "var(--color-stone)" }}>{q.correct}/{q.total}</p>
                         </div>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2 overflow-hidden">
-                        <div className={`h-full rounded-full ${q.pct < 40 ? "bg-red-500" : "bg-yellow-500"}`}
-                          style={{ width: `${q.pct}%` }} />
+                      <div className="w-full h-1.5 mt-2 overflow-hidden progress-track" style={{ borderRadius: "9999px" }}>
+                        <div className="h-full" style={{ width: `${q.pct}%`, backgroundColor: q.pct < 40 ? "var(--color-incorrect)" : "#d29922", borderRadius: "9999px" }} />
                       </div>
                     </div>
                   ))}
@@ -230,41 +217,39 @@ export default function AnalysisPage() {
               </div>
             )}
 
-            {/* Topic analysis */}
             {hasTopicData && (
               <>
                 {weakCount > 0 && (
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-4 text-sm text-yellow-800">
+                  <div className="p-4 mb-4 text-sm" style={{ borderRadius: "var(--rounded-md)", backgroundColor: "var(--color-surface)", border: "1px solid var(--color-hairline)", color: "var(--color-slate)" }}>
                     ⚠ Focus on <strong>{weakCount} topic{weakCount > 1 ? "s" : ""}</strong> with scores below 60%.
                   </div>
                 )}
 
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">By Topic</h2>
+                <h2 className="text-lg font-semibold mb-4" style={{ fontWeight: 600, lineHeight: 1.21 }}>By Topic</h2>
                 <div className="space-y-4">
                   {topicAnalysis.map((a) => {
-                    const barColor = a.avgPct >= 80 ? "bg-green-500" : a.avgPct >= 60 ? "bg-blue-500" : "bg-yellow-500";
-                    const textColor = a.avgPct >= 80 ? "text-green-600" : a.avgPct >= 60 ? "text-blue-600" : "text-yellow-600";
+                    const barColor = a.avgPct >= 80 ? "var(--color-brand-green)" : a.avgPct >= 60 ? "var(--color-accent-blue)" : "#d29922";
                     return (
-                      <div key={a.key} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+                      <div key={a.key} className="card p-5">
                         <div className="flex items-center justify-between mb-3">
                           <TopicBadge topic={a.key} />
-                          <span className={`text-lg font-bold ${textColor}`}>{a.avgPct}%</span>
+                          <span className="text-lg font-bold" style={{ color: barColor }}>{a.avgPct}%</span>
                         </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2.5 mb-3 overflow-hidden">
-                          <div className={`h-full rounded-full ${barColor}`} style={{ width: `${a.avgPct}%` }} />
+                        <div className="w-full h-2 mb-3 overflow-hidden progress-track" style={{ borderRadius: "9999px" }}>
+                          <div className="h-full" style={{ width: `${a.avgPct}%`, backgroundColor: barColor, borderRadius: "9999px" }} />
                         </div>
                         <div className="grid grid-cols-3 gap-3 text-center text-xs">
                           <div>
-                            <p className="text-gray-900 font-semibold">{a.totalScore}/{a.totalPossible}</p>
-                            <p className="text-gray-400">Correct</p>
+                            <p className="font-semibold" style={{ color: "var(--color-ink)" }}>{a.totalScore}/{a.totalPossible}</p>
+                            <p style={{ color: "var(--color-steel)" }}>Correct</p>
                           </div>
                           <div>
-                            <p className="text-gray-900 font-semibold">{a.attempts}</p>
-                            <p className="text-gray-400">Quizzes</p>
+                            <p className="font-semibold" style={{ color: "var(--color-ink)" }}>{a.attempts}</p>
+                            <p style={{ color: "var(--color-steel)" }}>Quizzes</p>
                           </div>
                           <div>
-                            <p className="text-gray-900 font-semibold">{a.totalQuestions}</p>
-                            <p className="text-gray-400">Questions</p>
+                            <p className="font-semibold" style={{ color: "var(--color-ink)" }}>{a.totalQuestions}</p>
+                            <p style={{ color: "var(--color-steel)" }}>Questions</p>
                           </div>
                         </div>
                       </div>
@@ -274,16 +259,15 @@ export default function AnalysisPage() {
               </>
             )}
 
-            {/* Tips */}
             {(hasTopicData || hasAttemptData) && (
-              <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">💡 Tips</h3>
-                <ul className="text-sm text-gray-600 space-y-1.5">
-                  <li>• <strong>Green</strong> (≥80%): You&apos;re doing well — maintain with occasional practice.</li>
-                  <li>• <strong>Blue</strong> (60–79%): Decent but room for improvement — review weak areas.</li>
-                  <li>• <strong>Yellow</strong> (&lt;60%): Needs focus — spend extra time on these topics.</li>
+              <div className="mt-8 card p-5">
+                <h3 className="font-semibold mb-2" style={{ color: "var(--color-ink)", fontWeight: 600, lineHeight: 1.21 }}>💡 Tips</h3>
+                <ul className="text-sm space-y-1.5" style={{ color: "var(--color-slate)" }}>
+                  <li>• <strong style={{ color: "var(--color-brand-green)" }}>Green</strong> (≥80%): You&apos;re doing well — maintain with occasional practice.</li>
+                  <li>• <strong style={{ color: "var(--color-accent-blue)" }}>Blue</strong> (60–79%): Decent but room for improvement — review weak areas.</li>
+                  <li>• <strong style={{ color: "#d29922" }}>Yellow</strong> (&lt;60%): Needs focus — spend extra time on these topics.</li>
                   <li>• Questions at the top of the &ldquo;Questions to Study&rdquo; list are your weakest — start there.</li>
-                  <li>• Use <Link href="/study" className="underline">Study Mode</Link> to browse answers or <Link href="/review" className="underline">Review Mistakes</Link> to retry.</li>
+                  <li>• Use <Link href="/study" className="underline" style={{ color: "var(--color-brand-green-dark)" }}>Study Mode</Link> to browse answers or <Link href="/review" className="underline" style={{ color: "var(--color-brand-green-dark)" }}>Review Mistakes</Link> to retry.</li>
                 </ul>
               </div>
             )}

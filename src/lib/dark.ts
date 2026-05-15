@@ -3,8 +3,10 @@
 const DARK_KEY = "sc900-dark";
 
 export function getDarkMode(): boolean {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem(DARK_KEY) === "true";
+  if (typeof window === "undefined") return true;
+  const v = localStorage.getItem(DARK_KEY);
+  if (v === null) return true;
+  return v === "true";
 }
 
 export function setDarkMode(enabled: boolean): void {

@@ -5,70 +5,44 @@ import Link from "next/link";
 import allQuestions from "@/lib/questions.json";
 import type { Question } from "@/lib/types";
 import { TOPIC_LABELS } from "@/lib/topics";
-import TopicBadge from "@/components/TopicBadge";
-import { linkify } from "@/lib/linkify";
-import { optionLetter } from "@/lib/helpers";
+import QuestionCard from "@/components/QuestionCard";
+import Skeleton from "@/components/Skeleton";
 
 const qs = allQuestions as Question[];
 
-const topicsList = [...new Set(qs.map((q) => q.topic))];
-
 export default function StudyPage() {
-  const [selectedTopic, setSelectedTopic] = useState("");
+  const [topic, setTopic] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const filtered = selectedTopic ? qs.filter((q) => q.topic === selectedTopic) : qs;
+  const filtered = topic ? qs.filter((q) => q.topic === topic) : qs;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+      <div className="mx-auto max-w-2xl px-4 py-8">
+        <Link href="/" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }} className="inline-block mb-4">
           ← Home
         </Link>
 
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">📖 Study Mode</h1>
-          <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)}
-            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div className="flex items-center justify-between mb-2">
+          <h1 className="text-2xl font-bold" style={{ fontWeight: 700, lineHeight: 1.19 }}>📖 Study Mode</h1>
+          <select value={topic} onChange={(e) => { setTopic(e.target.value); setLoading(true); setTimeout(() => setLoading(false), 0); }} className="w-44">
             <option value="">All Topics</option>
-            {topicsList.map((t) => (
-              <option key={t} value={t}>{TOPIC_LABELS[t] || t}</option>
+            {Object.keys(TOPIC_LABELS).filter(k => k).map((k) => (
+              <option key={k} value={k}>{TOPIC_LABELS[k]}</option>
             ))}
           </select>
         </div>
+        <p className="mb-6" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }}>{filtered.length} questions</p>
 
-        <p className="text-sm text-gray-500 mb-4">{filtered.length} question{filtered.length !== 1 ? "s" : ""}</p>
-
-        <div className="space-y-4">
-          {filtered.map((q) => {
-            const correct = q.options[q.correctAnswer];
-            return (
-              <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                <p className="text-gray-900 font-medium mb-2">{q.question}</p>
-                <div className="flex items-center gap-2 mb-3">
-                  <TopicBadge topic={q.topic} />
-                </div>
-                <div className="space-y-2">
-                  {q.options.map((opt, i) => (
-                    <div key={i} className={`p-2.5 rounded-lg text-sm ${
-                      i === q.correctAnswer
-                        ? "bg-green-50 border border-green-200 text-green-800 font-medium"
-                        : "bg-gray-50 border border-gray-200 text-gray-700"
-                    }`}>
-                      <span className="font-medium mr-2">{optionLetter(i)}.</span>
-                      {opt}
-                      {i === q.correctAnswer && (
-                        <span className="ml-2 text-xs text-green-600">✓ Correct</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
-                  {linkify(q.explanation)}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        {loading ? (
+          <div className="space-y-6"><Skeleton /><Skeleton /><Skeleton /></div>
+        ) : (
+          <div className="space-y-6">
+            {filtered.map((q) => (
+              <QuestionCard key={q.id} question={q} selected={q.correctAnswer} onSelect={() => {}} mode="review" />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

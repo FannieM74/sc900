@@ -27,70 +27,70 @@ function ResultsContent() {
   const today = new Date().toDateString();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-canvas)" }}>
+      <div className="mx-auto max-w-2xl px-4 py-8">
+        <Link href="/" style={{ color: "var(--color-steel)", fontSize: "0.875rem" }} className="inline-block mb-4">
           ← Home
         </Link>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">📊 Quiz History</h1>
+        <h1 className="text-2xl font-bold mb-6" style={{ fontWeight: 700, lineHeight: 1.19 }}>📊 Quiz History</h1>
 
         {totalParam > 0 && (
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 text-center mb-8">
+          <div className="card p-6 text-center mb-8">
             <p className="text-5xl mb-2">{latestPct >= 80 ? "🎉" : latestPct >= 60 ? "👍" : "💪"}</p>
-            <h2 className={`text-xl font-bold ${latestPct >= 80 ? "text-green-600" : latestPct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
+            <h2 className="text-xl font-bold" style={{
+              color: latestPct >= 80 ? "var(--color-brand-green)" : latestPct >= 60 ? "var(--color-accent-blue)" : "#d29922"
+            }}>
               {latestMessage}
             </h2>
-            <p className="text-gray-400 text-sm mt-1">{today}</p>
+            <p className="mt-1" style={{ color: "var(--color-muted)", fontSize: "0.875rem" }}>{today}</p>
             <div className="flex items-center justify-center gap-1 my-4">
-              <span className="text-4xl font-bold text-gray-900">{scoreParam}</span>
-              <span className="text-xl text-gray-400">/</span>
-              <span className="text-2xl text-gray-500">{totalParam}</span>
+              <span className="text-4xl font-bold" style={{ color: "var(--color-ink)" }}>{scoreParam}</span>
+              <span className="text-xl" style={{ color: "var(--color-muted)" }}>/</span>
+              <span className="text-2xl" style={{ color: "var(--color-muted)" }}>{totalParam}</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-3 mb-2 overflow-hidden max-w-xs mx-auto">
-              <div className={`h-full rounded-full ${latestPct >= 80 ? "bg-green-500" : latestPct >= 60 ? "bg-blue-500" : "bg-yellow-500"}`}
-                style={{ width: `${latestPct}%` }} />
+            <div className="w-full h-2 mb-2 overflow-hidden max-w-xs mx-auto progress-track" style={{ borderRadius: "9999px" }}>
+              <div className="h-full" style={{
+                width: `${latestPct}%`,
+                backgroundColor: latestPct >= 80 ? "var(--color-brand-green)" : latestPct >= 60 ? "var(--color-accent-blue)" : "#d29922",
+                borderRadius: "9999px"
+              }} />
             </div>
-            <p className="text-xl font-bold text-gray-800">{latestPct}%</p>
+            <p className="text-xl font-bold mb-6" style={{ color: "var(--color-ink)" }}>{latestPct}%</p>
           </div>
         )}
 
         {history.length === 0 && totalParam === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg mb-2">No quiz history yet</p>
-            <p className="text-gray-400 text-sm mb-4">Complete a quiz to see your scores here</p>
-            <Link href="/quiz"
-              className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-              Start Quiz
-            </Link>
+            <p className="mb-2" style={{ color: "var(--color-steel)", fontSize: "1.125rem" }}>No quiz history yet</p>
+            <p className="mb-4" style={{ color: "var(--color-muted)", fontSize: "0.875rem" }}>Complete a quiz to see your scores here</p>
+            <Link href="/quiz" className="btn-primary">Start Quiz</Link>
           </div>
         )}
 
         {history.length > 0 && (
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-5 py-4 border-b border-gray-100">
-              <h3 className="font-semibold text-gray-900">Past Results</h3>
+          <div className="card overflow-hidden">
+            <div className="px-5 py-4 hairline-bottom">
+              <h3 className="font-semibold" style={{ color: "var(--color-ink)", fontWeight: 600, lineHeight: 1.21 }}>Past Results</h3>
             </div>
-            <div className="divide-y divide-gray-100">
+            <div className="divide-y" style={{ borderColor: "var(--color-hairline-soft)" }}>
               {history.map((r, i) => {
                 const pct = Math.round((r.score / r.total) * 100);
                 return (
                   <div key={i} className="px-5 py-3 flex items-center justify-between">
                     <div className="flex items-center gap-3 min-w-0">
-                      <span className={`text-lg ${pct >= 80 ? "" : pct >= 60 ? "" : ""}`}>
-                        {pct >= 80 ? "🟢" : pct >= 60 ? "🟡" : "🔴"}
-                      </span>
+                      <span>{pct >= 80 ? "🟢" : pct >= 60 ? "🟡" : "🔴"}</span>
                       <div className="min-w-0">
-                        <p className="text-sm font-medium text-gray-900">
+                        <p className="text-sm font-medium" style={{ color: "var(--color-ink)" }}>
                           {r.score}/{r.total}
                         </p>
-                        <p className="text-xs text-gray-400 truncate">
+                        <p className="text-xs" style={{ color: "var(--color-stone)" }}>
                           {new Date(r.date).toLocaleDateString()}
                           {` · ${topicLabel(r.topic)}`}
                         </p>
                       </div>
                     </div>
-                    <span className={`text-sm font-bold ${pct >= 80 ? "text-green-600" : pct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
+                    <span className="text-sm font-bold" style={{ color: pct >= 80 ? "var(--color-brand-green)" : pct >= 60 ? "var(--color-accent-blue)" : "#d29922" }}>
                       {pct}%
                     </span>
                   </div>
@@ -101,14 +101,8 @@ function ResultsContent() {
         )}
 
         <div className="mt-6 flex gap-3">
-          <Link href="/quiz"
-            className="flex-1 text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-            New Quiz
-          </Link>
-          <Link href="/"
-            className="flex-1 text-center py-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
-            Home
-          </Link>
+          <Link href="/quiz" className="btn-primary flex-1 text-center">New Quiz</Link>
+          <Link href="/" className="btn-secondary flex-1 text-center">Home</Link>
         </div>
       </div>
     </div>
@@ -117,7 +111,7 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "var(--color-canvas)" }}><p style={{ color: "var(--color-steel)" }}>Loading...</p></div>}>
       <ResultsContent />
     </Suspense>
   );

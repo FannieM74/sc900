@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import questions from "@/lib/questions.json";
 import type { Question } from "@/lib/api";
-import { fetchQuestions, fetchStats } from "@/lib/api";
 import TopicBadge from "@/components/TopicBadge";
 import { linkify } from "@/lib/linkify";
 
@@ -14,23 +14,21 @@ const TOPIC_LABELS: Record<string, string> = {
   "azure-security": "Azure Security",
 };
 
+const qs = questions as Question[];
+
+const topicsList = [...new Set(qs.map((q) => q.topic))];
+
 export default function StudyPage() {
+  const [selectedTopic, setSelectedTopic] = useState("");
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [topics, setTopics] = useState<string[]>([]);
-  const [topic, setTopic] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchStats().then((s) => setTopics(Object.keys(s.topics))).catch(() => {});
-  }, []);
-
-  useEffect(() => {
     setLoading(true);
-    fetchQuestions(topic || undefined)
-      .then(setQuestions)
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  }, [topic]);
+    const filtered = selectedTopic ? qs.filter((q) => q.topic === selectedTopic) : qs;
+    setQuestions(filtered);
+    setLoading(false);
+  }, [selectedTopic]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -41,10 +39,10 @@ export default function StudyPage() {
 
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold text-gray-900">📖 Study Mode</h1>
-          <select value={topic} onChange={(e) => setTopic(e.target.value)}
+          <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)}
             className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="">All Topics</option>
-            {topics.map((t) => (
+            {topicsList.map((t) => (
               <option key={t} value={t}>{TOPIC_LABELS[t] || t}</option>
             ))}
           </select>

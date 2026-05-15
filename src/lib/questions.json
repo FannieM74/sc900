@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "question": "Microsoft’s six core privacy principles are:",
+    "question": "Microsoft\u2019s six core privacy principles are:",
     "options": [
       "Control ,Transparency, Security, Strong legal protections, No content-based targeting, Benefits to you",
       "Control ,Transparency, Security, Legal standing, No content-based targeting, Benefits to you",
@@ -126,7 +126,7 @@
       "Managed identities"
     ],
     "correctAnswer": 1,
-    "explanation": "In Entra ID, an identity provider maintains and manages identity information while providing authentication services to applications. See “Add an identity provider to your Entra ID B2C tenant” https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider",
+    "explanation": "In Entra ID, an identity provider maintains and manages identity information while providing authentication services to applications. See \u201cAdd an identity provider to your Entra ID B2C tenant\u201d https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider",
     "topic": "identity"
   },
   {
@@ -152,7 +152,7 @@
       "Brute force attack"
     ],
     "correctAnswer": 2,
-    "explanation": "A password spray attack attempts to match a username against a list of weak passwords. See “Describe identity principles” on MS Learn: https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/2-describe-common-identity-attacks",
+    "explanation": "A password spray attack attempts to match a username against a list of weak passwords. See \u201cDescribe identity principles\u201d on MS Learn: https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/2-describe-common-identity-attacks",
     "topic": "identity"
   },
   {
@@ -340,7 +340,7 @@
       "TRUE"
     ],
     "correctAnswer": 0,
-    "explanation": "The Basic tier of Azure DDoS is automatically enabled and protecting all Azure subscriptions by default. See “Azure DDoS protection overview” https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview.",
+    "explanation": "The Basic tier of Azure DDoS is automatically enabled and protecting all Azure subscriptions by default. See \u201cAzure DDoS protection overview\u201d https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview.",
     "topic": "security-concepts"
   },
   {
@@ -364,7 +364,7 @@
       "RDP/SSH connectivity provided over Azure Point-to-Site (P2S) VPN using the native Windows 10 VPN client."
     ],
     "correctAnswer": 2,
-    "explanation": "Azure Bastion is a service you deploy that lets you connect to a virtual machine using your browser and the Azure portal. It provides secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal over TLS in a web browser. Azure VMs do not need a public IP address to allow RDP/SSH access via Azure Bastion. See “What is Azure Bastion?” https://docs.microsoft.com/en-us/azure/bastion/bastion-overview",
+    "explanation": "Azure Bastion is a service you deploy that lets you connect to a virtual machine using your browser and the Azure portal. It provides secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal over TLS in a web browser. Azure VMs do not need a public IP address to allow RDP/SSH access via Azure Bastion. See \u201cWhat is Azure Bastion?\u201d https://docs.microsoft.com/en-us/azure/bastion/bastion-overview",
     "topic": "security-concepts"
   },
   {
@@ -429,7 +429,7 @@
       "Microsoft Defender for Office 365"
     ],
     "correctAnswer": 0,
-    "explanation": "Microsoft Defender for Identity (formerly Entra IDvanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. See “What is Microsoft Defender for Identity?” https://docs.microsoft.com/en-us/defender-for-identity/what-is",
+    "explanation": "Microsoft Defender for Identity (formerly Entra IDvanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. See \u201cWhat is Microsoft Defender for Identity?\u201d https://docs.microsoft.com/en-us/defender-for-identity/what-is",
     "topic": "identity"
   },
   {
@@ -455,7 +455,7 @@
       "Ingests data from a variety of Azure services to better assess the full scope of an incident."
     ],
     "correctAnswer": 2,
-    "explanation": "Microsoft Defender for Endpoint detects advanced threats on your Windows 10. and other endpoints and automates investigation and threat response. See “Microsoft Defender for Endpoint” https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide",
+    "explanation": "Microsoft Defender for Endpoint detects advanced threats on your Windows 10. and other endpoints and automates investigation and threat response. See \u201cMicrosoft Defender for Endpoint\u201d https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide",
     "topic": "azure-security"
   },
   {
@@ -468,7 +468,7 @@
       "Microsoft Defender for Endpoint"
     ],
     "correctAnswer": 2,
-    "explanation": "The cloud discovery feature in Microsoft Defender for Cloud Apps uses your traffic logs to dynamically discover and analyze the cloud apps that your organization is using. To create a snapshot report of your organization's cloud use, you can manually upload log files from your firewalls or proxies for analysis. Or, to set up continuous reports, use Cloud App Security log collectors to periodically forward syslog data from your perimeter network devices, such as firewalls and proxies. See “What is Cloud App Security?” https://docs.m icrosoft.com/en-us/cloud-app-security/what-is-cloud-app-security",
+    "explanation": "The cloud discovery feature in Microsoft Defender for Cloud Apps uses your traffic logs to dynamically discover and analyze the cloud apps that your organization is using. To create a snapshot report of your organization's cloud use, you can manually upload log files from your firewalls or proxies for analysis. Or, to set up continuous reports, use Cloud App Security log collectors to periodically forward syslog data from your perimeter network devices, such as firewalls and proxies. See \u201cWhat is Cloud App Security?\u201d https://docs.m icrosoft.com/en-us/cloud-app-security/what-is-cloud-app-security",
     "topic": "azure-security"
   },
   {
@@ -494,7 +494,7 @@
       "Microsoft Defender Secure Score"
     ],
     "correctAnswer": 1,
-    "explanation": "Microsoft Secure Score is a measurement of an organization's security posture across identities, endpoints, and apps. Currently there are recommendations for Microsoft 365 (including Exchange Online), Entra ID, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Cloud App Security, and Microsoft Teams See “Microsoft Secure Score” https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide",
+    "explanation": "Microsoft Secure Score is a measurement of an organization's security posture across identities, endpoints, and apps. Currently there are recommendations for Microsoft 365 (including Exchange Online), Entra ID, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Cloud App Security, and Microsoft Teams See \u201cMicrosoft Secure Score\u201d https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide",
     "topic": "azure-security"
   },
   {
@@ -519,7 +519,7 @@
       "Incidents, events, alert"
     ],
     "correctAnswer": 1,
-    "explanation": "Incidents are a collection of correlated alerts created when a suspicious event is found. Alerts are generated from different types of entities, like devices, users, and mailboxes, and can come from many different domains. See “Incidents in Microsoft 365 Defender” https://docs.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide.",
+    "explanation": "Incidents are a collection of correlated alerts created when a suspicious event is found. Alerts are generated from different types of entities, like devices, users, and mailboxes, and can come from many different domains. See \u201cIncidents in Microsoft 365 Defender\u201d https://docs.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide.",
     "topic": "azure-security"
   },
   {
@@ -581,7 +581,7 @@
       "Compliance Score"
     ],
     "correctAnswer": 2,
-    "explanation": "Compliance score shows the compliance score and will forward admins to the Compliance Manager where they can see a breakdown of the compliance score. Compliance score measures the progress in completing recommended improvement actions within controls. The score helps an organization to understand its current compliance posture and prioritize actions based on their potential to reduce risk. See “Compliance score calculation” https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide",
+    "explanation": "Compliance score shows the compliance score and will forward admins to the Compliance Manager where they can see a breakdown of the compliance score. Compliance score measures the progress in completing recommended improvement actions within controls. The score helps an organization to understand its current compliance posture and prioritize actions based on their potential to reduce risk. See \u201cCompliance score calculation\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide",
     "topic": "security-concepts"
   },
   {
@@ -607,7 +607,7 @@
       "Case Overview"
     ],
     "correctAnswer": 1,
-    "explanation": "All data files and email messages associated with alert activities are automatically captured and displayed in the Content Explorer. Activity Explorer allows you to monitor what is being done with labeled content. See “Get started with content explorer” https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer?view=o365-worldwide",
+    "explanation": "All data files and email messages associated with alert activities are automatically captured and displayed in the Content Explorer. Activity Explorer allows you to monitor what is being done with labeled content. See \u201cGet started with content explorer\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer?view=o365-worldwide",
     "topic": "security-concepts"
   },
   {
@@ -620,7 +620,7 @@
       "Sensitivity labels, classification and protection"
     ],
     "correctAnswer": 3,
-    "explanation": "Sensitivity labels are used for data classification and protection. Label policies are used to publish sensitivity labels. See “Learn about sensitivity labels” https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide.",
+    "explanation": "Sensitivity labels are used for data classification and protection. Label policies are used to publish sensitivity labels. See \u201cLearn about sensitivity labels\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide.",
     "topic": "security-concepts"
   },
   {
@@ -633,7 +633,7 @@
       "site, mailbox"
     ],
     "correctAnswer": 3,
-    "explanation": "Use a retention policy to assign the same retention settings for content at a site or mailbox level and use a retention label to assign retention settings at an item level (folder, document, email). See “Retention policies and retention labels” https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide",
+    "explanation": "Use a retention policy to assign the same retention settings for content at a site or mailbox level and use a retention label to assign retention settings at an item level (folder, document, email). See \u201cRetention policies and retention labels\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide",
     "topic": "compliance"
   },
   {
@@ -644,7 +644,7 @@
       "FALSE"
     ],
     "correctAnswer": 0,
-    "explanation": "Use a retention policy to assign the same retention settings for content at a site or mailbox level and use a retention label to assign retention settings at an item level (folder, document, email). See “Retention policies and retention labels” https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide",
+    "explanation": "Use a retention policy to assign the same retention settings for content at a site or mailbox level and use a retention label to assign retention settings at an item level (folder, document, email). See \u201cRetention policies and retention labels\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide",
     "topic": "compliance"
   },
   {
@@ -657,7 +657,7 @@
       "All of the above"
     ],
     "correctAnswer": 3,
-    "explanation": "Records management in Microsoft 365 helps an organization manage their legal obligations, provides the ability to demonstrate compliance with regulations, and increases efficiency with regular disposition of items that are no longer required to be retained, no longer of value, or no longer required for business purposes. Records management in Microsoft 365 includes notifications, reminders, and disposition reviews so you can ensure deletion is appropriate. See “Learn about records management in Microsoft 365” https://docs.microsoft.com/en-us/microsoft-365/compliance/records-management?view=o365-worldwide",
+    "explanation": "Records management in Microsoft 365 helps an organization manage their legal obligations, provides the ability to demonstrate compliance with regulations, and increases efficiency with regular disposition of items that are no longer required to be retained, no longer of value, or no longer required for business purposes. Records management in Microsoft 365 includes notifications, reminders, and disposition reviews so you can ensure deletion is appropriate. See \u201cLearn about records management in Microsoft 365\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/records-management?view=o365-worldwide",
     "topic": "compliance"
   },
   {
@@ -670,7 +670,7 @@
       "is blocked from being shared between departments."
     ],
     "correctAnswer": 2,
-    "explanation": "Data loss prevention helps protect this sensitive data and reduce risk; they need a way to prevent their users from inappropriately sharing it with people who should not see it. See “Learn about data loss prevention ” https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide",
+    "explanation": "Data loss prevention helps protect this sensitive data and reduce risk; they need a way to prevent their users from inappropriately sharing it with people who should not see it. See \u201cLearn about data loss prevention \u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide",
     "topic": "compliance"
   },
   {
@@ -683,7 +683,7 @@
       "Email content in Exchange Online"
     ],
     "correctAnswer": 1,
-    "explanation": "You can use the Content search tool in the Microsoft Purview compliance portal to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business. Searching Entra ID audit logs is most often performed directly in Entra ID within the Azure Portal. See “Search for content using the Content search tool” https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-content?view=o365-worldwide.",
+    "explanation": "You can use the Content search tool in the Microsoft Purview compliance portal to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business. Searching Entra ID audit logs is most often performed directly in Entra ID within the Azure Portal. See \u201cSearch for content using the Content search tool\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-content?view=o365-worldwide.",
     "topic": "compliance"
   },
   {
@@ -696,7 +696,7 @@
       "Exporting data results"
     ],
     "correctAnswer": 1,
-    "explanation": "Adding data custodians, automating notifications, and jobs are features of advanced eDiscovery. See “Get started with Core eDiscovery in Microsoft 365” https://docs.microsoft.com/en-us/microsoft-365/compliance/get-started-core-ediscovery?view=o365-worldwide",
+    "explanation": "Adding data custodians, automating notifications, and jobs are features of advanced eDiscovery. See \u201cGet started with Core eDiscovery in Microsoft 365\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/get-started-core-ediscovery?view=o365-worldwide",
     "topic": "security-concepts"
   },
   {
@@ -709,7 +709,7 @@
       "Adding non-custodial data sources"
     ],
     "correctAnswer": 1,
-    "explanation": "Advanced eDiscovery workflow builds on the existing core eDiscovery and analytics capabilities. Advanced eDiscovery provides an end-to-end workflow to preserve, collect, analyze, review, and export content that's responsive to your organization's internal and external investigations. You can create a legal hold in core eDiscovery. See “Overview of Microsoft 365 Advanced eDiscovery” https://docs.microsoft.com/en-us/microsoft-365/compliance/overview-ediscovery-20?view=o365-worldwide.",
+    "explanation": "Advanced eDiscovery workflow builds on the existing core eDiscovery and analytics capabilities. Advanced eDiscovery provides an end-to-end workflow to preserve, collect, analyze, review, and export content that's responsive to your organization's internal and external investigations. You can create a legal hold in core eDiscovery. See \u201cOverview of Microsoft 365 Advanced eDiscovery\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/overview-ediscovery-20?view=o365-worldwide.",
     "topic": "security-concepts"
   },
   {
@@ -722,7 +722,7 @@
       "Microsoft Purview"
     ],
     "correctAnswer": 3,
-    "explanation": "Microsoft Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. See “What is Azure Purview?” https://docs.microsoft.com/en-us/azure/purview/overview.",
+    "explanation": "Microsoft Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. See \u201cWhat is Azure Purview?\u201d https://docs.microsoft.com/en-us/azure/purview/overview.",
     "topic": "security-concepts"
   },
   {
@@ -735,7 +735,7 @@
       "Azure policies"
     ],
     "correctAnswer": 1,
-    "explanation": "Resource locks can prevent unwanted changes or accidental deletion at the subscription, resource group, or even the resource level. See “Lock resources to prevent unexpected changes” https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json",
+    "explanation": "Resource locks can prevent unwanted changes or accidental deletion at the subscription, resource group, or even the resource level. See \u201cLock resources to prevent unexpected changes\u201d https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json",
     "topic": "security-concepts"
   },
   {
@@ -748,12 +748,12 @@
       "Azure Blueprints"
     ],
     "correctAnswer": 3,
-    "explanation": "Azure Blueprints enables cloud architects to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and stand up new environments with trust they're building within organizational compliance with a set of built-in components, such as networking, to speed up development and delivery. See “What is Azure Blueprints” https://docs.microsoft.com/en-us/azure/governance/blueprints/overview",
+    "explanation": "Azure Blueprints enables cloud architects to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and stand up new environments with trust they're building within organizational compliance with a set of built-in components, such as networking, to speed up development and delivery. See \u201cWhat is Azure Blueprints\u201d https://docs.microsoft.com/en-us/azure/governance/blueprints/overview",
     "topic": "security-concepts"
   },
   {
     "id": 60,
-    "question": "Which of the following Azure services is used to monitor Azure resources to ensure new and existing deployments are in compliance with the organization’s standards and regulatory requirements?",
+    "question": "Which of the following Azure services is used to monitor Azure resources to ensure new and existing deployments are in compliance with the organization\u2019s standards and regulatory requirements?",
     "options": [
       "Azure Firewall",
       "Azure Policy",
@@ -761,7 +761,7 @@
       "Azure RBAC"
     ],
     "correctAnswer": 1,
-    "explanation": "Azure Policy continuously monitors Azure resources to ensure compliance. The evaluation and reporting cycle is every 24 hours. See “What is Azure Policy?” https://docs.microsoft.com/en-us/azure/governance/policy/overview",
+    "explanation": "Azure Policy continuously monitors Azure resources to ensure compliance. The evaluation and reporting cycle is every 24 hours. See \u201cWhat is Azure Policy?\u201d https://docs.microsoft.com/en-us/azure/governance/policy/overview",
     "topic": "security-concepts"
   },
   {
@@ -774,7 +774,7 @@
       "Microsoft Cloud Adoption Framework"
     ],
     "correctAnswer": 3,
-    "explanation": "The Microsoft Cloud Adoption Framework includes strategy and planning resources, migration guides, a cloud journey tracker, and many other resources to support a strong security posture in all phases of Azure migration and adoption. See “Microsoft Cloud Adoption Framework for Azure” https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/",
+    "explanation": "The Microsoft Cloud Adoption Framework includes strategy and planning resources, migration guides, a cloud journey tracker, and many other resources to support a strong security posture in all phases of Azure migration and adoption. See \u201cMicrosoft Cloud Adoption Framework for Azure\u201d https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/",
     "topic": "security-concepts"
   },
   {
@@ -787,7 +787,7 @@
       "None of these"
     ],
     "correctAnswer": 2,
-    "explanation": "Advanced Audit helps organizations to conduct forensic and compliance investigations by increasing audit log retention required to conduct an investigation, providing access to crucial events that help determine scope of compromise, and faster access to Office 365 Management Activity API. See “Advanced audit in Microsoft 365” https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide.",
+    "explanation": "Advanced Audit helps organizations to conduct forensic and compliance investigations by increasing audit log retention required to conduct an investigation, providing access to crucial events that help determine scope of compromise, and faster access to Office 365 Management Activity API. See \u201cAdvanced audit in Microsoft 365\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide.",
     "topic": "compliance"
   },
   {
@@ -800,7 +800,7 @@
       "Log Analytics"
     ],
     "correctAnswer": 2,
-    "explanation": "You can use the Microsoft Purview compliance portal to search the unified audit log to view user and administrator activity in your organization. See “Search the audit log in the compliance center” https://docs.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide.",
+    "explanation": "You can use the Microsoft Purview compliance portal to search the unified audit log to view user and administrator activity in your organization. See \u201cSearch the audit log in the compliance center\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide.",
     "topic": "compliance"
   },
   {
@@ -812,7 +812,7 @@
       "To enable Microsoft Support engineers to identify unprotected data sources that contain sensitive account data in your tenant."
     ],
     "correctAnswer": 1,
-    "explanation": "eDiscovery is the process of identifying and delivering electronic information that can be used as evidence in legal cases. See “eDiscovery solutions in Microsoft Purview” https://docs.microsoft.com/en-us/microsoft-365/compliance/ediscovery?view=o365-worldwide.",
+    "explanation": "eDiscovery is the process of identifying and delivering electronic information that can be used as evidence in legal cases. See \u201ceDiscovery solutions in Microsoft Purview\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/ediscovery?view=o365-worldwide.",
     "topic": "security-concepts"
   },
   {
@@ -838,7 +838,7 @@
       "eDiscovery"
     ],
     "correctAnswer": 2,
-    "explanation": "Information barriers in Microsoft 365 is designed to prevent communication between groups, business units, or individuals that may results in a conflict of interest or regulatory breach. See “Learn about information barriers in Microsoft 365” https://docs.microsoft.com/en-us/microsoft-365/compliance/information-barriers?view=o365-worldwide",
+    "explanation": "Information barriers in Microsoft 365 is designed to prevent communication between groups, business units, or individuals that may results in a conflict of interest or regulatory breach. See \u201cLearn about information barriers in Microsoft 365\u201d https://docs.microsoft.com/en-us/microsoft-365/compliance/information-barriers?view=o365-worldwide",
     "topic": "compliance"
   },
   {
@@ -851,7 +851,7 @@
       "Insider risk management"
     ],
     "correctAnswer": 3,
-    "explanation": "Insider risk management helps minimize internal risks by enabling you to detect, investigate, and act on malicious and inadvertent activities in your organization. Insider risk policies allow you to define the types of risks to identify and detect in your organization, including acting on cases and escalating cases to Microsoft Advanced eDiscovery if needed. See “Learn about insider risk management in Microsoft 365”: https://docs.microsoft.com/en-us/microsoft-365/compliance/insider-risk-management?view=o365-worldwide",
+    "explanation": "Insider risk management helps minimize internal risks by enabling you to detect, investigate, and act on malicious and inadvertent activities in your organization. Insider risk policies allow you to define the types of risks to identify and detect in your organization, including acting on cases and escalating cases to Microsoft Advanced eDiscovery if needed. See \u201cLearn about insider risk management in Microsoft 365\u201d: https://docs.microsoft.com/en-us/microsoft-365/compliance/insider-risk-management?view=o365-worldwide",
     "topic": "security-concepts"
   },
   {
@@ -863,7 +863,7 @@
       "Compliance Manager is an end-to-end solution in Microsoft Purview compliance portal to enable admins to manage and track compliance activities. Compliance score is a calculation of the overall compliance posture across the organization."
     ],
     "correctAnswer": 2,
-    "explanation": "Compliance Manager provides admins with the capabilities to understand and improve their compliance score so that they can ultimately improve the organization’s compliance posture and help it to stay in line with its compliance requirements",
+    "explanation": "Compliance Manager provides admins with the capabilities to understand and improve their compliance score so that they can ultimately improve the organization\u2019s compliance posture and help it to stay in line with its compliance requirements",
     "topic": "compliance"
   },
   {
@@ -893,7 +893,7 @@
   },
   {
     "id": 71,
-    "question": "Which of the following tools help to deliver intelligent, automated, and integrated security across an organization’s domains, such as identities, endpoints, applications, and email?",
+    "question": "Which of the following tools help to deliver intelligent, automated, and integrated security across an organization\u2019s domains, such as identities, endpoints, applications, and email?",
     "options": [
       "SAML",
       "SOAR",
@@ -901,7 +901,7 @@
       "SIEM"
     ],
     "correctAnswer": 2,
-    "explanation": "An XDR system is designed to deliver intelligent, automated, and integrated security across an organization’s domain. It helps prevent, detect, and respond to threats across identities, endpoints, applications, email, IoT, infrastructure, and cloud platforms.",
+    "explanation": "An XDR system is designed to deliver intelligent, automated, and integrated security across an organization\u2019s domain. It helps prevent, detect, and respond to threats across identities, endpoints, applications, email, IoT, infrastructure, and cloud platforms.",
     "topic": "security-concepts"
   },
   {
@@ -914,7 +914,7 @@
       "None of the above"
     ],
     "correctAnswer": 0,
-    "explanation": "Cloud security posture management (CSPM) includes foundational (think “Free tier”) features like secure score, detection of security misconfigurations in your Azure workloads, and asset inventory.",
+    "explanation": "Cloud security posture management (CSPM) includes foundational (think \u201cFree tier\u201d) features like secure score, detection of security misconfigurations in your Azure workloads, and asset inventory.",
     "topic": "azure-security"
   },
   {
@@ -927,7 +927,7 @@
       "Microsoft Defender"
     ],
     "correctAnswer": 3,
-    "explanation": "Microsoft Defender provides a single portal for monitoring Azure and hybrid cloud workload protection and security. Microsoft Defender includes extended detection and response (XDR) capabilities, and intelligent protection for VMs, web app instances, cloud databases, cloud storage, and more. See “What resource types can Microsoft Defender secure?”",
+    "explanation": "Microsoft Defender provides a single portal for monitoring Azure and hybrid cloud workload protection and security. Microsoft Defender includes extended detection and response (XDR) capabilities, and intelligent protection for VMs, web app instances, cloud databases, cloud storage, and more. See \u201cWhat resource types can Microsoft Defender secure?\u201d",
     "topic": "azure-security"
   },
   {
@@ -1004,7 +1004,7 @@
       "Microsoft Defender for Office 365"
     ],
     "correctAnswer": 0,
-    "explanation": "See “What is Microsoft Defender for Identity?”See \"What is Microsoft Defender for Identity?\" https://docs.microsoft.com/en-us/defender-for-identity/what-is",
+    "explanation": "See \u201cWhat is Microsoft Defender for Identity?\u201dSee \"What is Microsoft Defender for Identity?\" https://docs.microsoft.com/en-us/defender-for-identity/what-is",
     "topic": "azure-security"
   },
   {
@@ -1017,7 +1017,7 @@
       "Brute force attack"
     ],
     "correctAnswer": 2,
-    "explanation": "A phishing attack is when a hacker sends an email that appears to come from a reputable source. The email contains a credible story, such as a security breach, instructing the user to sign in and change their password. Instead of going to a legitimate website, the user is directed to the scammer’s website where they enter their username and password. A spear phishing attack is a more sophisticated attack designed to target a specific user or group of users.",
+    "explanation": "A phishing attack is when a hacker sends an email that appears to come from a reputable source. The email contains a credible story, such as a security breach, instructing the user to sign in and change their password. Instead of going to a legitimate website, the user is directed to the scammer\u2019s website where they enter their username and password. A spear phishing attack is a more sophisticated attack designed to target a specific user or group of users.",
     "topic": "identity"
   },
   {
@@ -1030,7 +1030,7 @@
       "Native support for mobile devices, SaaS, and line of business (LOB) apps that require modern authentication methods."
     ],
     "correctAnswer": 3,
-    "explanation": "Active Directory (AD) is a set of directory services developed by Microsoft as part of Windows 2000 for on-premises domain-based networks. It stores information about members of the domain, including devices and users, verifies their credentials, and defines their access rights. However, it does not natively support mobile devices, SaaS, and line of business (LOB) apps that require modern authentication methods. See “Describe the concept of directory services and active directory” https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/6-describe-concept-of-directory-services-active-directory.",
+    "explanation": "Active Directory (AD) is a set of directory services developed by Microsoft as part of Windows 2000 for on-premises domain-based networks. It stores information about members of the domain, including devices and users, verifies their credentials, and defines their access rights. However, it does not natively support mobile devices, SaaS, and line of business (LOB) apps that require modern authentication methods. See \u201cDescribe the concept of directory services and active directory\u201d https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/6-describe-concept-of-directory-services-active-directory.",
     "topic": "identity"
   },
   {
@@ -1043,7 +1043,7 @@
       "Managed identities"
     ],
     "correctAnswer": 1,
-    "explanation": "In Azure AD, an identity provider maintains and manages identity information while providing authentication services to applications. See “Add an identity provider to your Entra ID B2C tenant” https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider",
+    "explanation": "In Azure AD, an identity provider maintains and manages identity information while providing authentication services to applications. See \u201cAdd an identity provider to your Entra ID B2C tenant\u201d https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider",
     "topic": "identity"
   },
   {
@@ -1156,5 +1156,525 @@
     "correctAnswer": 3,
     "explanation": "Entra Permissions Management is a cloud infrastructure entitlement management (CIEM) solution that can assess permission risks by evaluating the gap between permissions granted and permissions used. It supports cross-cloud permissions discovery (Azure, AWS, GCP). Read more in \"Microsoft Entra Permissions Management Quickstart Guide\"",
     "topic": "security-concepts"
+  },
+  {
+    "id": 92,
+    "question": "What is the guiding principle of Zero Trust?",
+    "options": [
+      "Always trust internal traffic",
+      "Never trust, always verify",
+      "Verify after access is granted",
+      "Trust but verify"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Zero Trust follows the principle of 'never trust, always verify' - every access request is treated as a potential threat regardless of origin.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 93,
+    "question": "The principle of Least Privilege Access includes which of the following?",
+    "options": [
+      "Conditional Access policies",
+      "Just-In-Time (JIT) and Just-Enough-Access (JEA)",
+      "Multi-factor authentication",
+      "Role-based access control (RBAC)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Least Privilege Access is implemented through Just-In-Time (JIT) and Just-Enough-Access (JEA) to ensure users have only the access they need for only as long as needed.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 94,
+    "question": "According to the shared responsibility model, who owns and is responsible for data and identities in all cloud deployment models?",
+    "options": [
+      "The customer",
+      "It depends on the specific cloud model",
+      "Both customer and provider share equal responsibility",
+      "The cloud service provider"
+    ],
+    "correctAnswer": 0,
+    "explanation": "In all cloud models (SaaS, PaaS, IaaS), the customer always owns and is responsible for their data and identities.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 95,
+    "question": "In an IaaS deployment, who manages the guest operating system and applications?",
+    "options": [
+      "Both customer and provider",
+      "The customer",
+      "The cloud service provider",
+      "A third-party managed service provider"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In IaaS, the cloud provider manages the physical infrastructure while the customer manages the guest OS, applications, and network controls.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 96,
+    "question": "Which principle of the CIA triad ensures data is accurate and not tampered with by unauthorized users?",
+    "options": [
+      "Integrity",
+      "Availability",
+      "Non-repudiation",
+      "Confidentiality"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Integrity ensures data is accurate, consistent, and not tampered with by unauthorized users.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 97,
+    "question": "What is the concept of Defense in Depth?",
+    "options": [
+      "Multiple layered security mechanisms",
+      "Using only physical security controls",
+      "Encrypting all data in transit",
+      "A single strong perimeter defense"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Defense in Depth uses multiple layered security mechanisms - if one layer fails, another layer provides protection.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 98,
+    "question": "What is the process of verifying a user's identity by checking credentials called?",
+    "options": [
+      "Single Sign-On",
+      "Authentication",
+      "Authorization",
+      "Federation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Authentication is the process of verifying identity by checking credentials such as passwords, biometrics, or security tokens.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 99,
+    "question": "In the shared responsibility model, who is responsible for the physical security of datacenters?",
+    "options": [
+      "Both customer and cloud provider",
+      "A third-party security firm",
+      "The customer",
+      "The cloud provider"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Physical security of datacenters is always the cloud provider's responsibility, even in an IaaS deployment.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 100,
+    "question": "What is a sovereign cloud designed to address?",
+    "options": [
+      "Global scalability and performance",
+      "Cost optimization for cloud resources",
+      "Specific regulatory and data residency requirements",
+      "Open-source technology adoption"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Sovereign clouds like Azure Government meet specific regulatory and data residency requirements for government and regulated industries.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 101,
+    "question": "The Zero Trust principle of 'Assume Breach' minimizes which of the following?",
+    "options": [
+      "Network latency",
+      "Compliance overhead",
+      "Attack surface",
+      "Blast radius"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Assume Breach minimizes blast radius through micro-segmentation and continuous monitoring, limiting the impact of a potential breach.",
+    "topic": "security-concepts"
+  },
+  {
+    "id": 102,
+    "question": "What is Microsoft Entra ID (formerly Azure Active Directory)?",
+    "options": [
+      "A DNS management service",
+      "A cloud-based identity and access management service",
+      "A virtual private network service",
+      "An on-premises directory service for Windows networks"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Microsoft Entra ID is a cloud-based identity and access management service that provides authentication and authorization for Microsoft cloud services.",
+    "topic": "identity"
+  },
+  {
+    "id": 103,
+    "question": "What does Single Sign-On (SSO) allow users to do?",
+    "options": [
+      "Access resources without any authentication",
+      "Share credentials with other users",
+      "Sign in once and access multiple applications without re-authenticating",
+      "Use multiple passwords for different applications"
+    ],
+    "correctAnswer": 2,
+    "explanation": "SSO allows users to sign in once and access multiple applications and services without being prompted to re-authenticate.",
+    "topic": "identity"
+  },
+  {
+    "id": 104,
+    "question": "Which of the following is considered the most secure authentication method?",
+    "options": [
+      "Security questions",
+      "SMS-based verification",
+      "Password with MFA",
+      "Passwordless (Windows Hello, FIDO2)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Passwordless methods such as Windows Hello and FIDO2 are phishing-resistant and provide the highest level of authentication security.",
+    "topic": "identity"
+  },
+  {
+    "id": 105,
+    "question": "What does Conditional Access in Microsoft Entra ID enforce?",
+    "options": [
+      "Network firewall rules",
+      "Data encryption requirements",
+      "Policies based on signals such as location, device health, and risk",
+      "Password complexity rules"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Conditional Access enforces policies based on signals like user location, device health, and risk level to grant or deny access.",
+    "topic": "identity"
+  },
+  {
+    "id": 106,
+    "question": "What is the purpose of Self-Service Password Reset (SSPR) in Microsoft Entra ID?",
+    "options": [
+      "To require IT admin approval for all password changes",
+      "To allow users to reset their own passwords without IT intervention",
+      "To enforce password expiration policies",
+      "To synchronize passwords with on-premises AD"
+    ],
+    "correctAnswer": 1,
+    "explanation": "SSPR enables users to reset or change their own passwords without requiring IT administrator intervention.",
+    "topic": "identity"
+  },
+  {
+    "id": 107,
+    "question": "What do Managed Identities in Azure provide?",
+    "options": [
+      "Database backup services",
+      "User password management",
+      "Network security monitoring",
+      "Authentication for Azure resources without managing credentials"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Managed Identities allow Azure resources to authenticate to other Azure services without managing credentials in code.",
+    "topic": "identity"
+  },
+  {
+    "id": 108,
+    "question": "What does Privileged Identity Management (PIM) provide?",
+    "options": [
+      "Just-In-Time access for administrative roles",
+      "Data loss prevention",
+      "Network security management",
+      "Basic user authentication"
+    ],
+    "correctAnswer": 0,
+    "explanation": "PIM provides Just-In-Time access for administrative roles with time-bound activation and approval workflows.",
+    "topic": "identity"
+  },
+  {
+    "id": 109,
+    "question": "What does Microsoft Entra Identity Protection detect and remediate?",
+    "options": [
+      "Identity-based risks such as leaked credentials and risky sign-ins",
+      "Data exfiltration",
+      "Network attacks",
+      "Malware infections"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Identity Protection detects, investigates, and remediates identity-based risks such as leaked credentials and suspicious sign-in activities.",
+    "topic": "identity"
+  },
+  {
+    "id": 110,
+    "question": "What can a Global Administrator manage in Microsoft Entra ID?",
+    "options": [
+      "Only application registrations",
+      "Only billing information",
+      "All aspects of Microsoft Entra ID and Microsoft services",
+      "Only user passwords"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Global Administrator role can manage all aspects of Microsoft Entra ID and Microsoft cloud services.",
+    "topic": "identity"
+  },
+  {
+    "id": 111,
+    "question": "What is a Service Principal in Microsoft Entra ID?",
+    "options": [
+      "A user account for employees",
+      "The local identity for a specific application instance",
+      "A security group for administrators",
+      "A device identity for workstations"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A Service Principal is the local identity for a specific application instance in Microsoft Entra ID, used for authentication and authorization.",
+    "topic": "identity"
+  },
+  {
+    "id": 112,
+    "question": "What is Microsoft Sentinel?",
+    "options": [
+      "A firewall service",
+      "An identity management service",
+      "A data backup service",
+      "A cloud-native SIEM (Security Information and Event Management) solution"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Microsoft Sentinel is a cloud-native SIEM solution that provides security information and event management across the enterprise.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 113,
+    "question": "What does Microsoft Defender for Endpoint protect?",
+    "options": [
+      "Only cloud storage",
+      "Database servers only",
+      "Only email communications",
+      "Laptops, servers, and mobile devices from advanced threats"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Microsoft Defender for Endpoint protects endpoints including laptops, servers, and mobile devices from advanced persistent threats.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 114,
+    "question": "What does Microsoft Defender for Identity monitor?",
+    "options": [
+      "On-premises Active Directory signals to detect compromised accounts",
+      "Email messages for phishing",
+      "Network traffic for intrusion attempts",
+      "Cloud application usage"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Defender for Identity monitors on-premises Active Directory signals to detect compromised accounts and malicious activities.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 115,
+    "question": "What does Microsoft Defender for Cloud provide?",
+    "options": [
+      "User identity management",
+      "Database administration",
+      "Email security",
+      "Cloud Security Posture Management (CSPM)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Defender for Cloud provides Cloud Security Posture Management (CSPM) for continuous assessment and improvement of security posture across cloud workloads.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 116,
+    "question": "What does the Secure Score measure?",
+    "options": [
+      "User productivity",
+      "Network bandwidth usage",
+      "Security posture - a higher score means lower identified risk",
+      "Cloud spending"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Secure Score measures security posture based on completed improvement actions - a higher score indicates lower identified risk.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 117,
+    "question": "What is Azure Web Application Firewall (WAF)?",
+    "options": [
+      "A managed Layer 7 firewall protecting web applications from OWASP threats",
+      "An email filtering service",
+      "A network firewall",
+      "A DNS filtering service"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Azure WAF is a managed Layer 7 firewall that protects web applications from common OWASP top-10 threats with SSL termination.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 118,
+    "question": "What does Azure DDoS Protection protect?",
+    "options": [
+      "Email communications",
+      "On-premises servers only",
+      "Azure resources from Distributed Denial of Service attacks",
+      "User identities"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Azure DDoS Protection protects Azure resources from Distributed Denial of Service (DDoS) attacks by monitoring and mitigating attack traffic.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 119,
+    "question": "What is Azure Bastion?",
+    "options": [
+      "A service providing secure RDP/SSH access to VMs via web browser over SSL",
+      "A load balancer",
+      "A VPN gateway",
+      "A DNS service"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Azure Bastion provides secure and seamless RDP/SSH access to virtual machines directly through the Azure portal over SSL.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 120,
+    "question": "What is Microsoft Defender for Cloud Apps?",
+    "options": [
+      "A backup service",
+      "Microsoft's Cloud Access Security Broker (CASB) solution",
+      "A firewall service",
+      "An identity management service"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Defender for Cloud Apps is Microsoft's Cloud Access Security Broker (CASB) solution providing visibility and control over cloud applications.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 121,
+    "question": "What does Microsoft Defender for Office 365 Safe Links provide?",
+    "options": [
+      "Email encryption",
+      "Time-of-click protection against malicious URLs",
+      "Spam filtering",
+      "Mailbox storage management"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Safe Links provides time-of-click protection against malicious URLs in emails and Office documents.",
+    "topic": "azure-security"
+  },
+  {
+    "id": 122,
+    "question": "What does the Service Trust Portal provide?",
+    "options": [
+      "User identity management",
+      "Cloud billing management",
+      "Application development tools",
+      "Access to Microsoft audit reports and compliance documentation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Service Trust Portal provides access to Microsoft's audit reports, compliance documentation, and data protection resources.",
+    "topic": "compliance"
+  },
+  {
+    "id": 123,
+    "question": "What does Microsoft Purview manage?",
+    "options": [
+      "Only email communications",
+      "User identities",
+      "Network infrastructure",
+      "Data governance, compliance, and risk across the data estate"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Microsoft Purview manages data governance, compliance, and risk across the entire data estate including on-premises, multicloud, and SaaS.",
+    "topic": "compliance"
+  },
+  {
+    "id": 124,
+    "question": "What do Sensitivity Labels in Microsoft Purview do?",
+    "options": [
+      "Delete old data",
+      "Classify and encrypt content - labels persist even if data leaves the organization",
+      "Manage user permissions",
+      "Monitor network traffic"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sensitivity Labels classify and encrypt content with persistent protection - labels travel with data even when it leaves the organization.",
+    "topic": "compliance"
+  },
+  {
+    "id": 125,
+    "question": "What does Data Loss Prevention (DLP) in Microsoft Purview prevent?",
+    "options": [
+      "Users from sharing sensitive information outside the organization",
+      "Network outages",
+      "Hardware failures",
+      "Software bugs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "DLP prevents users from unintentionally sharing sensitive information such as credit card numbers or personal data outside the organization.",
+    "topic": "compliance"
+  },
+  {
+    "id": 126,
+    "question": "What does eDiscovery in Microsoft Purview identify?",
+    "options": [
+      "Electronic information usable as evidence in legal cases",
+      "Network performance issues",
+      "Hardware inventory",
+      "User productivity metrics"
+    ],
+    "correctAnswer": 0,
+    "explanation": "eDiscovery identifies and delivers electronic information that can be used as evidence in legal cases and investigations.",
+    "topic": "compliance"
+  },
+  {
+    "id": 127,
+    "question": "What does Insider Risk Management in Microsoft Purview detect?",
+    "options": [
+      "Malicious and inadvertent activities such as data theft and policy violations",
+      "Hardware failures",
+      "Software licensing issues",
+      "External network attacks"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Insider Risk Management detects and acts on malicious or inadvertent insider activities like data theft, policy violations, and data leaks.",
+    "topic": "compliance"
+  },
+  {
+    "id": 128,
+    "question": "What do Retention Policies in Microsoft Purview determine?",
+    "options": [
+      "How long data is kept and when it should be deleted",
+      "Which users can access data",
+      "How data is encrypted",
+      "Where data is stored geographically"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Retention Policies determine how long content is retained and when it should be permanently deleted to meet compliance requirements.",
+    "topic": "compliance"
+  },
+  {
+    "id": 129,
+    "question": "What does Customer Lockbox ensure in Microsoft 365?",
+    "options": [
+      "Users can access all tenant data",
+      "Data is automatically encrypted",
+      "Microsoft cannot access customer content for service operations without explicit approval",
+      "All external sharing is blocked"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Customer Lockbox ensures Microsoft support engineers cannot access your content for service operations without your explicit approval.",
+    "topic": "compliance"
+  },
+  {
+    "id": 130,
+    "question": "What do Sensitive Information Types (SITs) in Microsoft Purview identify?",
+    "options": [
+      "Sensitive data using regex patterns, keywords, and functions",
+      "File formats",
+      "Storage locations",
+      "User permissions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Sensitive Information Types use regex patterns, keywords, and functions to identify sensitive data like credit card numbers and social security numbers.",
+    "topic": "compliance"
+  },
+  {
+    "id": 131,
+    "question": "What does Compliance Manager in Microsoft Purview calculate?",
+    "options": [
+      "Data storage costs",
+      "A compliance score based on completed improvement actions",
+      "User training completion rates",
+      "Network uptime"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Compliance Manager calculates a compliance score based on the implementation of recommended improvement actions for regulatory standards.",
+    "topic": "compliance"
   }
 ]

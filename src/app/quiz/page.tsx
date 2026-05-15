@@ -3,8 +3,8 @@
 import { useEffect, useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import allQuestions from "@/lib/questions.json";
 import type { Question } from "@/lib/api";
-import { fetchQuestions } from "@/lib/api";
 import { saveQuizRecord, addMissedQuestions, recordAttempt } from "@/lib/storage";
 import { shuffleArray, dateSeed } from "@/lib/random";
 import QuestionCard from "@/components/QuestionCard";
@@ -19,6 +19,28 @@ const TOPIC_LABELS: Record<string, string> = {
   "azure-security": "Azure Security",
 };
 
+function fisherYates<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function shuffleOptions(q: Question): Question {
+  const paired = q.options.map((opt, i) => ({ opt, i }));
+  for (let i = paired.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [paired[i], paired[j]] = [paired[j], paired[i]];
+  }
+  return {
+    ...q,
+    options: paired.map(p => p.opt),
+    correctAnswer: paired.findIndex(p => p.i === q.correctAnswer),
+  };
+}
+
 function QuizContent() {
   const searchParams = useSearchParams();
   const topic = searchParams.get("topic") || "";
@@ -32,25 +54,16 @@ function QuizContent() {
   const [phase, setPhase] = useState<"quiz" | "review">("quiz");
   const daily = searchParams.get("daily") === "true";
 
+  const qs = allQuestions as Question[];
+
   useEffect(() => {
-    let cancelled = false;
-    const load = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const all = topic ? await fetchQuestions(topic) : await fetchQuestions();
-        const shuffled = daily
-          ? shuffleArray(all, dateSeed())
-          : all.sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, Math.min(count, shuffled.length));
-        if (!cancelled) setQuestions(selected);
-      } catch (e: unknown) {
-        if (!cancelled) setError(e instanceof Error ? e.message : "Failed to load");
-      }
-      if (!cancelled) setLoading(false);
-    };
-    load();
-    return () => { cancelled = true; };
+    setLoading(true);
+    setError(null);
+    const all = topic ? qs.filter((q) => q.topic === topic) : qs;
+    const shuffled = daily ? shuffleArray(all, dateSeed()) : fisherYates(all);
+    const selected = shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
+    setQuestions(selected);
+    setLoading(false);
   }, [topic, count, daily]);
 
   const handleSelect = (optionIndex: number) => {

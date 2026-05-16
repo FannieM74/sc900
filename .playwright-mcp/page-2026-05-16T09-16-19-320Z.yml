@@ -1,0 +1,40 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e14]:
+      - link "← Quit" [ref=e15] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e16]: · 1/10
+    - generic [ref=e18]:
+      - generic [ref=e19]: Question 2 of 10
+      - generic [ref=e20]: 1 answered
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Question 25
+          - generic [ref=e27]: Identity
+        - button "Bookmark question" [ref=e29]: ☆
+      - heading "The probability that a given authentication request is not a request by the identity owner is referred to as \"user risk\"." [level=2] [ref=e55]
+      - generic [ref=e31]:
+        - button "A TRUE" [ref=e56]:
+          - generic [ref=e33]: A
+          - text: "TRUE"
+        - button "B FALSE" [ref=e57]:
+          - generic [ref=e35]: B
+          - text: "FALSE"
+    - generic [ref=e40]:
+      - button "← Previous" [ref=e41]
+      - button "Next →" [active] [ref=e42]
+    - generic [ref=e43]:
+      - button [ref=e44]
+      - button [ref=e45]
+      - button [ref=e46]
+      - button [ref=e47]
+      - button [ref=e48]
+      - button [ref=e49]
+      - button [ref=e50]
+      - button [ref=e51]
+      - button [ref=e52]
+      - button [ref=e53]
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]

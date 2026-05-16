@@ -1,0 +1,13 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - heading "📈 Analysis" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Performance trends, topic breakdown, and specific questions to study.
+    - generic [ref=e7]:
+      - paragraph [ref=e8]: No quiz data yet
+      - paragraph [ref=e9]: Complete a quiz to start tracking your progress.
+      - link "Take a Quiz" [ref=e10] [cursor=pointer]:
+        - /url: /
+  - button "Open Next.js Dev Tools" [ref=e16] [cursor=pointer]:
+    - img [ref=e17]

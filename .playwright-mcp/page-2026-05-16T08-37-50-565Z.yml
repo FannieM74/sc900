@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "← Quit" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]: · 0/10
+    - generic [ref=e8]:
+      - generic [ref=e9]: Question 1 of 10
+      - generic [ref=e10]: 0 answered
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Question 9
+          - generic [ref=e17]: Security Concepts
+        - button "Bookmark question" [ref=e19]: ☆
+      - heading "The act of granting an authenticated party permission to do something is:" [level=2] [ref=e20]
+      - generic [ref=e21]:
+        - button "A Single Sign-On" [ref=e22]:
+          - generic [ref=e23]: A
+          - text: Single Sign-On
+        - button "B Authentication" [ref=e24]:
+          - generic [ref=e25]: B
+          - text: Authentication
+        - button "C Authorization" [ref=e26]:
+          - generic [ref=e27]: C
+          - text: Authorization
+        - button "D Zero Trust Security" [ref=e28]:
+          - generic [ref=e29]: D
+          - text: Zero Trust Security
+    - generic [ref=e30]:
+      - button "← Previous" [disabled] [ref=e31]
+      - button "Next →" [ref=e32]
+    - generic [ref=e33]:
+      - button [ref=e34]
+      - button [ref=e35]
+      - button [ref=e36]
+      - button [ref=e37]
+      - button [ref=e38]
+      - button [ref=e39]
+      - button [ref=e40]
+      - button [ref=e41]
+      - button [ref=e42]
+      - button [ref=e43]
+  - button "Open Next.js Dev Tools" [ref=e49] [cursor=pointer]:
+    - img [ref=e50]
+  - alert [ref=e53]

@@ -1,0 +1,12 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - heading "❓ Flagged Questions" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: No flagged questions
+      - paragraph [ref=e8]: Flag questions that seem incorrect during review to check them later.
+      - link "Home" [ref=e9] [cursor=pointer]:
+        - /url: /
+  - button "Open Next.js Dev Tools" [ref=e15] [cursor=pointer]:
+    - img [ref=e16]

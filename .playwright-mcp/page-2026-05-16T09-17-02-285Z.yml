@@ -1,0 +1,13 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - heading "★ Bookmarks" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: No bookmarked questions yet
+      - paragraph [ref=e8]: Star questions during the quiz to save them here
+      - link "Start Quiz" [ref=e9] [cursor=pointer]:
+        - /url: /quiz
+  - button "Open Next.js Dev Tools" [ref=e15] [cursor=pointer]:
+    - img [ref=e16]
+  - alert [ref=e19]

@@ -1,0 +1,18 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - heading "📊 Quiz History" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: No quiz history yet
+      - paragraph [ref=e8]: Complete a quiz to see your scores here
+      - link "Start Quiz" [ref=e9] [cursor=pointer]:
+        - /url: /quiz
+    - generic [ref=e10]:
+      - link "New Quiz" [ref=e11] [cursor=pointer]:
+        - /url: /quiz
+      - link "Home" [ref=e12] [cursor=pointer]:
+        - /url: /
+  - button "Open Next.js Dev Tools" [ref=e18] [cursor=pointer]:
+    - img [ref=e19]
+  - alert [ref=e22]

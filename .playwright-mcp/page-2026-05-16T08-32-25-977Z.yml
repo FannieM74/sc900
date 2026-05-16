@@ -1,0 +1,45 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "← Quit" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]: · 0/10
+    - generic [ref=e8]:
+      - generic [ref=e9]: Question 1 of 10
+      - generic [ref=e10]: 0 answered
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Question 50
+          - generic [ref=e17]: Compliance
+        - button "Bookmark question" [ref=e19]: ☆
+      - heading "Retention policies are used to assign the same retention settings to content at a __________ level or __________ level." [level=2] [ref=e20]
+      - generic [ref=e21]:
+        - button "A document, site" [ref=e22]:
+          - generic [ref=e23]: A
+          - text: document, site
+        - button "B site, mailbox" [ref=e24]:
+          - generic [ref=e25]: B
+          - text: site, mailbox
+        - button "C Exchange (all mailboxes only), SharePoint, OneDrive" [ref=e26]:
+          - generic [ref=e27]: C
+          - text: Exchange (all mailboxes only), SharePoint, OneDrive
+        - button "D document, mailbox" [ref=e28]:
+          - generic [ref=e29]: D
+          - text: document, mailbox
+    - generic [ref=e30]:
+      - button "← Previous" [disabled] [ref=e31]
+      - button "Next →" [ref=e32]
+    - generic [ref=e33]:
+      - button [ref=e34]
+      - button [ref=e35]
+      - button [ref=e36]
+      - button [ref=e37]
+      - button [ref=e38]
+      - button [ref=e39]
+      - button [ref=e40]
+      - button [ref=e41]
+      - button [ref=e42]
+      - button [ref=e43]
+  - button "Open Next.js Dev Tools" [ref=e49] [cursor=pointer]:
+    - img [ref=e50]

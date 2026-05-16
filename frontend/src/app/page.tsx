@@ -125,10 +125,10 @@ export default function HomePage() {
               <Link
                 key={key}
                 href={`/quiz?topic=${key}&count=131`}
-                className="flex items-center justify-between p-3 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                className="flex flex-col items-center gap-1 p-3 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors text-center"
               >
                 <TopicBadge topic={key} />
-                <span className="text-sm text-gray-500">{cnt} questions</span>
+                <span className="text-xs text-gray-400">{cnt} questions</span>
               </Link>
             ))}
           </div>

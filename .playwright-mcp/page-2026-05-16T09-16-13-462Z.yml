@@ -1,0 +1,46 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e14]:
+      - link "← Quit" [ref=e15] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e16]: · 1/10
+    - generic [ref=e18]:
+      - generic [ref=e19]: Question 1 of 10
+      - generic [ref=e20]: 1 answered
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Question 104
+          - generic [ref=e27]: Identity
+        - button "Bookmark question" [ref=e29]: ☆
+      - heading "Which of the following is considered the most secure authentication method?" [level=2] [ref=e30]
+      - generic [ref=e31]:
+        - button "A SMS-based verification" [active] [ref=e32]:
+          - generic [ref=e33]: A
+          - text: SMS-based verification
+        - button "B Passwordless (Windows Hello, FIDO2)" [ref=e34]:
+          - generic [ref=e35]: B
+          - text: Passwordless (Windows Hello, FIDO2)
+        - button "C Security questions" [ref=e36]:
+          - generic [ref=e37]: C
+          - text: Security questions
+        - button "D Password with MFA" [ref=e38]:
+          - generic [ref=e39]: D
+          - text: Password with MFA
+    - generic [ref=e40]:
+      - button "← Previous" [disabled] [ref=e41]
+      - button "Next →" [ref=e42]
+    - generic [ref=e43]:
+      - button [ref=e44]
+      - button [ref=e45]
+      - button [ref=e46]
+      - button [ref=e47]
+      - button [ref=e48]
+      - button [ref=e49]
+      - button [ref=e50]
+      - button [ref=e51]
+      - button [ref=e52]
+      - button [ref=e53]
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]

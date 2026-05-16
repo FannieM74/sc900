@@ -1,0 +1,2275 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]:
+      - heading "📖 Study Mode" [level=1] [ref=e6]
+      - combobox [ref=e7]:
+        - option "All Topics" [selected]
+        - option "Security Concepts"
+        - option "Identity"
+        - option "Azure Security"
+        - option "Compliance"
+    - paragraph [ref=e8]: 131 questions
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: According to the shared responsibility model, which of the following computing models places the most responsibility on the cloud service provider (CSP)?
+        - generic [ref=e13]: Security Concepts
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: A.
+            - text: Private Cloud
+          - generic [ref=e17]:
+            - generic [ref=e18]: B.
+            - text: IaaS
+          - generic [ref=e19]:
+            - generic [ref=e20]: C.
+            - text: PaaS
+          - generic [ref=e21]:
+            - generic [ref=e22]: D.
+            - text: SaaS✓ Correct
+        - generic [ref=e23]: The SaaS model, implemented by services such as Office 365, the cloud service provider takes on service management responsibilities beyond configuring the customers desired user data and device configuration settings.
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: To implement a defense in-depth security methodology, which of the given measures will an organization implement?
+        - generic [ref=e27]: Security Concepts
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: A.
+            - text: A corporate network with no segmentation.
+          - generic [ref=e31]:
+            - generic [ref=e32]: B.
+            - text: Multi-factor authentication for all users.✓ Correct
+          - generic [ref=e33]:
+            - generic [ref=e34]: C.
+            - text: Locating all its servers in a single physical location.
+          - generic [ref=e35]:
+            - generic [ref=e36]: D.
+            - text: All of these
+        - generic [ref=e37]: Distributing the physical location of servers provides added security at the physical layer by mitigating the risk that may come from outages caused by fire, hurricanes, and other disasters. Splitting a network up into multiple sub-networks provides better layered security and is an example of defense in depth at the network layer.
+      - generic [ref=e38]:
+        - paragraph [ref=e39]: Which of the following cyber-attacks aims to exhaust an application's resources, making the application unavailable to legitimate users?
+        - generic [ref=e41]: Security Concepts
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]: A.
+            - text: Dictionary attack
+          - generic [ref=e45]:
+            - generic [ref=e46]: B.
+            - text: SQL Injection
+          - generic [ref=e47]:
+            - generic [ref=e48]: C.
+            - text: Distributed Denial of Service (DDoS)✓ Correct
+          - generic [ref=e49]:
+            - generic [ref=e50]: D.
+            - text: Ransomware
+        - generic [ref=e51]: A distributed denial of service (DDoS) attack is a disruptive attack that attempts to exhaust an application's resources, making the application unavailable to legitimate users. DDoS attacks can target at any endpoint or service reachable on Internet.
+      - generic [ref=e52]:
+        - paragraph [ref=e53]: ______________ is/are used to implement encryption in transit, such as with HTTPS protocol for secure browsing, or certificate-based authentication on secure wi-fi networks.
+        - generic [ref=e55]: Security Concepts
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: A.
+            - text: Symmetric encryption
+          - generic [ref=e59]:
+            - generic [ref=e60]: B.
+            - text: Asymmetric encryption
+          - generic [ref=e61]:
+            - generic [ref=e62]: C.
+            - text: Neither symmetric or asymmetric
+          - generic [ref=e63]:
+            - generic [ref=e64]: D.
+            - text: Both symmetric or asymmetric✓ Correct
+        - generic [ref=e65]: TLS, which facilitates HTTPS, uses asymmetric encryption to first establish the identity of one or both parties. Then, it uses asymmetric encryption to exchange a key to a symmetric cipher. However, asymmetric is only used during the initial setup of communication.
+      - generic [ref=e66]:
+        - paragraph [ref=e67]: Which of the following encryption types uses a public and private key pair for encrypting and decrypting data?
+        - generic [ref=e69]: Security Concepts
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: A.
+            - text: Asymmetric encryption✓ Correct
+          - generic [ref=e73]:
+            - generic [ref=e74]: B.
+            - text: Symmetric encryption
+          - generic [ref=e75]:
+            - generic [ref=e76]: C.
+            - text: Hashing
+          - generic [ref=e77]:
+            - generic [ref=e78]: D.
+            - text: All of the above
+        - generic [ref=e79]: Asymmetric encryption uses a public key and private key pair. Symmetric encryption uses a single shared key for bulk data encryption. Hashing is a one-way function that does not require a key.
+      - generic [ref=e80]:
+        - paragraph [ref=e81]: "Microsoft’s six core privacy principles are:"
+        - generic [ref=e83]: Security Concepts
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: A.
+            - text: Control ,Transparency, Security, Strong legal protections, No content-based targeting, Benefits to you✓ Correct
+          - generic [ref=e87]:
+            - generic [ref=e88]: B.
+            - text: Control ,Transparency, Security, Legal standing, No content-based targeting, Benefits to you
+          - generic [ref=e89]:
+            - generic [ref=e90]: C.
+            - text: Control ,Transparency, Security, Strong legal protections, No content-based targeting, Freedom of information
+          - generic [ref=e91]:
+            - generic [ref=e92]: D.
+            - text: Governance ,Transparency, Security, Strong legal protections, No content-based targeting, Benefits to you
+        - generic [ref=e93]:
+          - text: on MS Learn
+          - link "https://docs.microsoft.com/en-us/learn/modules/describe-security-concepts-methodologies/2-describe-zero-trust-methodology?ns-enrollment-type=LearningPath&ns-enrollment-id=learn.wwl.describe-concepts-of-security-compliance-identity" [ref=e94] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/learn/modules/describe-security-concepts-methodologies/2-describe-zero-trust-methodology?ns-enrollment-type=LearningPath&ns-enrollment-id=learn.wwl.describe-concepts-of-security-compliance-identity
+      - generic [ref=e95]:
+        - paragraph [ref=e96]: Resources on the Service Trust Portal do not include which of the following?
+        - generic [ref=e98]: Security Concepts
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: A.
+            - text: Audit reports from ISO, NIST, and more
+          - generic [ref=e102]:
+            - generic [ref=e103]: B.
+            - text: Data protection resources
+          - generic [ref=e104]:
+            - generic [ref=e105]: C.
+            - text: Azure blueprints for security and compliance
+          - generic [ref=e106]:
+            - generic [ref=e107]: D.
+            - text: Licensing guidance for Microsoft security solutions✓ Correct
+        - generic [ref=e108]: The Service Trust Portal does not offer Licensing guidance for Microsoft security solutions but does offer a wide range of resources to help you implement a secure and compliant environment.
+      - generic [ref=e109]:
+        - paragraph [ref=e110]: "The process of proving you are who you say you are is:"
+        - generic [ref=e112]: Security Concepts
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - generic [ref=e115]: A.
+            - text: Authorization
+          - generic [ref=e116]:
+            - generic [ref=e117]: B.
+            - text: Authentication✓ Correct
+          - generic [ref=e118]:
+            - generic [ref=e119]: C.
+            - text: Single Sign-On
+          - generic [ref=e120]:
+            - generic [ref=e121]: D.
+            - text: Zero Trust Security
+      - generic [ref=e123]:
+        - paragraph [ref=e124]: "The act of granting an authenticated party permission to do something is:"
+        - generic [ref=e126]: Security Concepts
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]: A.
+            - text: Authorization✓ Correct
+          - generic [ref=e130]:
+            - generic [ref=e131]: B.
+            - text: Authentication
+          - generic [ref=e132]:
+            - generic [ref=e133]: C.
+            - text: Single Sign-On
+          - generic [ref=e134]:
+            - generic [ref=e135]: D.
+            - text: Zero Trust Security
+      - generic [ref=e137]:
+        - paragraph [ref=e138]: "Entra ID can be configured to allow users to authenticate with their social identities, such as Facebook or Google. In this scenario, Facebook and Google are serving as: (choose the best answer)"
+        - generic [ref=e140]: Identity
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: A.
+            - text: Service principals
+          - generic [ref=e144]:
+            - generic [ref=e145]: B.
+            - text: Identity providers✓ Correct
+          - generic [ref=e146]:
+            - generic [ref=e147]: C.
+            - text: Trusted entities
+          - generic [ref=e148]:
+            - generic [ref=e149]: D.
+            - text: Managed identities
+        - generic [ref=e150]:
+          - text: In Entra ID, an identity provider maintains and manages identity information while providing authentication services to applications. See “Add an identity provider to your Entra ID B2C tenant”
+          - link "https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider" [ref=e151] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider
+      - generic [ref=e152]:
+        - paragraph [ref=e153]: What is the relationship type that allows federated services to access resources?
+        - generic [ref=e155]: Identity
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - generic [ref=e158]: A.
+            - text: Trust relationship✓ Correct
+          - generic [ref=e159]:
+            - generic [ref=e160]: B.
+            - text: Shared access relationship
+          - generic [ref=e161]:
+            - generic [ref=e162]: C.
+            - text: Claims relationship
+          - generic [ref=e163]:
+            - generic [ref=e164]: D.
+            - text: Cross-provider relationship
+        - generic [ref=e165]: Federation relies on a trust relationship to allow access to resources for authenticating entities.
+      - generic [ref=e166]:
+        - paragraph [ref=e167]: Which of the following identity attacks attempts to match a username against a list of weak passwords?
+        - generic [ref=e169]: Identity
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - generic [ref=e172]: A.
+            - text: Spear Phishing
+          - generic [ref=e173]:
+            - generic [ref=e174]: B.
+            - text: Phishing attack
+          - generic [ref=e175]:
+            - generic [ref=e176]: C.
+            - text: Password spray attack✓ Correct
+          - generic [ref=e177]:
+            - generic [ref=e178]: D.
+            - text: Brute force attack
+        - generic [ref=e179]:
+          - text: "A password spray attack attempts to match a username against a list of weak passwords. See “Describe identity principles” on MS Learn:"
+          - link "https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/2-describe-common-identity-attacks" [ref=e180] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/2-describe-common-identity-attacks
+      - generic [ref=e181]:
+        - paragraph [ref=e182]: Which of the following cloud solutions provides capabilities such as multifactor authentication (MFA), identity protection, and role-based access control?
+        - generic [ref=e184]: Identity
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - generic [ref=e187]: A.
+            - text: Azure Initiatives
+          - generic [ref=e188]:
+            - generic [ref=e189]: B.
+            - text: Azure Blueprints
+          - generic [ref=e190]:
+            - generic [ref=e191]: C.
+            - text: Intune App Protection policies
+          - generic [ref=e192]:
+            - generic [ref=e193]: D.
+            - text: Entra ID (Azure AD)✓ Correct
+        - generic [ref=e194]: Cloud solutions such as Entra ID (Azure AD) provide capabilities such as multifactor authentication, identity protection, and robust role-based access control. Entra ID also provides the ability to provision on-premises and third-party applications such as Box, Concur, Google Apps, Salesforce, and more.
+      - generic [ref=e195]:
+        - paragraph [ref=e196]: Which of the following is not an Entra ID identity type?
+        - generic [ref=e198]: Identity
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - generic [ref=e201]: A.
+            - text: User
+          - generic [ref=e202]:
+            - generic [ref=e203]: B.
+            - text: Member✓ Correct
+          - generic [ref=e204]:
+            - generic [ref=e205]: C.
+            - text: Internal
+          - generic [ref=e206]:
+            - generic [ref=e207]: D.
+            - text: External
+        - generic [ref=e208]: Member is not an identity type available in Entra ID, but rather a value set on the user identity. The UserType can be set to Guest or Member. See "Describe the function and identity types of Microsoft Entra ID"
+      - generic [ref=e209]:
+        - paragraph [ref=e210]: "The two types of external identities are:"
+        - generic [ref=e212]: Identity
+        - generic [ref=e213]:
+          - generic [ref=e214]:
+            - generic [ref=e215]: A.
+            - text: Entra ID guests and members
+          - generic [ref=e216]:
+            - generic [ref=e217]: B.
+            - text: Work accounts and social identities
+          - generic [ref=e218]:
+            - generic [ref=e219]: C.
+            - text: Entra ID accounts and Microsoft accounts (formerly Live ID)
+          - generic [ref=e220]:
+            - generic [ref=e221]: D.
+            - text: Entra ID B2B and B2C✓ Correct
+        - generic [ref=e222]: Entra ID B2B allows secure collaboration between organizations leveraging their work accounts. Entra ID B2C is a customer identity access management solution enabling customers to login to your directory with their social identity (like Google or Facebook).
+      - generic [ref=e223]:
+        - paragraph [ref=e224]: Which of the following is an advantage of single sign-on?
+        - generic [ref=e226]: Identity
+        - generic [ref=e227]:
+          - generic [ref=e228]:
+            - generic [ref=e229]: A.
+            - text: User passwords expire less frequently.
+          - generic [ref=e230]:
+            - generic [ref=e231]: B.
+            - text: The user signs in once and can then access many applications or resources.✓ Correct
+          - generic [ref=e232]:
+            - generic [ref=e233]: C.
+            - text: It leverages a single, centralized identity provider.
+          - generic [ref=e234]:
+            - generic [ref=e235]: D.
+            - text: All of the above
+        - generic [ref=e236]: With single sign-on, a user signs in once and can then access multiple applications or resources. Although a central identity provider can be used by an organization, it isn't a benefit of single sign-on.
+      - generic [ref=e237]:
+        - paragraph [ref=e238]: Which of the following is NOT a feature of Entra ID Self-Service Password Reset (SSPR)?
+        - generic [ref=e240]: Identity
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e243]: A.
+            - text: Password change (when user knows password but wants to change)
+          - generic [ref=e244]:
+            - generic [ref=e245]: B.
+            - text: Password reset (when forgot password or password expired)
+          - generic [ref=e246]:
+            - generic [ref=e247]: C.
+            - text: Password set (when account is disabled)✓ Correct
+          - generic [ref=e248]:
+            - generic [ref=e249]: D.
+            - text: Password unlock (when account is locked out)
+        - generic [ref=e250]: A user cannot set or reset their password when their account is not enabled.
+      - generic [ref=e251]:
+        - paragraph [ref=e252]: Which of the following Entra ID features protects users from password spray attacks, and bans them from using weak passwords in a global list of banned passwords when setting or resetting their password?
+        - generic [ref=e254]: Identity
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - generic [ref=e257]: A.
+            - text: Identity Protection
+          - generic [ref=e258]:
+            - generic [ref=e259]: B.
+            - text: Self-Service Password Reset
+          - generic [ref=e260]:
+            - generic [ref=e261]: C.
+            - text: Password Protection✓ Correct
+          - generic [ref=e262]:
+            - generic [ref=e263]: D.
+            - text: Conditional Access
+        - generic [ref=e264]: Entra ID Password Protection reduces the risk of users setting weak passwords by detecting and blocking known weak passwords from a global banned password list, or also from a customer-maintained custom banned password list.
+      - generic [ref=e265]:
+        - paragraph [ref=e266]: Which of the following is discouraged as a secondary authentication factor due to known vulnerabilities?
+        - generic [ref=e268]: Identity
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - generic [ref=e271]: A.
+            - text: Microsoft Authenticator App
+          - generic [ref=e272]:
+            - generic [ref=e273]: B.
+            - text: Voice call
+          - generic [ref=e274]:
+            - generic [ref=e275]: C.
+            - text: SMS (text) message✓ Correct
+          - generic [ref=e276]:
+            - generic [ref=e277]: D.
+            - text: OATH hardware token
+        - generic [ref=e278]: Due to vulnerabilities, such as SIM swap attacks. SMS(text) message is considered relatively weak as a second factor, and therefore is discouraged. Voice call is the one secondary method that cannot be disabled.
+      - generic [ref=e279]:
+        - paragraph [ref=e280]: Which of the following statements accurately depicts a difference between Windows Hello and Windows Hello for Business?
+        - generic [ref=e282]: Identity
+        - generic [ref=e283]:
+          - generic [ref=e284]:
+            - generic [ref=e285]: A.
+            - text: Windows Hello is for personal devices, while Windows Hello for Business is for managed devices.✓ Correct
+          - generic [ref=e286]:
+            - generic [ref=e287]: B.
+            - text: Windows Hello uses a key-based or certificate-based authentication factor.
+          - generic [ref=e288]:
+            - generic [ref=e289]: C.
+            - text: Windows Hello supports FIDO2 authentication.
+        - generic [ref=e290]: Windows Hello is for personal devices, while Windows Hello for Business is for managed devices. Windows Hello for Business can uses a key-based or certificate-based authentication factor, where Windows Hello uses a pin or biometric authentication.
+      - generic [ref=e291]:
+        - paragraph [ref=e292]: You need to implement multi-factor authentication for your Entra ID users. However, you only want to prompt for an additional authentication factor when users are not in a trusted location on an unmanaged device. Which feature should you implement? (choose the best answer)
+        - generic [ref=e294]: Identity
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - generic [ref=e297]: A.
+            - text: Entra ID Conditional Access✓ Correct
+          - generic [ref=e298]:
+            - generic [ref=e299]: B.
+            - text: Entra ID Identity Protection
+          - generic [ref=e300]:
+            - generic [ref=e301]: C.
+            - text: Entra ID Password Protection
+          - generic [ref=e302]:
+            - generic [ref=e303]: D.
+            - text: Privileged Identity Management
+        - generic [ref=e304]: Conditional access policies bring several benefits to authentication and authorization, including enabling selectively prompting users for a secondary authentication factor based on user location, app selection, device compliance or management state, and sign-in risk.
+      - generic [ref=e305]:
+        - paragraph [ref=e306]: Which of the following is not a benefit of Entra ID Conditional Access policies?
+        - generic [ref=e308]: Identity
+        - generic [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e311]: A.
+            - text: Improves user productivity by only prompting for a secondary authentication factor when conditions indicate.
+          - generic [ref=e312]:
+            - generic [ref=e313]: B.
+            - text: Manages risk by factoring Identity Protection risk detections in user authentication attempts.
+          - generic [ref=e314]:
+            - generic [ref=e315]: C.
+            - text: Improves identity governance through auditing and restricting access based on device compliance.
+          - generic [ref=e316]:
+            - generic [ref=e317]: D.
+            - text: Manages device state by implementing device compliance policies to measure device compliance.✓ Correct
+        - generic [ref=e318]: While the first three items are benefits of conditional access policies, device compliance policies are implemented through Microsoft Intune.
+      - generic [ref=e319]:
+        - paragraph [ref=e320]: Which of the following is not a benefit of Entra ID roles?
+        - generic [ref=e322]: Identity
+        - generic [ref=e323]:
+          - generic [ref=e324]:
+            - generic [ref=e325]: A.
+            - text: Eases assignment of permissions
+          - generic [ref=e326]:
+            - generic [ref=e327]: B.
+            - text: Supports least privilege implementation
+          - generic [ref=e328]:
+            - generic [ref=e329]: C.
+            - text: Protects users from sign-in risk✓ Correct
+          - generic [ref=e330]:
+            - generic [ref=e331]: D.
+            - text: Enables role-specific delegations
+        - generic [ref=e332]: While Entra ID roles ease role assignments in delegation scenarios and implementation of least privilege, it is Entra ID Identity Protection that supports detection of user risk and sign-in risk.
+      - generic [ref=e333]:
+        - paragraph [ref=e334]: With Privileged Identity Management, users can not only activate their own eligible roles, but if desired, can also self-review their eligible roles during scheduled access reviews.
+        - generic [ref=e336]: Identity
+        - generic [ref=e337]:
+          - generic [ref=e338]:
+            - generic [ref=e339]: A.
+            - text: TRUE✓ Correct
+          - generic [ref=e340]:
+            - generic [ref=e341]: B.
+            - text: "FALSE"
+        - generic [ref=e342]: Privileged Identity Management (PIM) allows users to activate eligible roles themselves, while offering notification of role activation to other admins, as well as optional manager approval. If desired, PIM access reviews can be configured to allow users to self-review, and then automatically apply changes based on user response.
+      - generic [ref=e343]:
+        - paragraph [ref=e344]: The probability that a given authentication request is not a request by the identity owner is referred to as "user risk".
+        - generic [ref=e346]: Identity
+        - generic [ref=e347]:
+          - generic [ref=e348]:
+            - generic [ref=e349]: A.
+            - text: "TRUE"
+          - generic [ref=e350]:
+            - generic [ref=e351]: B.
+            - text: FALSE✓ Correct
+        - generic [ref=e352]: The two types of risk defined in the Identity Protection feature are user risk and sign-in risk. User risk represents the probability that a given identity or account is compromised. Sign-in risk represents the probability that a given authentication request isn't authorized by the identity owner.
+      - generic [ref=e353]:
+        - paragraph [ref=e354]: A network security group (NSG) is comprised of inbound and outbound security rules. Rules are processed in priority order, with lower numbered rules processed _____________ higher numbers.
+        - generic [ref=e356]: Azure Security
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - generic [ref=e359]: A.
+            - text: after
+          - generic [ref=e360]:
+            - generic [ref=e361]: B.
+            - text: before✓ Correct
+          - generic [ref=e362]:
+            - generic [ref=e363]: C.
+            - text: simultaneously
+          - generic [ref=e364]:
+            - generic [ref=e365]: D.
+            - text: None of the above
+        - generic [ref=e366]: NSG rules are processed in priority order, with lower numbers processed before higher numbers. When traffic matches a rule, processing stops. This means that any other rules with a lower priority (higher numbers) won't be processed.
+      - generic [ref=e367]:
+        - paragraph [ref=e368]: The Basic tier of Azure DDoS is free but must be enabled on each subscription.
+        - generic [ref=e370]: Security Concepts
+        - generic [ref=e371]:
+          - generic [ref=e372]:
+            - generic [ref=e373]: A.
+            - text: FALSE✓ Correct
+          - generic [ref=e374]:
+            - generic [ref=e375]: B.
+            - text: "TRUE"
+        - generic [ref=e376]:
+          - text: The Basic tier of Azure DDoS is automatically enabled and protecting all Azure subscriptions by default. See “Azure DDoS protection overview”
+          - link "https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview." [ref=e377] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview.
+      - generic [ref=e378]:
+        - paragraph [ref=e379]: Azure Firewall is a fully stateful firewall that offers high availability. High availability must be enabled, and the number of scale instances selected at deployment time.
+        - generic [ref=e381]: Security Concepts
+        - generic [ref=e382]:
+          - generic [ref=e383]:
+            - generic [ref=e384]: A.
+            - text: "TRUE"
+          - generic [ref=e385]:
+            - generic [ref=e386]: B.
+            - text: FALSE✓ Correct
+        - generic [ref=e387]: High availability and unrestricted scalability is built into the solution. There is no need to select and configure scale instances.
+      - generic [ref=e388]:
+        - paragraph [ref=e389]: What is the core value proposition of Azure Bastion?
+        - generic [ref=e391]: Security Concepts
+        - generic [ref=e392]:
+          - generic [ref=e393]:
+            - generic [ref=e394]: A.
+            - text: RDP/SSH connectivity provided in the native Windows RDP client / any SSH client, and no public IP address required for the Azure VM.
+          - generic [ref=e395]:
+            - generic [ref=e396]: B.
+            - text: RDP connectivity provided in the native Windows RDP client, but with no public IP address required for the Azure VM.
+          - generic [ref=e397]:
+            - generic [ref=e398]: C.
+            - text: RDP/SSH connectivity provided in a web browser, with no RDP/SSH client needed, and no public IP address required for the Azure VM.✓ Correct
+          - generic [ref=e399]:
+            - generic [ref=e400]: D.
+            - text: RDP/SSH connectivity provided over Azure Point-to-Site (P2S) VPN using the native Windows 10 VPN client.
+        - generic [ref=e401]:
+          - text: Azure Bastion is a service you deploy that lets you connect to a virtual machine using your browser and the Azure portal. It provides secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal over TLS in a web browser. Azure VMs do not need a public IP address to allow RDP/SSH access via Azure Bastion. See “What is Azure Bastion?”
+          - link "https://docs.microsoft.com/en-us/azure/bastion/bastion-overview" [ref=e402] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/bastion/bastion-overview
+      - generic [ref=e403]:
+        - paragraph [ref=e404]: Which secure score provides visualization of the current security posture of your cloud infrastructure, such as VMs, web app instances, and Azure SQL databases?
+        - generic [ref=e406]: Azure Security
+        - generic [ref=e407]:
+          - generic [ref=e408]:
+            - generic [ref=e409]: A.
+            - text: Microsoft 365 Secure Score
+          - generic [ref=e410]:
+            - generic [ref=e411]: B.
+            - text: Azure Secure Score✓ Correct
+          - generic [ref=e412]:
+            - generic [ref=e413]: C.
+            - text: Azure Compliance Manager
+          - generic [ref=e414]:
+            - generic [ref=e415]: D.
+            - text: Microsoft 365 Security Compliance
+        - link "https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls" [ref=e417] [cursor=pointer]:
+          - /url: https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls
+      - generic [ref=e418]:
+        - paragraph [ref=e419]: A security __________ is the implementation of a security benchmark for the specific Azure service.
+        - generic [ref=e421]: Security Concepts
+        - generic [ref=e422]:
+          - generic [ref=e423]:
+            - generic [ref=e424]: A.
+            - text: control
+          - generic [ref=e425]:
+            - generic [ref=e426]: B.
+            - text: configuration item
+          - generic [ref=e427]:
+            - generic [ref=e428]: C.
+            - text: baseline✓ Correct
+          - generic [ref=e429]:
+            - generic [ref=e430]: D.
+            - text: access package
+        - generic [ref=e431]: A baseline is the implementation of a security benchmark for the specific Azure service. A control is a high-level description of the feature or activity and is not specific to a technology. A configuration item exists within a baseline. An access package is an element of entitlement management, and not related to baselines.
+      - generic [ref=e432]:
+        - paragraph [ref=e433]: Which of the following tools is used to collect and analyze large amounts of data from across your entire estate, including identity, endpoints, infrastructure, apps, and data to identify and alert on potential security threats?
+        - generic [ref=e435]: Azure Security
+        - generic [ref=e436]:
+          - generic [ref=e437]:
+            - generic [ref=e438]: A.
+            - text: XDR
+          - generic [ref=e439]:
+            - generic [ref=e440]: B.
+            - text: SOAR
+          - generic [ref=e441]:
+            - generic [ref=e442]: C.
+            - text: SIEM✓ Correct
+          - generic [ref=e443]:
+            - generic [ref=e444]: D.
+            - text: SAML
+        - generic [ref=e445]: A security information event management (SIEM), such as Azure Sentinel, is a tool that an organization uses to collect large amounts of data from across your environment to correlate anomalous and potentially malicious activity to identify security threats.
+      - generic [ref=e446]:
+        - paragraph [ref=e447]: Which of the following is not an advantage of Azure Sentinel in providing integrated threat protection to your environment?
+        - generic [ref=e449]: Azure Security
+        - generic [ref=e450]:
+          - generic [ref=e451]:
+            - generic [ref=e452]: A.
+            - text: Automates data collection from a variety of sources using connectors.
+          - generic [ref=e453]:
+            - generic [ref=e454]: B.
+            - text: Analyzes data across services to bring greater context in identifying security incidents.
+          - generic [ref=e455]:
+            - generic [ref=e456]: C.
+            - text: Discovers apps in use on your endpoints to stop shadow IT✓ Correct
+          - generic [ref=e457]:
+            - generic [ref=e458]: D.
+            - text: Automates incident response using security playbooks.
+        - generic [ref=e459]: App discovery on endpoints to help identify unsanctioned apps is a core function of Microsoft Cloud App Discovery (MCAS), but not a feature of Azure Sentinel.
+      - generic [ref=e460]:
+        - paragraph [ref=e461]: Which of the following Azure services monitor users, entity behavior, and activities with learning-based analytics to help protect user identities and credentials stored in on-premises Active Directory?
+        - generic [ref=e463]: Identity
+        - generic [ref=e464]:
+          - generic [ref=e465]:
+            - generic [ref=e466]: A.
+            - text: Microsoft Defender for Identity✓ Correct
+          - generic [ref=e467]:
+            - generic [ref=e468]: B.
+            - text: Microsoft Defender for Cloud Apps
+          - generic [ref=e469]:
+            - generic [ref=e470]: C.
+            - text: Microsoft Defender for Endpoint
+          - generic [ref=e471]:
+            - generic [ref=e472]: D.
+            - text: Microsoft Defender for Office 365
+        - generic [ref=e473]:
+          - text: Microsoft Defender for Identity (formerly Entra IDvanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. See “What is Microsoft Defender for Identity?”
+          - link "https://docs.microsoft.com/en-us/defender-for-identity/what-is" [ref=e474] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/defender-for-identity/what-is
+      - generic [ref=e475]:
+        - paragraph [ref=e476]: Which of these Azure services enables you to run realistic simulated phishing and password attack campaigns in your organization, and train users to raise their awareness of these attacks ?
+        - generic [ref=e478]: Identity
+        - generic [ref=e479]:
+          - generic [ref=e480]:
+            - generic [ref=e481]: A.
+            - text: Microsoft Defender for Endpoint
+          - generic [ref=e482]:
+            - generic [ref=e483]: B.
+            - text: Microsoft Defender for Identity
+          - generic [ref=e484]:
+            - generic [ref=e485]: C.
+            - text: Microsoft Defender for Office 365✓ Correct
+          - generic [ref=e486]:
+            - generic [ref=e487]: D.
+            - text: Entra ID Password Protection
+        - generic [ref=e488]: Attack Simulation Training in MS Defender for Office 365 lets you run realistic, but simulated phishing and password attack campaigns in your organization. You can create and run a campaign against some or all users.
+      - generic [ref=e489]:
+        - paragraph [ref=e490]: Contoso IT recently implemented Microsoft Defender for Endpoint to better protect its Windows 10 endpoints. Which of the following is a feature of Endpoint behavioral sensors technology?
+        - generic [ref=e492]: Azure Security
+        - generic [ref=e493]:
+          - generic [ref=e494]:
+            - generic [ref=e495]: A.
+            - text: It monitors for configuration best practices in an endpoint security baseline.
+          - generic [ref=e496]:
+            - generic [ref=e497]: B.
+            - text: It discovers unsanctioned apps installed by users on endpoints.
+          - generic [ref=e498]:
+            - generic [ref=e499]: C.
+            - text: It monitors for and detects advanced threats on your Windows 10. and other endpoints and automates investigation and threat response.✓ Correct
+          - generic [ref=e500]:
+            - generic [ref=e501]: D.
+            - text: Ingests data from a variety of Azure services to better assess the full scope of an incident.
+        - generic [ref=e502]:
+          - text: Microsoft Defender for Endpoint detects advanced threats on your Windows 10. and other endpoints and automates investigation and threat response. See “Microsoft Defender for Endpoint”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide" [ref=e503] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide
+      - generic [ref=e504]:
+        - paragraph [ref=e505]: Which of the following services ingests network traffic logs to dynamically discover and analyze the cloud apps in use within your organization?
+        - generic [ref=e507]: Azure Security
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - generic [ref=e510]: A.
+            - text: Conditional Access App Control
+          - generic [ref=e511]:
+            - generic [ref=e512]: B.
+            - text: Microsoft Defender for Office 365
+          - generic [ref=e513]:
+            - generic [ref=e514]: C.
+            - text: Microsoft Defender for Cloud Apps✓ Correct
+          - generic [ref=e515]:
+            - generic [ref=e516]: D.
+            - text: Microsoft Defender for Endpoint
+        - generic [ref=e517]:
+          - text: The cloud discovery feature in Microsoft Defender for Cloud Apps uses your traffic logs to dynamically discover and analyze the cloud apps that your organization is using. To create a snapshot report of your organization's cloud use, you can manually upload log files from your firewalls or proxies for analysis. Or, to set up continuous reports, use Cloud App Security log collectors to periodically forward syslog data from your perimeter network devices, such as firewalls and proxies. See “What is Cloud App Security?”
+          - link "https://docs.m" [ref=e518] [cursor=pointer]:
+            - /url: https://docs.m
+          - text: icrosoft.com/en-us/cloud-app-security/what-is-cloud-app-security
+      - generic [ref=e519]:
+        - paragraph [ref=e520]: Which portal brings Defender for Endpoint, Defender for Office 365, and Microsoft Defender for Cloud Apps data together in consolidated a unified view and user experience?
+        - generic [ref=e522]: Azure Security
+        - generic [ref=e523]:
+          - generic [ref=e524]:
+            - generic [ref=e525]: A.
+            - text: Microsoft Purview compliance portal
+          - generic [ref=e526]:
+            - generic [ref=e527]: B.
+            - text: Microsoft Purview Compliance Manager
+          - generic [ref=e528]:
+            - generic [ref=e529]: C.
+            - text: Microsoft Defender portal✓ Correct
+          - generic [ref=e530]:
+            - generic [ref=e531]: D.
+            - text: Microsoft 365 Admin Center
+        - generic [ref=e532]:
+          - text: Microsoft Defender portal is the new home for monitoring and managing security across your Microsoft identities, data, devices, and apps at
+          - link "https://security.microsoft.com." [ref=e533] [cursor=pointer]:
+            - /url: https://security.microsoft.com.
+      - generic [ref=e534]:
+        - paragraph [ref=e535]: Which secure score focuses on security across identities, apps, and data?
+        - generic [ref=e537]: Azure Security
+        - generic [ref=e538]:
+          - generic [ref=e539]:
+            - generic [ref=e540]: A.
+            - text: Azure Secure Score
+          - generic [ref=e541]:
+            - generic [ref=e542]: B.
+            - text: Microsoft Secure Score✓ Correct
+          - generic [ref=e543]:
+            - generic [ref=e544]: C.
+            - text: Microsoft 365 Compliance Score
+          - generic [ref=e545]:
+            - generic [ref=e546]: D.
+            - text: Microsoft Defender Secure Score
+        - generic [ref=e547]:
+          - text: Microsoft Secure Score is a measurement of an organization's security posture across identities, endpoints, and apps. Currently there are recommendations for Microsoft 365 (including Exchange Online), Entra ID, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Cloud App Security, and Microsoft Teams See “Microsoft Secure Score”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide" [ref=e548] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide
+      - generic [ref=e549]:
+        - paragraph [ref=e550]: What are the categories shown on the secure score in Microsoft Defender portal?
+        - generic [ref=e552]: Azure Security
+        - generic [ref=e553]:
+          - generic [ref=e554]:
+            - generic [ref=e555]: A.
+            - text: Identities, data, devices, and apps✓ Correct
+          - generic [ref=e556]:
+            - generic [ref=e557]: B.
+            - text: Alerts, incidents, remediations, and recommendations
+          - generic [ref=e558]:
+            - generic [ref=e559]: C.
+            - text: Activities, entities, anomalies, and alerts
+        - generic [ref=e560]: "Microsoft Defender portal shows cars with these categories: identities, data, devices, and apps."
+      - generic [ref=e561]:
+        - paragraph [ref=e562]: _____ are a collection of correlated _____ created when a suspicious _____ is found.
+        - generic [ref=e564]: Azure Security
+        - generic [ref=e565]:
+          - generic [ref=e566]:
+            - generic [ref=e567]: A.
+            - text: Alerts, incidents, event
+          - generic [ref=e568]:
+            - generic [ref=e569]: B.
+            - text: Incidents, alerts, event✓ Correct
+          - generic [ref=e570]:
+            - generic [ref=e571]: C.
+            - text: Events, incident, alert
+          - generic [ref=e572]:
+            - generic [ref=e573]: D.
+            - text: Incidents, events, alert
+        - generic [ref=e574]:
+          - text: Incidents are a collection of correlated alerts created when a suspicious event is found. Alerts are generated from different types of entities, like devices, users, and mailboxes, and can come from many different domains. See “Incidents in Microsoft 365 Defender”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide." [ref=e575] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide.
+      - generic [ref=e576]:
+        - paragraph [ref=e577]: Microsoft _____ is a cloud-based service that helps streamline security analyst triage, incident response, threat hunting, and vulnerability management workflows.
+        - generic [ref=e579]: Azure Security
+        - generic [ref=e580]:
+          - generic [ref=e581]:
+            - generic [ref=e582]: A.
+            - text: Defender Vulnerability Management
+          - generic [ref=e583]:
+            - generic [ref=e584]: B.
+            - text: Defender Threat Intelligence✓ Correct
+          - generic [ref=e585]:
+            - generic [ref=e586]: C.
+            - text: Defender for Cloud Apps
+          - generic [ref=e587]:
+            - generic [ref=e588]: D.
+            - text: Defender portal
+        - generic [ref=e589]: Microsoft Defender Threat Intelligence is a comprehensive security platform designed to help organizations protect themselves from cyber threats. "What is Microsoft Defender Threat Intelligence (Defender TI)?"
+      - generic [ref=e590]:
+        - paragraph [ref=e591]: _________________ enables continuous asset discovery and monitoring using built-in and agentless scanners continuously monitor and detect risk from devices, even when not connected to the corporate network. Risks are then prioritized based on threat intelligence and breach likelihood predictions.
+        - generic [ref=e593]: Azure Security
+        - generic [ref=e594]:
+          - generic [ref=e595]:
+            - generic [ref=e596]: A.
+            - text: Microsoft Defender Threat Intelligence
+          - generic [ref=e597]:
+            - generic [ref=e598]: B.
+            - text: Microsoft Defender Vulnerability Management✓ Correct
+          - generic [ref=e599]:
+            - generic [ref=e600]: C.
+            - text: Microsoft Purview Entitlement Management
+          - generic [ref=e601]:
+            - generic [ref=e602]: D.
+            - text: Microsoft Defender for Cloud Apps
+        - generic [ref=e603]: Microsoft Defender Vulnerability Management continuously monitors and detect vulnerabilities on devices, intelligently prioritizes these vulnerabilities, and enables remediation of issues with built-in workflows. See "About the Microsoft Defender Vulnerability Management trial"
+      - generic [ref=e604]:
+        - paragraph [ref=e605]: Defender for Servers, Defender for Key Vault, and Defender for Storage are part of the foundational cloud security posture management (CSPM).
+        - generic [ref=e607]: Azure Security
+        - generic [ref=e608]:
+          - generic [ref=e609]:
+            - generic [ref=e610]: A.
+            - text: "Yes"
+          - generic [ref=e611]:
+            - generic [ref=e612]: B.
+            - text: No✓ Correct
+        - generic [ref=e613]: Defender for Servers, Defender for Key Vault, and Defender for Storage are part of the cloud workload protetion (CWP) features in the Standard tier of Microsoft Defender for Cloud. Read more at "What is Microsoft Defender for Cloud? - Microsoft Defender for Cloud"
+      - generic [ref=e614]:
+        - paragraph [ref=e615]: What is the name of the unified portal that provides easy access to the data and tools you need to manage to your organization's compliance needs and track progress?
+        - generic [ref=e617]: Compliance
+        - generic [ref=e618]:
+          - generic [ref=e619]:
+            - generic [ref=e620]: A.
+            - text: Microsoft 365 Security and Compliance
+          - generic [ref=e621]:
+            - generic [ref=e622]: B.
+            - text: Microsoft Purview compliance portal✓ Correct
+          - generic [ref=e623]:
+            - generic [ref=e624]: C.
+            - text: Compliance Manager
+          - generic [ref=e625]:
+            - generic [ref=e626]: D.
+            - text: Compliance Score
+        - generic [ref=e627]: Microsoft Purview compliance portal provides centralized access to the tools and other resources admins need to manage and track compliance activities. Compliance score is a calculation of the overall compliance posture across the organization. Compliance Manager is an end-to-end solution in Microsoft Purview compliance portal to enable admins to manage and track compliance activities.
+      - generic [ref=e628]:
+        - paragraph [ref=e629]: _____________ measures the progress in completing recommended improvement actions within Compliance Manager.
+        - generic [ref=e631]: Security Concepts
+        - generic [ref=e632]:
+          - generic [ref=e633]:
+            - generic [ref=e634]: A.
+            - text: Azure Secure Score
+          - generic [ref=e635]:
+            - generic [ref=e636]: B.
+            - text: Microsoft Secure Score
+          - generic [ref=e637]:
+            - generic [ref=e638]: C.
+            - text: Compliance Score✓ Correct
+        - generic [ref=e639]:
+          - text: Compliance score shows the compliance score and will forward admins to the Compliance Manager where they can see a breakdown of the compliance score. Compliance score measures the progress in completing recommended improvement actions within controls. The score helps an organization to understand its current compliance posture and prioritize actions based on their potential to reduce risk. See “Compliance score calculation”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide" [ref=e640] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide
+      - generic [ref=e641]:
+        - paragraph [ref=e642]: _______ use machine learning to intelligently classify your data.
+        - generic [ref=e644]: Compliance
+        - generic [ref=e645]:
+          - generic [ref=e646]:
+            - generic [ref=e647]: A.
+            - text: Sensitive information types
+          - generic [ref=e648]:
+            - generic [ref=e649]: B.
+            - text: Sensitivity labels
+          - generic [ref=e650]:
+            - generic [ref=e651]: C.
+            - text: Trainable classifiers✓ Correct
+          - generic [ref=e652]:
+            - generic [ref=e653]: D.
+            - text: Regular expressions
+        - generic [ref=e654]: A Microsoft 365 trainable classifier is a tool you can train to recognize various types of content by giving it samples to look at. Once trained, you can use it to identify item for application of Office sensitivity labels, Communications compliance policies, and retention label policies. To learn more about the different types of classifiers, see Learn about trainable classifiers.
+      - generic [ref=e655]:
+        - paragraph [ref=e656]: Which of the following contains a snapshot of items (emails, files) that have a sensitivity or retention label applied or have been classified as a sensitive information type?
+        - generic [ref=e658]: Security Concepts
+        - generic [ref=e659]:
+          - generic [ref=e660]:
+            - generic [ref=e661]: A.
+            - text: Activity Explorer
+          - generic [ref=e662]:
+            - generic [ref=e663]: B.
+            - text: Content Explorer✓ Correct
+          - generic [ref=e664]:
+            - generic [ref=e665]: C.
+            - text: Case Notes
+          - generic [ref=e666]:
+            - generic [ref=e667]: D.
+            - text: Case Overview
+        - generic [ref=e668]:
+          - text: All data files and email messages associated with alert activities are automatically captured and displayed in the Content Explorer. Activity Explorer allows you to monitor what is being done with labeled content. See “Get started with content explorer”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer?view=o365-worldwide" [ref=e669] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/data-classification-content-explorer?view=o365-worldwide
+      - generic [ref=e670]:
+        - paragraph [ref=e671]: You use __________ to implement data __________.
+        - generic [ref=e673]: Security Concepts
+        - generic [ref=e674]:
+          - generic [ref=e675]:
+            - generic [ref=e676]: A.
+            - text: Label policies, classification
+          - generic [ref=e677]:
+            - generic [ref=e678]: B.
+            - text: Sensitivity labels, protection and retention
+          - generic [ref=e679]:
+            - generic [ref=e680]: C.
+            - text: Sensitivity labels, retention
+          - generic [ref=e681]:
+            - generic [ref=e682]: D.
+            - text: Sensitivity labels, classification and protection✓ Correct
+        - generic [ref=e683]:
+          - text: Sensitivity labels are used for data classification and protection. Label policies are used to publish sensitivity labels. See “Learn about sensitivity labels”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide." [ref=e684] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels?view=o365-worldwide.
+      - generic [ref=e685]:
+        - paragraph [ref=e686]: Retention policies are used to assign the same retention settings to content at a __________ level or __________ level.
+        - generic [ref=e688]: Compliance
+        - generic [ref=e689]:
+          - generic [ref=e690]:
+            - generic [ref=e691]: A.
+            - text: document, site
+          - generic [ref=e692]:
+            - generic [ref=e693]: B.
+            - text: document, mailbox
+          - generic [ref=e694]:
+            - generic [ref=e695]: C.
+            - text: Exchange (all mailboxes only), SharePoint, OneDrive
+          - generic [ref=e696]:
+            - generic [ref=e697]: D.
+            - text: site, mailbox✓ Correct
+        - generic [ref=e698]:
+          - text: Use a retention policy to assign the same retention settings for content at a site or mailbox level and use a retention label to assign retention settings at an item level (folder, document, email). See “Retention policies and retention labels”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide" [ref=e699] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide
+      - generic [ref=e700]:
+        - paragraph [ref=e701]: Retention labels are used to assign retention settings at an item level, such as folder, document, or email.
+        - generic [ref=e703]: Compliance
+        - generic [ref=e704]:
+          - generic [ref=e705]:
+            - generic [ref=e706]: A.
+            - text: TRUE✓ Correct
+          - generic [ref=e707]:
+            - generic [ref=e708]: B.
+            - text: "FALSE"
+        - generic [ref=e709]:
+          - text: Use a retention policy to assign the same retention settings for content at a site or mailbox level and use a retention label to assign retention settings at an item level (folder, document, email). See “Retention policies and retention labels”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide" [ref=e710] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide
+      - generic [ref=e711]:
+        - paragraph [ref=e712]: What is the difference between a document and a record?
+        - generic [ref=e714]: Compliance
+        - generic [ref=e715]:
+          - generic [ref=e716]:
+            - generic [ref=e717]: A.
+            - text: Records include evidence
+          - generic [ref=e718]:
+            - generic [ref=e719]: B.
+            - text: Records must be retained for an extended period
+          - generic [ref=e720]:
+            - generic [ref=e721]: C.
+            - text: Records must be deleted at the end of a retention period
+          - generic [ref=e722]:
+            - generic [ref=e723]: D.
+            - text: All of the above✓ Correct
+        - generic [ref=e724]:
+          - text: Records management in Microsoft 365 helps an organization manage their legal obligations, provides the ability to demonstrate compliance with regulations, and increases efficiency with regular disposition of items that are no longer required to be retained, no longer of value, or no longer required for business purposes. Records management in Microsoft 365 includes notifications, reminders, and disposition reviews so you can ensure deletion is appropriate. See “Learn about records management in Microsoft 365”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/records-management?view=o365-worldwide" [ref=e725] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/records-management?view=o365-worldwide
+      - generic [ref=e726]:
+        - paragraph [ref=e727]: "Data loss prevention is a way to ensure sensitive information:"
+        - generic [ref=e729]: Compliance
+        - generic [ref=e730]:
+          - generic [ref=e731]:
+            - generic [ref=e732]: A.
+            - text: is appropriately backed up.
+          - generic [ref=e733]:
+            - generic [ref=e734]: B.
+            - text: is not unintentionally deleted.
+          - generic [ref=e735]:
+            - generic [ref=e736]: C.
+            - text: is not inappropriately shared.✓ Correct
+          - generic [ref=e737]:
+            - generic [ref=e738]: D.
+            - text: is blocked from being shared between departments.
+        - generic [ref=e739]:
+          - text: Data loss prevention helps protect this sensitive data and reduce risk; they need a way to prevent their users from inappropriately sharing it with people who should not see it. See “Learn about data loss prevention ”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide" [ref=e740] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide
+      - generic [ref=e741]:
+        - paragraph [ref=e742]: The content search tool enables in-place content search across all of the following EXCEPT
+        - generic [ref=e744]: Compliance
+        - generic [ref=e745]:
+          - generic [ref=e746]:
+            - generic [ref=e747]: A.
+            - text: Documents in SharePoint and OneDrive
+          - generic [ref=e748]:
+            - generic [ref=e749]: B.
+            - text: User activities in Entra ID audit logs✓ Correct
+          - generic [ref=e750]:
+            - generic [ref=e751]: C.
+            - text: Instant messaging conversations in Microsoft Teams
+          - generic [ref=e752]:
+            - generic [ref=e753]: D.
+            - text: Email content in Exchange Online
+        - generic [ref=e754]:
+          - text: You can use the Content search tool in the Microsoft Purview compliance portal to quickly find email in Exchange mailboxes, documents in SharePoint sites and OneDrive locations, and instant messaging conversations in Skype for Business. Searching Entra ID audit logs is most often performed directly in Entra ID within the Azure Portal. See “Search for content using the Content search tool”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-content?view=o365-worldwide." [ref=e755] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-content?view=o365-worldwide.
+      - generic [ref=e756]:
+        - paragraph [ref=e757]: Which of the following is not a feature of core eDiscovery (Standard) workflow?
+        - generic [ref=e759]: Security Concepts
+        - generic [ref=e760]:
+          - generic [ref=e761]:
+            - generic [ref=e762]: A.
+            - text: Adding sources
+          - generic [ref=e763]:
+            - generic [ref=e764]: B.
+            - text: Adding data custodians✓ Correct
+          - generic [ref=e765]:
+            - generic [ref=e766]: C.
+            - text: Creating holds and queries
+          - generic [ref=e767]:
+            - generic [ref=e768]: D.
+            - text: Exporting data results
+        - generic [ref=e769]:
+          - text: Adding data custodians, automating notifications, and jobs are features of advanced eDiscovery. See “Get started with Core eDiscovery in Microsoft 365”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/get-started-core-ediscovery?view=o365-worldwide" [ref=e770] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/get-started-core-ediscovery?view=o365-worldwide
+      - generic [ref=e771]:
+        - paragraph [ref=e772]: Which of the following is not a feature available only in advanced eDiscovery (Premium) workflow?
+        - generic [ref=e774]: Security Concepts
+        - generic [ref=e775]:
+          - generic [ref=e776]:
+            - generic [ref=e777]: A.
+            - text: Management of long-running jobs
+          - generic [ref=e778]:
+            - generic [ref=e779]: B.
+            - text: Creating a legal hold✓ Correct
+          - generic [ref=e780]:
+            - generic [ref=e781]: C.
+            - text: Analysis of data in a review set
+          - generic [ref=e782]:
+            - generic [ref=e783]: D.
+            - text: Adding non-custodial data sources
+        - generic [ref=e784]:
+          - text: Advanced eDiscovery workflow builds on the existing core eDiscovery and analytics capabilities. Advanced eDiscovery provides an end-to-end workflow to preserve, collect, analyze, review, and export content that's responsive to your organization's internal and external investigations. You can create a legal hold in core eDiscovery. See “Overview of Microsoft 365 Advanced eDiscovery”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/overview-ediscovery-20?view=o365-worldwide." [ref=e785] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/overview-ediscovery-20?view=o365-worldwide.
+      - generic [ref=e786]:
+        - paragraph [ref=e787]: What is the name of the unified data governance service that enables end-to-end data lineage?
+        - generic [ref=e789]: Security Concepts
+        - generic [ref=e790]:
+          - generic [ref=e791]:
+            - generic [ref=e792]: A.
+            - text: Microsoft 365 eDiscovery
+          - generic [ref=e793]:
+            - generic [ref=e794]: B.
+            - text: Data Loss Prevention
+          - generic [ref=e795]:
+            - generic [ref=e796]: C.
+            - text: Entitlement Management
+          - generic [ref=e797]:
+            - generic [ref=e798]: D.
+            - text: Microsoft Purview✓ Correct
+        - generic [ref=e799]:
+          - text: Microsoft Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. See “What is Azure Purview?”
+          - link "https://docs.microsoft.com/en-us/azure/purview/overview." [ref=e800] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/purview/overview.
+      - generic [ref=e801]:
+        - paragraph [ref=e802]: You need to prevent accidental deletion of Azure resources in your subscription. Which feature will meet this requirements? (choose the best answer)
+        - generic [ref=e804]: Security Concepts
+        - generic [ref=e805]:
+          - generic [ref=e806]:
+            - generic [ref=e807]: A.
+            - text: RBAC
+          - generic [ref=e808]:
+            - generic [ref=e809]: B.
+            - text: Resource locks✓ Correct
+          - generic [ref=e810]:
+            - generic [ref=e811]: C.
+            - text: Security groups
+          - generic [ref=e812]:
+            - generic [ref=e813]: D.
+            - text: Azure policies
+        - generic [ref=e814]:
+          - text: Resource locks can prevent unwanted changes or accidental deletion at the subscription, resource group, or even the resource level. See “Lock resources to prevent unexpected changes”
+          - link "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json" [ref=e815] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json
+      - generic [ref=e816]:
+        - paragraph [ref=e817]: The Contoso Cloud Architecture team needs to simplify deployments of new environments in Azure, including Azure Resource Manager (ARM) templates, role-based access, and policies. Which Azure service enables delivery of templates for repeatable deployment and configuration of new subscriptions and environments? (choose the best answer)
+        - generic [ref=e819]: Security Concepts
+        - generic [ref=e820]:
+          - generic [ref=e821]:
+            - generic [ref=e822]: A.
+            - text: Azure Policy Initiatives
+          - generic [ref=e823]:
+            - generic [ref=e824]: B.
+            - text: Azure Policy
+          - generic [ref=e825]:
+            - generic [ref=e826]: C.
+            - text: ARM templates
+          - generic [ref=e827]:
+            - generic [ref=e828]: D.
+            - text: Azure Blueprints✓ Correct
+        - generic [ref=e829]:
+          - text: Azure Blueprints enables cloud architects to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints makes it possible for development teams to rapidly build and stand up new environments with trust they're building within organizational compliance with a set of built-in components, such as networking, to speed up development and delivery. See “What is Azure Blueprints”
+          - link "https://docs.microsoft.com/en-us/azure/governance/blueprints/overview" [ref=e830] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/governance/blueprints/overview
+      - generic [ref=e831]:
+        - paragraph [ref=e832]: Which of the following Azure services is used to monitor Azure resources to ensure new and existing deployments are in compliance with the organization’s standards and regulatory requirements?
+        - generic [ref=e834]: Security Concepts
+        - generic [ref=e835]:
+          - generic [ref=e836]:
+            - generic [ref=e837]: A.
+            - text: Azure Firewall
+          - generic [ref=e838]:
+            - generic [ref=e839]: B.
+            - text: Azure Policy✓ Correct
+          - generic [ref=e840]:
+            - generic [ref=e841]: C.
+            - text: Azure Blueprint
+          - generic [ref=e842]:
+            - generic [ref=e843]: D.
+            - text: Azure RBAC
+        - generic [ref=e844]:
+          - text: Azure Policy continuously monitors Azure resources to ensure compliance. The evaluation and reporting cycle is every 24 hours. See “What is Azure Policy?”
+          - link "https://docs.microsoft.com/en-us/azure/governance/policy/overview" [ref=e845] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/governance/policy/overview
+      - generic [ref=e846]:
+        - paragraph [ref=e847]: _______ is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey.
+        - generic [ref=e849]: Security Concepts
+        - generic [ref=e850]:
+          - generic [ref=e851]:
+            - generic [ref=e852]: A.
+            - text: Azure FastTrack
+          - generic [ref=e853]:
+            - generic [ref=e854]: B.
+            - text: Azure Migration Jumpstart
+          - generic [ref=e855]:
+            - generic [ref=e856]: C.
+            - text: Azure Well-Architected Framework
+          - generic [ref=e857]:
+            - generic [ref=e858]: D.
+            - text: Microsoft Cloud Adoption Framework✓ Correct
+        - generic [ref=e859]:
+          - text: The Microsoft Cloud Adoption Framework includes strategy and planning resources, migration guides, a cloud journey tracker, and many other resources to support a strong security posture in all phases of Azure migration and adoption. See “Microsoft Cloud Adoption Framework for Azure”
+          - link "https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/" [ref=e860] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/
+      - generic [ref=e861]:
+        - paragraph [ref=e862]: Which of the following is a feature of advanced auditing in Microsoft 365?
+        - generic [ref=e864]: Compliance
+        - generic [ref=e865]:
+          - generic [ref=e866]:
+            - generic [ref=e867]: A.
+            - text: Faster access to the Office 365 Management Activity API
+          - generic [ref=e868]:
+            - generic [ref=e869]: B.
+            - text: Longer audit log retention to accommodate forensic and compliance investigations
+          - generic [ref=e870]:
+            - generic [ref=e871]: C.
+            - text: Both of these✓ Correct
+          - generic [ref=e872]:
+            - generic [ref=e873]: D.
+            - text: None of these
+        - generic [ref=e874]:
+          - text: Advanced Audit helps organizations to conduct forensic and compliance investigations by increasing audit log retention required to conduct an investigation, providing access to crucial events that help determine scope of compromise, and faster access to Office 365 Management Activity API. See “Advanced audit in Microsoft 365”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide." [ref=e875] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/advanced-audit?view=o365-worldwide.
+      - generic [ref=e876]:
+        - paragraph [ref=e877]: "The core audit capabilities of Microsoft Purview enable search across Microsoft 365 services through:"
+        - generic [ref=e879]: Compliance
+        - generic [ref=e880]:
+          - generic [ref=e881]:
+            - generic [ref=e882]: A.
+            - text: Azure Purview
+          - generic [ref=e883]:
+            - generic [ref=e884]: B.
+            - text: eDiscovery workflow
+          - generic [ref=e885]:
+            - generic [ref=e886]: C.
+            - text: a unified audit log✓ Correct
+          - generic [ref=e887]:
+            - generic [ref=e888]: D.
+            - text: Log Analytics
+        - generic [ref=e889]:
+          - text: You can use the Microsoft Purview compliance portal to search the unified audit log to view user and administrator activity in your organization. See “Search the audit log in the compliance center”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide." [ref=e890] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide.
+      - generic [ref=e891]:
+        - paragraph [ref=e892]: What is the core function of eDiscovery feature in Microsoft Purview?
+        - generic [ref=e894]: Security Concepts
+        - generic [ref=e895]:
+          - generic [ref=e896]:
+            - generic [ref=e897]: A.
+            - text: To enable discovery of sensitive data across Microsoft 365 features like SharePoint, OneDrive, and Teams.
+          - generic [ref=e898]:
+            - generic [ref=e899]: B.
+            - text: To enable identifying and delivering electronic information that can be used as evidence in legal cases.✓ Correct
+          - generic [ref=e900]:
+            - generic [ref=e901]: C.
+            - text: To enable Microsoft Support engineers to identify unprotected data sources that contain sensitive account data in your tenant.
+        - generic [ref=e902]:
+          - text: eDiscovery is the process of identifying and delivering electronic information that can be used as evidence in legal cases. See “eDiscovery solutions in Microsoft Purview”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/ediscovery?view=o365-worldwide." [ref=e903] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/ediscovery?view=o365-worldwide.
+      - generic [ref=e904]:
+        - paragraph [ref=e905]: Which of the following features available in the Microsoft Purview compliance portal provides automation of data subject requests (DSR)?
+        - generic [ref=e907]: Security Concepts
+        - generic [ref=e908]:
+          - generic [ref=e909]:
+            - generic [ref=e910]: A.
+            - text: Compliance Manager
+          - generic [ref=e911]:
+            - generic [ref=e912]: B.
+            - text: Microsoft Priva✓ Correct
+          - generic [ref=e913]:
+            - generic [ref=e914]: C.
+            - text: Information Protection
+          - generic [ref=e915]:
+            - generic [ref=e916]: D.
+            - text: Data Loss Prevention (DLP)
+        - generic [ref=e917]: Several privacy regulations around the world grant individuals (also called data subjects) the right to make requests to review or manage the personal data that companies have collected about them, called as data subject requests (DSRs). Through automated workflows, Priva Subject Rights Requests can help alleviate the complexity and length of time involved in responding to DSR inquires. Read more at "Learn about Priva Subject Rights Requests - Microsoft Priva".
+      - generic [ref=e918]:
+        - paragraph [ref=e919]: Which Microsoft Purview feature enables administrators to define policies to explicitly prevent communication between group or users within the organization to avoid regulatory breaches and conflict of interest issues?
+        - generic [ref=e921]: Compliance
+        - generic [ref=e922]:
+          - generic [ref=e923]:
+            - generic [ref=e924]: A.
+            - text: Insider risk management
+          - generic [ref=e925]:
+            - generic [ref=e926]: B.
+            - text: Communication compliance
+          - generic [ref=e927]:
+            - generic [ref=e928]: C.
+            - text: Information barriers✓ Correct
+          - generic [ref=e929]:
+            - generic [ref=e930]: D.
+            - text: eDiscovery
+        - generic [ref=e931]:
+          - text: Information barriers in Microsoft 365 is designed to prevent communication between groups, business units, or individuals that may results in a conflict of interest or regulatory breach. See “Learn about information barriers in Microsoft 365”
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/information-barriers?view=o365-worldwide" [ref=e932] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/information-barriers?view=o365-worldwide
+      - generic [ref=e933]:
+        - paragraph [ref=e934]: Which of the following Microsoft Purview compliance solutions is focused on detecting and acting on unethical, illegal, and malicious behaviors?
+        - generic [ref=e936]: Security Concepts
+        - generic [ref=e937]:
+          - generic [ref=e938]:
+            - generic [ref=e939]: A.
+            - text: Information barriers
+          - generic [ref=e940]:
+            - generic [ref=e941]: B.
+            - text: Communication compliance
+          - generic [ref=e942]:
+            - generic [ref=e943]: C.
+            - text: Information protection
+          - generic [ref=e944]:
+            - generic [ref=e945]: D.
+            - text: Insider risk management✓ Correct
+        - generic [ref=e946]:
+          - text: "Insider risk management helps minimize internal risks by enabling you to detect, investigate, and act on malicious and inadvertent activities in your organization. Insider risk policies allow you to define the types of risks to identify and detect in your organization, including acting on cases and escalating cases to Microsoft Advanced eDiscovery if needed. See “Learn about insider risk management in Microsoft 365”:"
+          - link "https://docs.microsoft.com/en-us/microsoft-365/compliance/insider-risk-management?view=o365-worldwide" [ref=e947] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/microsoft-365/compliance/insider-risk-management?view=o365-worldwide
+      - generic [ref=e948]:
+        - paragraph [ref=e949]: Which of the following statements describes the difference between Compliance Manager and compliance score?
+        - generic [ref=e951]: Compliance
+        - generic [ref=e952]:
+          - generic [ref=e953]:
+            - generic [ref=e954]: A.
+            - text: Compliance Manager is the auditor role who will manage your compliance activities. Compliance score is a calculation of the overall compliance posture across the organization.
+          - generic [ref=e955]:
+            - generic [ref=e956]: B.
+            - text: Compliance Manager is an end-to-end solution in Microsoft Purview compliance portal to enable admins to manage and track compliance activities. Compliance score is a score the organization receives from the auditor role for successful compliance.
+          - generic [ref=e957]:
+            - generic [ref=e958]: C.
+            - text: Compliance Manager is an end-to-end solution in Microsoft Purview compliance portal to enable admins to manage and track compliance activities. Compliance score is a calculation of the overall compliance posture across the organization.✓ Correct
+        - generic [ref=e959]: Compliance Manager provides admins with the capabilities to understand and improve their compliance score so that they can ultimately improve the organization’s compliance posture and help it to stay in line with its compliance requirements
+      - generic [ref=e960]:
+        - paragraph [ref=e961]: Which of the following is an end-to-end solution in Microsoft Purview compliance portal that enables admins to manage and track compliance activities.?
+        - generic [ref=e963]: Compliance
+        - generic [ref=e964]:
+          - generic [ref=e965]:
+            - generic [ref=e966]: A.
+            - text: Compliance Manager✓ Correct
+          - generic [ref=e967]:
+            - generic [ref=e968]: B.
+            - text: Compliance Score
+          - generic [ref=e969]:
+            - generic [ref=e970]: C.
+            - text: Microsoft 365 Security and Compliance
+          - generic [ref=e971]:
+            - generic [ref=e972]: D.
+            - text: Privileged Access Manager
+        - generic [ref=e973]: Compliance Manager is an end-to-end solution in Microsoft Purview compliance portal to enable admins to manage and track compliance activities. Compliance score is a calculation of the overall compliance posture across the organization.
+      - generic [ref=e974]:
+        - paragraph [ref=e975]: What are the categories shown on the secure score in Microsoft Defender portal?
+        - generic [ref=e977]: Azure Security
+        - generic [ref=e978]:
+          - generic [ref=e979]:
+            - generic [ref=e980]: A.
+            - text: Identities, data, devices, and apps✓ Correct
+          - generic [ref=e981]:
+            - generic [ref=e982]: B.
+            - text: Alerts, incidents, remediations, and recommendations
+          - generic [ref=e983]:
+            - generic [ref=e984]: C.
+            - text: Activities, entities, anomalies, and alerts
+        - generic [ref=e985]: "Microsoft Defender portal shows cars with these categories: identities, data, devices, and apps."
+      - generic [ref=e986]:
+        - paragraph [ref=e987]: Which of the following tools help to deliver intelligent, automated, and integrated security across an organization’s domains, such as identities, endpoints, applications, and email?
+        - generic [ref=e989]: Security Concepts
+        - generic [ref=e990]:
+          - generic [ref=e991]:
+            - generic [ref=e992]: A.
+            - text: SAML
+          - generic [ref=e993]:
+            - generic [ref=e994]: B.
+            - text: SOAR
+          - generic [ref=e995]:
+            - generic [ref=e996]: C.
+            - text: XDR✓ Correct
+          - generic [ref=e997]:
+            - generic [ref=e998]: D.
+            - text: SIEM
+        - generic [ref=e999]: An XDR system is designed to deliver intelligent, automated, and integrated security across an organization’s domain. It helps prevent, detect, and respond to threats across identities, endpoints, applications, email, IoT, infrastructure, and cloud platforms.
+      - generic [ref=e1000]:
+        - paragraph [ref=e1001]: "The cloud security posture management (CSPM) functionality in Microsoft Defender for Cloud includes:"
+        - generic [ref=e1003]: Azure Security
+        - generic [ref=e1004]:
+          - generic [ref=e1005]:
+            - generic [ref=e1006]: A.
+            - text: Free tier functionality such as secure score, detection of misconfigurations, and asset inventory.✓ Correct
+          - generic [ref=e1007]:
+            - generic [ref=e1008]: B.
+            - text: A range of advanced, intelligent protections in the Standard Tier of Azure Security Center.
+          - generic [ref=e1009]:
+            - generic [ref=e1010]: C.
+            - text: All of these above
+          - generic [ref=e1011]:
+            - generic [ref=e1012]: D.
+            - text: None of the above
+        - generic [ref=e1013]: Cloud security posture management (CSPM) includes foundational (think “Free tier”) features like secure score, detection of security misconfigurations in your Azure workloads, and asset inventory.
+      - generic [ref=e1014]:
+        - paragraph [ref=e1015]: You need to provide the following functionality for infrastructure across your on-premises and Azure infrastructure.
+        - generic [ref=e1017]: Azure Security
+        - generic [ref=e1018]:
+          - generic [ref=e1019]:
+            - generic [ref=e1020]: A.
+            - text: Azure Firewall Manager
+          - generic [ref=e1021]:
+            - generic [ref=e1022]: B.
+            - text: Azure DDoS
+          - generic [ref=e1023]:
+            - generic [ref=e1024]: C.
+            - text: Microsoft Defender for Endpoint
+          - generic [ref=e1025]:
+            - generic [ref=e1026]: D.
+            - text: Microsoft Defender✓ Correct
+        - generic [ref=e1027]: Microsoft Defender provides a single portal for monitoring Azure and hybrid cloud workload protection and security. Microsoft Defender includes extended detection and response (XDR) capabilities, and intelligent protection for VMs, web app instances, cloud databases, cloud storage, and more. See “What resource types can Microsoft Defender secure?”
+      - generic [ref=e1028]:
+        - paragraph [ref=e1029]: Which of the following is NOT a function of Microsoft Defender for Cloud?
+        - generic [ref=e1031]: Azure Security
+        - generic [ref=e1032]:
+          - generic [ref=e1033]:
+            - generic [ref=e1034]: A.
+            - text: Makes recommendations on how to better secure/protect vulnerable resources in your Azure subscription.
+          - generic [ref=e1035]:
+            - generic [ref=e1036]: B.
+            - text: It scans your environment to detect unprotected web applications.
+          - generic [ref=e1037]:
+            - generic [ref=e1038]: C.
+            - text: Stores and tracks diagnostic data, including firewall and audit log alerts✓ Correct
+          - generic [ref=e1039]:
+            - generic [ref=e1040]: D.
+            - text: It provides increased visibility into and control over the security of your Azure resources.
+        - generic [ref=e1041]: Azure Security Center helps you prevent, detect, and respond to threats. It provides increased visibility into and control over the security of your Azure resources. Application Gateway is integrated with Security Center. Security Center scans your environment to detect unprotected web applications. It can recommend Application Gateway WAF to protect these vulnerable resources. However, it is not responsible for storage and retention diagnostic and audit log data.
+      - generic [ref=e1042]:
+        - paragraph [ref=e1043]: Which of the following Azure services offers protection from the following common attacks cataloged by OWASP? 1. SQL-injection attack 2. Cross-site scripting attack. 3. Cross-origin resource sharing (CORS) attacks. 4. Man-in-the-middle (MITM) attacks.
+        - generic [ref=e1045]: Azure Security
+        - generic [ref=e1046]:
+          - generic [ref=e1047]:
+            - generic [ref=e1048]: A.
+            - text: Azure Network Security Groups (NSGs)
+          - generic [ref=e1049]:
+            - generic [ref=e1050]: B.
+            - text: Azure DDoS Protection
+          - generic [ref=e1051]:
+            - generic [ref=e1052]: C.
+            - text: Azure Web Application Firewall (WAF)✓ Correct
+          - generic [ref=e1053]:
+            - generic [ref=e1054]: D.
+            - text: Microsoft Defender for Servers
+        - link "https://docs.microsoft.com/en-us/azure/web-application-firewall/overview" [ref=e1056] [cursor=pointer]:
+          - /url: https://docs.microsoft.com/en-us/azure/web-application-firewall/overview
+      - generic [ref=e1057]:
+        - paragraph [ref=e1058]: Your security admin needs to protect Azure resources from DDoS attacks, which of the given Azure DDoS Protection tiers will help your admin to enhance protection from attacks targeting Azure virtual network resources?
+        - generic [ref=e1060]: Security Concepts
+        - generic [ref=e1061]:
+          - generic [ref=e1062]:
+            - generic [ref=e1063]: A.
+            - text: Advanced
+          - generic [ref=e1064]:
+            - generic [ref=e1065]: B.
+            - text: Standard✓ Correct
+          - generic [ref=e1066]:
+            - generic [ref=e1067]: C.
+            - text: Basic
+        - generic [ref=e1068]: The Standard service tier provides additional mitigation capabilities that are tuned specifically to Microsoft Azure Virtual Network resources.
+      - generic [ref=e1069]:
+        - paragraph [ref=e1070]: Which of the following enables inclusion of risk as a signal in Conditional Access policy decisions in Microsoft Entra?
+        - generic [ref=e1072]: Identity
+        - generic [ref=e1073]:
+          - generic [ref=e1074]:
+            - generic [ref=e1075]: A.
+            - text: Priviliged Identity Management (PIM)
+          - generic [ref=e1076]:
+            - generic [ref=e1077]: B.
+            - text: Entra Password Protection
+          - generic [ref=e1078]:
+            - generic [ref=e1079]: C.
+            - text: Identity Protection✓ Correct
+          - generic [ref=e1080]:
+            - generic [ref=e1081]: D.
+            - text: None (available by default)
+        - generic [ref=e1082]: Identity Protection in Entra ID enables the evaluation of risk in Conditional Access policies. However, Identity Protection is only available in Entra ID Plan 2 (P2). Read more at "What is Microsoft Entra ID Protection? - Microsoft Entra ID Protection"
+      - generic [ref=e1083]:
+        - paragraph [ref=e1084]: Which of the following is not a question answered by Entra ID Identity Governance?
+        - generic [ref=e1086]: Security Concepts
+        - generic [ref=e1087]:
+          - generic [ref=e1088]:
+            - generic [ref=e1089]: A.
+            - text: What are users doing with access?
+          - generic [ref=e1090]:
+            - generic [ref=e1091]: B.
+            - text: Are there effective organizational controls for managing that access?
+          - generic [ref=e1092]:
+            - generic [ref=e1093]: C.
+            - text: Can auditors verify those controls are working.
+          - generic [ref=e1094]:
+            - generic [ref=e1095]: D.
+            - text: Can users self-report these controls are appropriately limiting their access?✓ Correct
+        - generic [ref=e1096]: "The questions addressed by identity governance are: 1) Which users have access to which resources? 2) What are users doing with access? 3)Are there effective organizational controls for managing that access? and 4) Can auditors verify those controls are working."
+      - generic [ref=e1097]:
+        - paragraph [ref=e1098]: Which of the following services performs the following functions leveraging event data from your on-premises Active Directory?
+        - generic [ref=e1100]: Azure Security
+        - generic [ref=e1101]:
+          - generic [ref=e1102]:
+            - generic [ref=e1103]: A.
+            - text: Microsoft Defender for Identity✓ Correct
+          - generic [ref=e1104]:
+            - generic [ref=e1105]: B.
+            - text: Azure Security Center
+          - generic [ref=e1106]:
+            - generic [ref=e1107]: C.
+            - text: Microsoft Defender for Endpoint
+          - generic [ref=e1108]:
+            - generic [ref=e1109]: D.
+            - text: Microsoft Defender for Office 365
+        - generic [ref=e1110]:
+          - text: See “What is Microsoft Defender for Identity?”See "What is Microsoft Defender for Identity?"
+          - link "https://docs.microsoft.com/en-us/defender-for-identity/what-is" [ref=e1111] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/defender-for-identity/what-is
+      - generic [ref=e1112]:
+        - paragraph [ref=e1113]: Which of the following types of attack uses a formal email to convince users to sign in and change their password?
+        - generic [ref=e1115]: Identity
+        - generic [ref=e1116]:
+          - generic [ref=e1117]:
+            - generic [ref=e1118]: A.
+            - text: Spear Phishing
+          - generic [ref=e1119]:
+            - generic [ref=e1120]: B.
+            - text: Password spray attack
+          - generic [ref=e1121]:
+            - generic [ref=e1122]: C.
+            - text: Phishing attack✓ Correct
+          - generic [ref=e1123]:
+            - generic [ref=e1124]: D.
+            - text: Brute force attack
+        - generic [ref=e1125]: A phishing attack is when a hacker sends an email that appears to come from a reputable source. The email contains a credible story, such as a security breach, instructing the user to sign in and change their password. Instead of going to a legitimate website, the user is directed to the scammer’s website where they enter their username and password. A spear phishing attack is a more sophisticated attack designed to target a specific user or group of users.
+      - generic [ref=e1126]:
+        - paragraph [ref=e1127]: Which of the following is not a service provided by on-premises Active Directory Domain Services (AD DS)?
+        - generic [ref=e1129]: Identity
+        - generic [ref=e1130]:
+          - generic [ref=e1131]:
+            - generic [ref=e1132]: A.
+            - text: It enables organizations to manage multiple on-premises infrastructure components and systems using a single identity per user.
+          - generic [ref=e1133]:
+            - generic [ref=e1134]: B.
+            - text: A directory service that stores information about members of the domain.
+          - generic [ref=e1135]:
+            - generic [ref=e1136]: C.
+            - text: Verifies the credentials of the members of the domain and defines their access rights (AuthN and AuthZ).
+          - generic [ref=e1137]:
+            - generic [ref=e1138]: D.
+            - text: Native support for mobile devices, SaaS, and line of business (LOB) apps that require modern authentication methods.✓ Correct
+        - generic [ref=e1139]:
+          - text: Active Directory (AD) is a set of directory services developed by Microsoft as part of Windows 2000 for on-premises domain-based networks. It stores information about members of the domain, including devices and users, verifies their credentials, and defines their access rights. However, it does not natively support mobile devices, SaaS, and line of business (LOB) apps that require modern authentication methods. See “Describe the concept of directory services and active directory”
+          - link "https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/6-describe-concept-of-directory-services-active-directory." [ref=e1140] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/learn/modules/describe-identity-principles-concepts/6-describe-concept-of-directory-services-active-directory.
+      - generic [ref=e1141]:
+        - paragraph [ref=e1142]: "Entra ID can be configured to allow users to authenticate with their social identities, such as Facebook or Google. In this scenario, Facebook and Google are serving as: (choose the best answer)"
+        - generic [ref=e1144]: Identity
+        - generic [ref=e1145]:
+          - generic [ref=e1146]:
+            - generic [ref=e1147]: A.
+            - text: Service principals
+          - generic [ref=e1148]:
+            - generic [ref=e1149]: B.
+            - text: Identity providers✓ Correct
+          - generic [ref=e1150]:
+            - generic [ref=e1151]: C.
+            - text: Trusted entities
+          - generic [ref=e1152]:
+            - generic [ref=e1153]: D.
+            - text: Managed identities
+        - generic [ref=e1154]:
+          - text: In Azure AD, an identity provider maintains and manages identity information while providing authentication services to applications. See “Add an identity provider to your Entra ID B2C tenant”
+          - link "https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider" [ref=e1155] [cursor=pointer]:
+            - /url: https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-identity-provider
+      - generic [ref=e1156]:
+        - paragraph [ref=e1157]: Which of the following services helps to implement identity as the primary security perimeter? (choose the best answer)
+        - generic [ref=e1159]: Identity
+        - generic [ref=e1160]:
+          - generic [ref=e1161]:
+            - generic [ref=e1162]: A.
+            - text: Entra ID Conditional Access policies✓ Correct
+          - generic [ref=e1163]:
+            - generic [ref=e1164]: B.
+            - text: Intune endpoint protection policies
+          - generic [ref=e1165]:
+            - generic [ref=e1166]: C.
+            - text: A next generation firewall
+          - generic [ref=e1167]:
+            - generic [ref=e1168]: D.
+            - text: Azure App Gateway with the latest OWASP ruleset
+        - generic [ref=e1169]: Entra ID Conditional Access policies ensure users meet our requirements for authentication, including MFA. When coupled with Entra IDIdentity Protection to ensure acceptable user and sign-in risk, and Intune endpoint protection policies to secure devices, we have a solid layered defense.
+      - generic [ref=e1170]:
+        - paragraph [ref=e1171]: Which principle of Zero Trust is demonstrated by these services or features?
+        - generic [ref=e1173]: Identity
+        - generic [ref=e1174]:
+          - generic [ref=e1175]:
+            - generic [ref=e1176]: A.
+            - text: Verify explicitly
+          - generic [ref=e1177]:
+            - generic [ref=e1178]: B.
+            - text: Least privilege access✓ Correct
+          - generic [ref=e1179]:
+            - generic [ref=e1180]: C.
+            - text: Assume breach
+          - generic [ref=e1181]:
+            - generic [ref=e1182]: D.
+            - text: None of the above
+        - generic [ref=e1183]:
+          - text: Just-In-Time and Just-Enough Access (JIT/JEA), Entra IDRBAC and conditional access implement least privilege access. See
+          - link "https://www.microsoft.com/en-us/security/business/zero-trust." [ref=e1184] [cursor=pointer]:
+            - /url: https://www.microsoft.com/en-us/security/business/zero-trust.
+      - generic [ref=e1185]:
+        - paragraph [ref=e1186]: You can configure access to the secrets in Azure Key Vault using Azure RBAC (role based access control).
+        - generic [ref=e1188]: Identity
+        - generic [ref=e1189]:
+          - generic [ref=e1190]:
+            - generic [ref=e1191]: A.
+            - text: "No"
+          - generic [ref=e1192]:
+            - generic [ref=e1193]: B.
+            - text: Yes✓ Correct
+        - generic [ref=e1194]: Both access policies and Azure RBAC can be used to control access to the contents of the key vault. Azure RBAC is is how you control access to the Key Vault instance (the management plane)
+      - generic [ref=e1195]:
+        - paragraph [ref=e1196]: Entra Connect and Entra Cloud Sync are used to configure which of the following identity models?
+        - generic [ref=e1198]: Identity
+        - generic [ref=e1199]:
+          - generic [ref=e1200]:
+            - generic [ref=e1201]: A.
+            - text: Federated
+          - generic [ref=e1202]:
+            - generic [ref=e1203]: B.
+            - text: Synchronized
+          - generic [ref=e1204]:
+            - generic [ref=e1205]: C.
+            - text: Hybrid
+          - generic [ref=e1206]:
+            - generic [ref=e1207]: D.
+            - text: All the above✓ Correct
+        - generic [ref=e1208]: All of these identity models are supported by Entra Connect or Entra Cloud Sync. See the feature comparison for these tools at "What is Microsoft Entra Cloud Sync? - Microsoft Entra ID"
+      - generic [ref=e1209]:
+        - paragraph [ref=e1210]: To enable users to securely access company resources from anywhere, the security team wants to support OATH tokens (one-time password) as a second authentication factor for Entra ID. What Microsoft solution enables use of OATH tokens for Entra ID and other identity providers?
+        - generic [ref=e1212]: Identity
+        - generic [ref=e1213]:
+          - generic [ref=e1214]:
+            - generic [ref=e1215]: A.
+            - text: Entra ID Identity Protection
+          - generic [ref=e1216]:
+            - generic [ref=e1217]: B.
+            - text: Microsoft Authenticator✓ Correct
+          - generic [ref=e1218]:
+            - generic [ref=e1219]: C.
+            - text: Conditional Access
+          - generic [ref=e1220]:
+            - generic [ref=e1221]: D.
+            - text: Entra ID Multi-Factor Authentication
+        - generic [ref=e1222]: To support software OATH on the Entra platform, users must install the Microsoft Authenticator app and register with their Entra IDs. Read more at "OATH tokens authentication method - Microsoft Entra ID | Microsoft Learn".
+      - generic [ref=e1223]:
+        - paragraph [ref=e1224]: Adherence to mandatory regulations, whether multi-national, national, state or federal laws or industry that an organization must follow is known as
+        - generic [ref=e1226]: Security Concepts
+        - generic [ref=e1227]:
+          - generic [ref=e1228]:
+            - generic [ref=e1229]: A.
+            - text: Governance
+          - generic [ref=e1230]:
+            - generic [ref=e1231]: B.
+            - text: Risk
+          - generic [ref=e1232]:
+            - generic [ref=e1233]: C.
+            - text: Non-repudiation
+          - generic [ref=e1234]:
+            - generic [ref=e1235]: D.
+            - text: Compliance✓ Correct
+        - generic [ref=e1236]: Compliance focuses on adherence to regulations. Three tenants of compliance are data residency, data sovereignty, and data privacy. Read more at "Describe governance, risk, and compliance (GRC) concepts - Training | Microsoft Learn"
+      - generic [ref=e1237]:
+        - paragraph [ref=e1238]: The VMs and other services in different virtual networks within the same subscription can communicate by default.
+        - generic [ref=e1240]: Security Concepts
+        - generic [ref=e1241]:
+          - generic [ref=e1242]:
+            - generic [ref=e1243]: A.
+            - text: "TRUE"
+          - generic [ref=e1244]:
+            - generic [ref=e1245]: B.
+            - text: FALSE✓ Correct
+        - generic [ref=e1246]: While communication between subnets within a virtual network (VNET) is possible, communication between different VNETs requires explicit configuration, such as virtual network peering or a VNET-to-VNET VPN. Thus, using multiple VNETs is a form of network segmentation. Read more at "Virtual network peering and VPN gateways - Azure Reference Architectures"
+      - generic [ref=e1247]:
+        - paragraph [ref=e1248]: Access reviews in Entra ID can be configured to be self-completed by the eligible members of the privileged roles.
+        - generic [ref=e1250]: Identity
+        - generic [ref=e1251]:
+          - generic [ref=e1252]:
+            - generic [ref=e1253]: A.
+            - text: TRUE✓ Correct
+          - generic [ref=e1254]:
+            - generic [ref=e1255]: B.
+            - text: "FALSE"
+        - generic [ref=e1256]: Yes, you can assign designated reviewers, owners, or eligible role members. Read more at "What are access reviews? - Microsoft Entra - Microsoft Entra ID Governance"
+      - generic [ref=e1257]:
+        - paragraph [ref=e1258]: Which of the following services can identify over-privileged workload and user identities, actions, and resources across multi-cloud infrastructures and assess permissions risk based on permissions assigned vs permissions used?
+        - generic [ref=e1260]: Security Concepts
+        - generic [ref=e1261]:
+          - generic [ref=e1262]:
+            - generic [ref=e1263]: A.
+            - text: Access Reviews
+          - generic [ref=e1264]:
+            - generic [ref=e1265]: B.
+            - text: Entra Identity Protection
+          - generic [ref=e1266]:
+            - generic [ref=e1267]: C.
+            - text: Azure RBAC
+          - generic [ref=e1268]:
+            - generic [ref=e1269]: D.
+            - text: Entra Permissions Management✓ Correct
+        - generic [ref=e1270]: Entra Permissions Management is a cloud infrastructure entitlement management (CIEM) solution that can assess permission risks by evaluating the gap between permissions granted and permissions used. It supports cross-cloud permissions discovery (Azure, AWS, GCP). Read more in "Microsoft Entra Permissions Management Quickstart Guide"
+      - generic [ref=e1271]:
+        - paragraph [ref=e1272]: What is the guiding principle of Zero Trust?
+        - generic [ref=e1274]: Security Concepts
+        - generic [ref=e1275]:
+          - generic [ref=e1276]:
+            - generic [ref=e1277]: A.
+            - text: Always trust internal traffic
+          - generic [ref=e1278]:
+            - generic [ref=e1279]: B.
+            - text: Never trust, always verify✓ Correct
+          - generic [ref=e1280]:
+            - generic [ref=e1281]: C.
+            - text: Verify after access is granted
+          - generic [ref=e1282]:
+            - generic [ref=e1283]: D.
+            - text: Trust but verify
+        - generic [ref=e1284]: Zero Trust follows the principle of 'never trust, always verify' - every access request is treated as a potential threat regardless of origin.
+      - generic [ref=e1285]:
+        - paragraph [ref=e1286]: The principle of Least Privilege Access includes which of the following?
+        - generic [ref=e1288]: Security Concepts
+        - generic [ref=e1289]:
+          - generic [ref=e1290]:
+            - generic [ref=e1291]: A.
+            - text: Conditional Access policies
+          - generic [ref=e1292]:
+            - generic [ref=e1293]: B.
+            - text: Just-In-Time (JIT) and Just-Enough-Access (JEA)✓ Correct
+          - generic [ref=e1294]:
+            - generic [ref=e1295]: C.
+            - text: Multi-factor authentication
+          - generic [ref=e1296]:
+            - generic [ref=e1297]: D.
+            - text: Role-based access control (RBAC)
+        - generic [ref=e1298]: Least Privilege Access is implemented through Just-In-Time (JIT) and Just-Enough-Access (JEA) to ensure users have only the access they need for only as long as needed.
+      - generic [ref=e1299]:
+        - paragraph [ref=e1300]: According to the shared responsibility model, who owns and is responsible for data and identities in all cloud deployment models?
+        - generic [ref=e1302]: Security Concepts
+        - generic [ref=e1303]:
+          - generic [ref=e1304]:
+            - generic [ref=e1305]: A.
+            - text: The customer✓ Correct
+          - generic [ref=e1306]:
+            - generic [ref=e1307]: B.
+            - text: It depends on the specific cloud model
+          - generic [ref=e1308]:
+            - generic [ref=e1309]: C.
+            - text: Both customer and provider share equal responsibility
+          - generic [ref=e1310]:
+            - generic [ref=e1311]: D.
+            - text: The cloud service provider
+        - generic [ref=e1312]: In all cloud models (SaaS, PaaS, IaaS), the customer always owns and is responsible for their data and identities.
+      - generic [ref=e1313]:
+        - paragraph [ref=e1314]: In an IaaS deployment, who manages the guest operating system and applications?
+        - generic [ref=e1316]: Security Concepts
+        - generic [ref=e1317]:
+          - generic [ref=e1318]:
+            - generic [ref=e1319]: A.
+            - text: Both customer and provider
+          - generic [ref=e1320]:
+            - generic [ref=e1321]: B.
+            - text: The customer✓ Correct
+          - generic [ref=e1322]:
+            - generic [ref=e1323]: C.
+            - text: The cloud service provider
+          - generic [ref=e1324]:
+            - generic [ref=e1325]: D.
+            - text: A third-party managed service provider
+        - generic [ref=e1326]: In IaaS, the cloud provider manages the physical infrastructure while the customer manages the guest OS, applications, and network controls.
+      - generic [ref=e1327]:
+        - paragraph [ref=e1328]: Which principle of the CIA triad ensures data is accurate and not tampered with by unauthorized users?
+        - generic [ref=e1330]: Security Concepts
+        - generic [ref=e1331]:
+          - generic [ref=e1332]:
+            - generic [ref=e1333]: A.
+            - text: Integrity✓ Correct
+          - generic [ref=e1334]:
+            - generic [ref=e1335]: B.
+            - text: Availability
+          - generic [ref=e1336]:
+            - generic [ref=e1337]: C.
+            - text: Non-repudiation
+          - generic [ref=e1338]:
+            - generic [ref=e1339]: D.
+            - text: Confidentiality
+        - generic [ref=e1340]: Integrity ensures data is accurate, consistent, and not tampered with by unauthorized users.
+      - generic [ref=e1341]:
+        - paragraph [ref=e1342]: What is the concept of Defense in Depth?
+        - generic [ref=e1344]: Security Concepts
+        - generic [ref=e1345]:
+          - generic [ref=e1346]:
+            - generic [ref=e1347]: A.
+            - text: Multiple layered security mechanisms✓ Correct
+          - generic [ref=e1348]:
+            - generic [ref=e1349]: B.
+            - text: Using only physical security controls
+          - generic [ref=e1350]:
+            - generic [ref=e1351]: C.
+            - text: Encrypting all data in transit
+          - generic [ref=e1352]:
+            - generic [ref=e1353]: D.
+            - text: A single strong perimeter defense
+        - generic [ref=e1354]: Defense in Depth uses multiple layered security mechanisms - if one layer fails, another layer provides protection.
+      - generic [ref=e1355]:
+        - paragraph [ref=e1356]: What is the process of verifying a user's identity by checking credentials called?
+        - generic [ref=e1358]: Security Concepts
+        - generic [ref=e1359]:
+          - generic [ref=e1360]:
+            - generic [ref=e1361]: A.
+            - text: Single Sign-On
+          - generic [ref=e1362]:
+            - generic [ref=e1363]: B.
+            - text: Authentication✓ Correct
+          - generic [ref=e1364]:
+            - generic [ref=e1365]: C.
+            - text: Authorization
+          - generic [ref=e1366]:
+            - generic [ref=e1367]: D.
+            - text: Federation
+        - generic [ref=e1368]: Authentication is the process of verifying identity by checking credentials such as passwords, biometrics, or security tokens.
+      - generic [ref=e1369]:
+        - paragraph [ref=e1370]: In the shared responsibility model, who is responsible for the physical security of datacenters?
+        - generic [ref=e1372]: Security Concepts
+        - generic [ref=e1373]:
+          - generic [ref=e1374]:
+            - generic [ref=e1375]: A.
+            - text: Both customer and cloud provider
+          - generic [ref=e1376]:
+            - generic [ref=e1377]: B.
+            - text: A third-party security firm
+          - generic [ref=e1378]:
+            - generic [ref=e1379]: C.
+            - text: The customer
+          - generic [ref=e1380]:
+            - generic [ref=e1381]: D.
+            - text: The cloud provider✓ Correct
+        - generic [ref=e1382]: Physical security of datacenters is always the cloud provider's responsibility, even in an IaaS deployment.
+      - generic [ref=e1383]:
+        - paragraph [ref=e1384]: What is a sovereign cloud designed to address?
+        - generic [ref=e1386]: Security Concepts
+        - generic [ref=e1387]:
+          - generic [ref=e1388]:
+            - generic [ref=e1389]: A.
+            - text: Global scalability and performance
+          - generic [ref=e1390]:
+            - generic [ref=e1391]: B.
+            - text: Cost optimization for cloud resources
+          - generic [ref=e1392]:
+            - generic [ref=e1393]: C.
+            - text: Specific regulatory and data residency requirements✓ Correct
+          - generic [ref=e1394]:
+            - generic [ref=e1395]: D.
+            - text: Open-source technology adoption
+        - generic [ref=e1396]: Sovereign clouds like Azure Government meet specific regulatory and data residency requirements for government and regulated industries.
+      - generic [ref=e1397]:
+        - paragraph [ref=e1398]: The Zero Trust principle of 'Assume Breach' minimizes which of the following?
+        - generic [ref=e1400]: Security Concepts
+        - generic [ref=e1401]:
+          - generic [ref=e1402]:
+            - generic [ref=e1403]: A.
+            - text: Network latency
+          - generic [ref=e1404]:
+            - generic [ref=e1405]: B.
+            - text: Compliance overhead
+          - generic [ref=e1406]:
+            - generic [ref=e1407]: C.
+            - text: Attack surface
+          - generic [ref=e1408]:
+            - generic [ref=e1409]: D.
+            - text: Blast radius✓ Correct
+        - generic [ref=e1410]: Assume Breach minimizes blast radius through micro-segmentation and continuous monitoring, limiting the impact of a potential breach.
+      - generic [ref=e1411]:
+        - paragraph [ref=e1412]: What is Microsoft Entra ID (formerly Azure Active Directory)?
+        - generic [ref=e1414]: Identity
+        - generic [ref=e1415]:
+          - generic [ref=e1416]:
+            - generic [ref=e1417]: A.
+            - text: A DNS management service
+          - generic [ref=e1418]:
+            - generic [ref=e1419]: B.
+            - text: A cloud-based identity and access management service✓ Correct
+          - generic [ref=e1420]:
+            - generic [ref=e1421]: C.
+            - text: A virtual private network service
+          - generic [ref=e1422]:
+            - generic [ref=e1423]: D.
+            - text: An on-premises directory service for Windows networks
+        - generic [ref=e1424]: Microsoft Entra ID is a cloud-based identity and access management service that provides authentication and authorization for Microsoft cloud services.
+      - generic [ref=e1425]:
+        - paragraph [ref=e1426]: What does Single Sign-On (SSO) allow users to do?
+        - generic [ref=e1428]: Identity
+        - generic [ref=e1429]:
+          - generic [ref=e1430]:
+            - generic [ref=e1431]: A.
+            - text: Access resources without any authentication
+          - generic [ref=e1432]:
+            - generic [ref=e1433]: B.
+            - text: Share credentials with other users
+          - generic [ref=e1434]:
+            - generic [ref=e1435]: C.
+            - text: Sign in once and access multiple applications without re-authenticating✓ Correct
+          - generic [ref=e1436]:
+            - generic [ref=e1437]: D.
+            - text: Use multiple passwords for different applications
+        - generic [ref=e1438]: SSO allows users to sign in once and access multiple applications and services without being prompted to re-authenticate.
+      - generic [ref=e1439]:
+        - paragraph [ref=e1440]: Which of the following is considered the most secure authentication method?
+        - generic [ref=e1442]: Identity
+        - generic [ref=e1443]:
+          - generic [ref=e1444]:
+            - generic [ref=e1445]: A.
+            - text: Security questions
+          - generic [ref=e1446]:
+            - generic [ref=e1447]: B.
+            - text: SMS-based verification
+          - generic [ref=e1448]:
+            - generic [ref=e1449]: C.
+            - text: Password with MFA
+          - generic [ref=e1450]:
+            - generic [ref=e1451]: D.
+            - text: Passwordless (Windows Hello, FIDO2)✓ Correct
+        - generic [ref=e1452]: Passwordless methods such as Windows Hello and FIDO2 are phishing-resistant and provide the highest level of authentication security.
+      - generic [ref=e1453]:
+        - paragraph [ref=e1454]: What does Conditional Access in Microsoft Entra ID enforce?
+        - generic [ref=e1456]: Identity
+        - generic [ref=e1457]:
+          - generic [ref=e1458]:
+            - generic [ref=e1459]: A.
+            - text: Network firewall rules
+          - generic [ref=e1460]:
+            - generic [ref=e1461]: B.
+            - text: Data encryption requirements
+          - generic [ref=e1462]:
+            - generic [ref=e1463]: C.
+            - text: Policies based on signals such as location, device health, and risk✓ Correct
+          - generic [ref=e1464]:
+            - generic [ref=e1465]: D.
+            - text: Password complexity rules
+        - generic [ref=e1466]: Conditional Access enforces policies based on signals like user location, device health, and risk level to grant or deny access.
+      - generic [ref=e1467]:
+        - paragraph [ref=e1468]: What is the purpose of Self-Service Password Reset (SSPR) in Microsoft Entra ID?
+        - generic [ref=e1470]: Identity
+        - generic [ref=e1471]:
+          - generic [ref=e1472]:
+            - generic [ref=e1473]: A.
+            - text: To require IT admin approval for all password changes
+          - generic [ref=e1474]:
+            - generic [ref=e1475]: B.
+            - text: To allow users to reset their own passwords without IT intervention✓ Correct
+          - generic [ref=e1476]:
+            - generic [ref=e1477]: C.
+            - text: To enforce password expiration policies
+          - generic [ref=e1478]:
+            - generic [ref=e1479]: D.
+            - text: To synchronize passwords with on-premises AD
+        - generic [ref=e1480]: SSPR enables users to reset or change their own passwords without requiring IT administrator intervention.
+      - generic [ref=e1481]:
+        - paragraph [ref=e1482]: What do Managed Identities in Azure provide?
+        - generic [ref=e1484]: Identity
+        - generic [ref=e1485]:
+          - generic [ref=e1486]:
+            - generic [ref=e1487]: A.
+            - text: Database backup services
+          - generic [ref=e1488]:
+            - generic [ref=e1489]: B.
+            - text: User password management
+          - generic [ref=e1490]:
+            - generic [ref=e1491]: C.
+            - text: Network security monitoring
+          - generic [ref=e1492]:
+            - generic [ref=e1493]: D.
+            - text: Authentication for Azure resources without managing credentials✓ Correct
+        - generic [ref=e1494]: Managed Identities allow Azure resources to authenticate to other Azure services without managing credentials in code.
+      - generic [ref=e1495]:
+        - paragraph [ref=e1496]: What does Privileged Identity Management (PIM) provide?
+        - generic [ref=e1498]: Identity
+        - generic [ref=e1499]:
+          - generic [ref=e1500]:
+            - generic [ref=e1501]: A.
+            - text: Just-In-Time access for administrative roles✓ Correct
+          - generic [ref=e1502]:
+            - generic [ref=e1503]: B.
+            - text: Data loss prevention
+          - generic [ref=e1504]:
+            - generic [ref=e1505]: C.
+            - text: Network security management
+          - generic [ref=e1506]:
+            - generic [ref=e1507]: D.
+            - text: Basic user authentication
+        - generic [ref=e1508]: PIM provides Just-In-Time access for administrative roles with time-bound activation and approval workflows.
+      - generic [ref=e1509]:
+        - paragraph [ref=e1510]: What does Microsoft Entra Identity Protection detect and remediate?
+        - generic [ref=e1512]: Identity
+        - generic [ref=e1513]:
+          - generic [ref=e1514]:
+            - generic [ref=e1515]: A.
+            - text: Identity-based risks such as leaked credentials and risky sign-ins✓ Correct
+          - generic [ref=e1516]:
+            - generic [ref=e1517]: B.
+            - text: Data exfiltration
+          - generic [ref=e1518]:
+            - generic [ref=e1519]: C.
+            - text: Network attacks
+          - generic [ref=e1520]:
+            - generic [ref=e1521]: D.
+            - text: Malware infections
+        - generic [ref=e1522]: Identity Protection detects, investigates, and remediates identity-based risks such as leaked credentials and suspicious sign-in activities.
+      - generic [ref=e1523]:
+        - paragraph [ref=e1524]: What can a Global Administrator manage in Microsoft Entra ID?
+        - generic [ref=e1526]: Identity
+        - generic [ref=e1527]:
+          - generic [ref=e1528]:
+            - generic [ref=e1529]: A.
+            - text: Only application registrations
+          - generic [ref=e1530]:
+            - generic [ref=e1531]: B.
+            - text: Only billing information
+          - generic [ref=e1532]:
+            - generic [ref=e1533]: C.
+            - text: All aspects of Microsoft Entra ID and Microsoft services✓ Correct
+          - generic [ref=e1534]:
+            - generic [ref=e1535]: D.
+            - text: Only user passwords
+        - generic [ref=e1536]: The Global Administrator role can manage all aspects of Microsoft Entra ID and Microsoft cloud services.
+      - generic [ref=e1537]:
+        - paragraph [ref=e1538]: What is a Service Principal in Microsoft Entra ID?
+        - generic [ref=e1540]: Identity
+        - generic [ref=e1541]:
+          - generic [ref=e1542]:
+            - generic [ref=e1543]: A.
+            - text: A user account for employees
+          - generic [ref=e1544]:
+            - generic [ref=e1545]: B.
+            - text: The local identity for a specific application instance✓ Correct
+          - generic [ref=e1546]:
+            - generic [ref=e1547]: C.
+            - text: A security group for administrators
+          - generic [ref=e1548]:
+            - generic [ref=e1549]: D.
+            - text: A device identity for workstations
+        - generic [ref=e1550]: A Service Principal is the local identity for a specific application instance in Microsoft Entra ID, used for authentication and authorization.
+      - generic [ref=e1551]:
+        - paragraph [ref=e1552]: What is Microsoft Sentinel?
+        - generic [ref=e1554]: Azure Security
+        - generic [ref=e1555]:
+          - generic [ref=e1556]:
+            - generic [ref=e1557]: A.
+            - text: A firewall service
+          - generic [ref=e1558]:
+            - generic [ref=e1559]: B.
+            - text: An identity management service
+          - generic [ref=e1560]:
+            - generic [ref=e1561]: C.
+            - text: A data backup service
+          - generic [ref=e1562]:
+            - generic [ref=e1563]: D.
+            - text: A cloud-native SIEM (Security Information and Event Management) solution✓ Correct
+        - generic [ref=e1564]: Microsoft Sentinel is a cloud-native SIEM solution that provides security information and event management across the enterprise.
+      - generic [ref=e1565]:
+        - paragraph [ref=e1566]: What does Microsoft Defender for Endpoint protect?
+        - generic [ref=e1568]: Azure Security
+        - generic [ref=e1569]:
+          - generic [ref=e1570]:
+            - generic [ref=e1571]: A.
+            - text: Only cloud storage
+          - generic [ref=e1572]:
+            - generic [ref=e1573]: B.
+            - text: Database servers only
+          - generic [ref=e1574]:
+            - generic [ref=e1575]: C.
+            - text: Only email communications
+          - generic [ref=e1576]:
+            - generic [ref=e1577]: D.
+            - text: Laptops, servers, and mobile devices from advanced threats✓ Correct
+        - generic [ref=e1578]: Microsoft Defender for Endpoint protects endpoints including laptops, servers, and mobile devices from advanced persistent threats.
+      - generic [ref=e1579]:
+        - paragraph [ref=e1580]: What does Microsoft Defender for Identity monitor?
+        - generic [ref=e1582]: Azure Security
+        - generic [ref=e1583]:
+          - generic [ref=e1584]:
+            - generic [ref=e1585]: A.
+            - text: On-premises Active Directory signals to detect compromised accounts✓ Correct
+          - generic [ref=e1586]:
+            - generic [ref=e1587]: B.
+            - text: Email messages for phishing
+          - generic [ref=e1588]:
+            - generic [ref=e1589]: C.
+            - text: Network traffic for intrusion attempts
+          - generic [ref=e1590]:
+            - generic [ref=e1591]: D.
+            - text: Cloud application usage
+        - generic [ref=e1592]: Defender for Identity monitors on-premises Active Directory signals to detect compromised accounts and malicious activities.
+      - generic [ref=e1593]:
+        - paragraph [ref=e1594]: What does Microsoft Defender for Cloud provide?
+        - generic [ref=e1596]: Azure Security
+        - generic [ref=e1597]:
+          - generic [ref=e1598]:
+            - generic [ref=e1599]: A.
+            - text: User identity management
+          - generic [ref=e1600]:
+            - generic [ref=e1601]: B.
+            - text: Database administration
+          - generic [ref=e1602]:
+            - generic [ref=e1603]: C.
+            - text: Email security
+          - generic [ref=e1604]:
+            - generic [ref=e1605]: D.
+            - text: Cloud Security Posture Management (CSPM)✓ Correct
+        - generic [ref=e1606]: Defender for Cloud provides Cloud Security Posture Management (CSPM) for continuous assessment and improvement of security posture across cloud workloads.
+      - generic [ref=e1607]:
+        - paragraph [ref=e1608]: What does the Secure Score measure?
+        - generic [ref=e1610]: Azure Security
+        - generic [ref=e1611]:
+          - generic [ref=e1612]:
+            - generic [ref=e1613]: A.
+            - text: User productivity
+          - generic [ref=e1614]:
+            - generic [ref=e1615]: B.
+            - text: Network bandwidth usage
+          - generic [ref=e1616]:
+            - generic [ref=e1617]: C.
+            - text: Security posture - a higher score means lower identified risk✓ Correct
+          - generic [ref=e1618]:
+            - generic [ref=e1619]: D.
+            - text: Cloud spending
+        - generic [ref=e1620]: Secure Score measures security posture based on completed improvement actions - a higher score indicates lower identified risk.
+      - generic [ref=e1621]:
+        - paragraph [ref=e1622]: What is Azure Web Application Firewall (WAF)?
+        - generic [ref=e1624]: Azure Security
+        - generic [ref=e1625]:
+          - generic [ref=e1626]:
+            - generic [ref=e1627]: A.
+            - text: A managed Layer 7 firewall protecting web applications from OWASP threats✓ Correct
+          - generic [ref=e1628]:
+            - generic [ref=e1629]: B.
+            - text: An email filtering service
+          - generic [ref=e1630]:
+            - generic [ref=e1631]: C.
+            - text: A network firewall
+          - generic [ref=e1632]:
+            - generic [ref=e1633]: D.
+            - text: A DNS filtering service
+        - generic [ref=e1634]: Azure WAF is a managed Layer 7 firewall that protects web applications from common OWASP top-10 threats with SSL termination.
+      - generic [ref=e1635]:
+        - paragraph [ref=e1636]: What does Azure DDoS Protection protect?
+        - generic [ref=e1638]: Azure Security
+        - generic [ref=e1639]:
+          - generic [ref=e1640]:
+            - generic [ref=e1641]: A.
+            - text: Email communications
+          - generic [ref=e1642]:
+            - generic [ref=e1643]: B.
+            - text: On-premises servers only
+          - generic [ref=e1644]:
+            - generic [ref=e1645]: C.
+            - text: Azure resources from Distributed Denial of Service attacks✓ Correct
+          - generic [ref=e1646]:
+            - generic [ref=e1647]: D.
+            - text: User identities
+        - generic [ref=e1648]: Azure DDoS Protection protects Azure resources from Distributed Denial of Service (DDoS) attacks by monitoring and mitigating attack traffic.
+      - generic [ref=e1649]:
+        - paragraph [ref=e1650]: What is Azure Bastion?
+        - generic [ref=e1652]: Azure Security
+        - generic [ref=e1653]:
+          - generic [ref=e1654]:
+            - generic [ref=e1655]: A.
+            - text: A service providing secure RDP/SSH access to VMs via web browser over SSL✓ Correct
+          - generic [ref=e1656]:
+            - generic [ref=e1657]: B.
+            - text: A load balancer
+          - generic [ref=e1658]:
+            - generic [ref=e1659]: C.
+            - text: A VPN gateway
+          - generic [ref=e1660]:
+            - generic [ref=e1661]: D.
+            - text: A DNS service
+        - generic [ref=e1662]: Azure Bastion provides secure and seamless RDP/SSH access to virtual machines directly through the Azure portal over SSL.
+      - generic [ref=e1663]:
+        - paragraph [ref=e1664]: What is Microsoft Defender for Cloud Apps?
+        - generic [ref=e1666]: Azure Security
+        - generic [ref=e1667]:
+          - generic [ref=e1668]:
+            - generic [ref=e1669]: A.
+            - text: A backup service
+          - generic [ref=e1670]:
+            - generic [ref=e1671]: B.
+            - text: Microsoft's Cloud Access Security Broker (CASB) solution✓ Correct
+          - generic [ref=e1672]:
+            - generic [ref=e1673]: C.
+            - text: A firewall service
+          - generic [ref=e1674]:
+            - generic [ref=e1675]: D.
+            - text: An identity management service
+        - generic [ref=e1676]: Defender for Cloud Apps is Microsoft's Cloud Access Security Broker (CASB) solution providing visibility and control over cloud applications.
+      - generic [ref=e1677]:
+        - paragraph [ref=e1678]: What does Microsoft Defender for Office 365 Safe Links provide?
+        - generic [ref=e1680]: Azure Security
+        - generic [ref=e1681]:
+          - generic [ref=e1682]:
+            - generic [ref=e1683]: A.
+            - text: Email encryption
+          - generic [ref=e1684]:
+            - generic [ref=e1685]: B.
+            - text: Time-of-click protection against malicious URLs✓ Correct
+          - generic [ref=e1686]:
+            - generic [ref=e1687]: C.
+            - text: Spam filtering
+          - generic [ref=e1688]:
+            - generic [ref=e1689]: D.
+            - text: Mailbox storage management
+        - generic [ref=e1690]: Safe Links provides time-of-click protection against malicious URLs in emails and Office documents.
+      - generic [ref=e1691]:
+        - paragraph [ref=e1692]: What does the Service Trust Portal provide?
+        - generic [ref=e1694]: Compliance
+        - generic [ref=e1695]:
+          - generic [ref=e1696]:
+            - generic [ref=e1697]: A.
+            - text: User identity management
+          - generic [ref=e1698]:
+            - generic [ref=e1699]: B.
+            - text: Cloud billing management
+          - generic [ref=e1700]:
+            - generic [ref=e1701]: C.
+            - text: Application development tools
+          - generic [ref=e1702]:
+            - generic [ref=e1703]: D.
+            - text: Access to Microsoft audit reports and compliance documentation✓ Correct
+        - generic [ref=e1704]: Service Trust Portal provides access to Microsoft's audit reports, compliance documentation, and data protection resources.
+      - generic [ref=e1705]:
+        - paragraph [ref=e1706]: What does Microsoft Purview manage?
+        - generic [ref=e1708]: Compliance
+        - generic [ref=e1709]:
+          - generic [ref=e1710]:
+            - generic [ref=e1711]: A.
+            - text: Only email communications
+          - generic [ref=e1712]:
+            - generic [ref=e1713]: B.
+            - text: User identities
+          - generic [ref=e1714]:
+            - generic [ref=e1715]: C.
+            - text: Network infrastructure
+          - generic [ref=e1716]:
+            - generic [ref=e1717]: D.
+            - text: Data governance, compliance, and risk across the data estate✓ Correct
+        - generic [ref=e1718]: Microsoft Purview manages data governance, compliance, and risk across the entire data estate including on-premises, multicloud, and SaaS.
+      - generic [ref=e1719]:
+        - paragraph [ref=e1720]: What do Sensitivity Labels in Microsoft Purview do?
+        - generic [ref=e1722]: Compliance
+        - generic [ref=e1723]:
+          - generic [ref=e1724]:
+            - generic [ref=e1725]: A.
+            - text: Delete old data
+          - generic [ref=e1726]:
+            - generic [ref=e1727]: B.
+            - text: Classify and encrypt content - labels persist even if data leaves the organization✓ Correct
+          - generic [ref=e1728]:
+            - generic [ref=e1729]: C.
+            - text: Manage user permissions
+          - generic [ref=e1730]:
+            - generic [ref=e1731]: D.
+            - text: Monitor network traffic
+        - generic [ref=e1732]: Sensitivity Labels classify and encrypt content with persistent protection - labels travel with data even when it leaves the organization.
+      - generic [ref=e1733]:
+        - paragraph [ref=e1734]: What does Data Loss Prevention (DLP) in Microsoft Purview prevent?
+        - generic [ref=e1736]: Compliance
+        - generic [ref=e1737]:
+          - generic [ref=e1738]:
+            - generic [ref=e1739]: A.
+            - text: Users from sharing sensitive information outside the organization✓ Correct
+          - generic [ref=e1740]:
+            - generic [ref=e1741]: B.
+            - text: Network outages
+          - generic [ref=e1742]:
+            - generic [ref=e1743]: C.
+            - text: Hardware failures
+          - generic [ref=e1744]:
+            - generic [ref=e1745]: D.
+            - text: Software bugs
+        - generic [ref=e1746]: DLP prevents users from unintentionally sharing sensitive information such as credit card numbers or personal data outside the organization.
+      - generic [ref=e1747]:
+        - paragraph [ref=e1748]: What does eDiscovery in Microsoft Purview identify?
+        - generic [ref=e1750]: Compliance
+        - generic [ref=e1751]:
+          - generic [ref=e1752]:
+            - generic [ref=e1753]: A.
+            - text: Electronic information usable as evidence in legal cases✓ Correct
+          - generic [ref=e1754]:
+            - generic [ref=e1755]: B.
+            - text: Network performance issues
+          - generic [ref=e1756]:
+            - generic [ref=e1757]: C.
+            - text: Hardware inventory
+          - generic [ref=e1758]:
+            - generic [ref=e1759]: D.
+            - text: User productivity metrics
+        - generic [ref=e1760]: eDiscovery identifies and delivers electronic information that can be used as evidence in legal cases and investigations.
+      - generic [ref=e1761]:
+        - paragraph [ref=e1762]: What does Insider Risk Management in Microsoft Purview detect?
+        - generic [ref=e1764]: Compliance
+        - generic [ref=e1765]:
+          - generic [ref=e1766]:
+            - generic [ref=e1767]: A.
+            - text: Malicious and inadvertent activities such as data theft and policy violations✓ Correct
+          - generic [ref=e1768]:
+            - generic [ref=e1769]: B.
+            - text: Hardware failures
+          - generic [ref=e1770]:
+            - generic [ref=e1771]: C.
+            - text: Software licensing issues
+          - generic [ref=e1772]:
+            - generic [ref=e1773]: D.
+            - text: External network attacks
+        - generic [ref=e1774]: Insider Risk Management detects and acts on malicious or inadvertent insider activities like data theft, policy violations, and data leaks.
+      - generic [ref=e1775]:
+        - paragraph [ref=e1776]: What do Retention Policies in Microsoft Purview determine?
+        - generic [ref=e1778]: Compliance
+        - generic [ref=e1779]:
+          - generic [ref=e1780]:
+            - generic [ref=e1781]: A.
+            - text: How long data is kept and when it should be deleted✓ Correct
+          - generic [ref=e1782]:
+            - generic [ref=e1783]: B.
+            - text: Which users can access data
+          - generic [ref=e1784]:
+            - generic [ref=e1785]: C.
+            - text: How data is encrypted
+          - generic [ref=e1786]:
+            - generic [ref=e1787]: D.
+            - text: Where data is stored geographically
+        - generic [ref=e1788]: Retention Policies determine how long content is retained and when it should be permanently deleted to meet compliance requirements.
+      - generic [ref=e1789]:
+        - paragraph [ref=e1790]: What does Customer Lockbox ensure in Microsoft 365?
+        - generic [ref=e1792]: Compliance
+        - generic [ref=e1793]:
+          - generic [ref=e1794]:
+            - generic [ref=e1795]: A.
+            - text: Users can access all tenant data
+          - generic [ref=e1796]:
+            - generic [ref=e1797]: B.
+            - text: Data is automatically encrypted
+          - generic [ref=e1798]:
+            - generic [ref=e1799]: C.
+            - text: Microsoft cannot access customer content for service operations without explicit approval✓ Correct
+          - generic [ref=e1800]:
+            - generic [ref=e1801]: D.
+            - text: All external sharing is blocked
+        - generic [ref=e1802]: Customer Lockbox ensures Microsoft support engineers cannot access your content for service operations without your explicit approval.
+      - generic [ref=e1803]:
+        - paragraph [ref=e1804]: What do Sensitive Information Types (SITs) in Microsoft Purview identify?
+        - generic [ref=e1806]: Compliance
+        - generic [ref=e1807]:
+          - generic [ref=e1808]:
+            - generic [ref=e1809]: A.
+            - text: Sensitive data using regex patterns, keywords, and functions✓ Correct
+          - generic [ref=e1810]:
+            - generic [ref=e1811]: B.
+            - text: File formats
+          - generic [ref=e1812]:
+            - generic [ref=e1813]: C.
+            - text: Storage locations
+          - generic [ref=e1814]:
+            - generic [ref=e1815]: D.
+            - text: User permissions
+        - generic [ref=e1816]: Sensitive Information Types use regex patterns, keywords, and functions to identify sensitive data like credit card numbers and social security numbers.
+      - generic [ref=e1817]:
+        - paragraph [ref=e1818]: What does Compliance Manager in Microsoft Purview calculate?
+        - generic [ref=e1820]: Compliance
+        - generic [ref=e1821]:
+          - generic [ref=e1822]:
+            - generic [ref=e1823]: A.
+            - text: Data storage costs
+          - generic [ref=e1824]:
+            - generic [ref=e1825]: B.
+            - text: A compliance score based on completed improvement actions✓ Correct
+          - generic [ref=e1826]:
+            - generic [ref=e1827]: C.
+            - text: User training completion rates
+          - generic [ref=e1828]:
+            - generic [ref=e1829]: D.
+            - text: Network uptime
+        - generic [ref=e1830]: Compliance Manager calculates a compliance score based on the implementation of recommended improvement actions for regulatory standards.
+  - button "Open Next.js Dev Tools" [ref=e1836] [cursor=pointer]:
+    - img [ref=e1837]
+  - alert [ref=e1840]

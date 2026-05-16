@@ -1,0 +1,12 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - heading "❌ Review Mistakes" [level=1] [ref=e6]
+    - generic [ref=e7]:
+      - paragraph [ref=e8]: No mistakes recorded yet.
+      - paragraph [ref=e9]: Mistakes are automatically saved when you finish a quiz.
+      - link "Take a Quiz" [ref=e10] [cursor=pointer]:
+        - /url: /
+  - button "Open Next.js Dev Tools" [ref=e16] [cursor=pointer]:
+    - img [ref=e17]

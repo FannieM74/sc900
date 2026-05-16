@@ -95,7 +95,7 @@ export default function SearchPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
+                  <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3 break-words">
                     {linkify(q.explanation)}
                   </div>
                 </div>

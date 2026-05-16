@@ -49,13 +49,13 @@ export default function BookmarksPage() {
                   <TopicBadge topic={q.topic} />
                   <span className="text-xs text-gray-400">Q{q.id}</span>
                 </div>
-                <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
+                <p className="text-sm text-gray-800 leading-relaxed break-words">{q.question}</p>
                 <details className="mt-3">
                   <summary className="text-xs text-blue-600 cursor-pointer hover:text-blue-800">
                     Show answer & explanation
                   </summary>
                   <div className="mt-2 p-3 bg-green-50 rounded-lg border border-green-200">
-                    <p className="text-sm font-medium text-green-800">
+                    <p className="text-sm font-medium text-green-800 break-words">
                       Answer: {optionLetter(q.correctAnswer)}. {q.options[q.correctAnswer]}
                     </p>
                     <p className="text-sm text-gray-600 mt-2">{linkify(q.explanation)}</p>

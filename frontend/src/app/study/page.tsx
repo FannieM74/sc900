@@ -25,10 +25,10 @@ export default function StudyPage() {
           ← Home
         </Link>
 
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
           <h1 className="text-2xl font-bold text-gray-900">📖 Study Mode</h1>
           <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)}
-            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            className="w-full sm:w-auto rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="">All Topics</option>
             {topicsList.map((t) => (
               <option key={t} value={t}>{TOPIC_LABELS[t] || t}</option>
@@ -42,7 +42,7 @@ export default function StudyPage() {
           {filtered.map((q) => {
             return (
               <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                <p className="text-gray-900 font-medium mb-2">{q.question}</p>
+                <p className="text-gray-900 font-medium mb-2 break-words">{q.question}</p>
                 <div className="flex items-center gap-2 mb-3">
                   <TopicBadge topic={q.topic} />
                 </div>
@@ -53,15 +53,15 @@ export default function StudyPage() {
                         ? "bg-green-50 border border-green-200 text-green-800 font-medium"
                         : "bg-gray-50 border border-gray-200 text-gray-700"
                     }`}>
-                      <span className="font-medium mr-2">{optionLetter(i)}.</span>
-                      {opt}
+                      <span className="font-medium mr-2 shrink-0">{optionLetter(i)}.</span>
+                      <span className="break-words">{opt}</span>
                       {i === q.correctAnswer && (
-                        <span className="ml-2 text-xs text-green-600">✓ Correct</span>
+                        <span className="ml-2 text-xs text-green-600 shrink-0">✓ Correct</span>
                       )}
                     </div>
                   ))}
                 </div>
-                <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
+                <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3 break-words">
                   {linkify(q.explanation)}
                 </div>
               </div>

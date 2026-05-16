@@ -77,7 +77,7 @@ export default function ReviewPage() {
                   <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1 min-w-0">
-                        <p className="text-gray-900 font-medium mb-2">{q.question}</p>
+                        <p className="text-gray-900 font-medium mb-2 break-words">{q.question}</p>
                         <TopicBadge topic={q.topic} />
                       </div>
                       <button onClick={() => handleRemove(q.id)}
@@ -92,12 +92,12 @@ export default function ReviewPage() {
                             ? "bg-green-50 border border-green-200 text-green-800"
                             : "bg-gray-50 border border-gray-200 text-gray-700"
                         }`}>
-                          <span className="font-medium mr-2">{optionLetter(i)}.</span>
-                          {opt}
+                          <span className="font-medium mr-2 shrink-0">{optionLetter(i)}.</span>
+                          <span className="break-words">{opt}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3">
+                    <div className="mt-3 text-sm text-gray-500 bg-blue-50 rounded-lg p-3 break-words">
                       {linkify(q.explanation)}
                     </div>
                   </div>

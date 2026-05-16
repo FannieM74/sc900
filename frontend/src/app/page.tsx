@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           <Link href="/search" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
             🔍 Search
           </Link>

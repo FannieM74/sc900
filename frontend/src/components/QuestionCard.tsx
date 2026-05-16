@@ -72,7 +72,7 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
 
       <div className="space-y-3">
         {question.options.map((option, idx) => {
-          let classes = "w-full text-left p-4 rounded-lg border-2 transition-all duration-200 text-sm font-medium ";
+          let classes = "w-full text-left break-words p-4 rounded-lg border-2 transition-all duration-200 text-sm font-medium ";
 
           if (mode === "review") {
             if (idx === question.correctAnswer) {
@@ -97,7 +97,7 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
               disabled={mode === "review"}
               className={classes}
             >
-              <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full border text-xs font-bold mr-3 ${
+              <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full border text-xs font-bold mr-3 shrink-0 ${
                 mode === "review" && idx === question.correctAnswer
                   ? "border-green-500 bg-green-500 text-white"
                   : mode === "review" && idx === selected && !isCorrect
@@ -108,7 +108,7 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
               }`}>
                 {optionLetter(idx)}
               </span>
-              {option}
+              <span className="break-words">{option}</span>
             </button>
           );
         })}

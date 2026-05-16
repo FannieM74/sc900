@@ -7,10 +7,28 @@ const HISTORY_KEY = "sc900-history";
 const MISSED_KEY = "sc900-missed";
 const FLAGGED_KEY = "sc900-flagged";
 const ATTEMPTS_KEY = "sc900-attempts";
+const STORAGE_VERSION = 1;
+const VERSION_KEY = "sc900-version";
+
+function ensureStorageVersion(): void {
+  if (typeof window === "undefined") return;
+  try {
+    const v = localStorage.getItem(VERSION_KEY);
+    if (v !== String(STORAGE_VERSION)) {
+      for (const key of Object.keys(localStorage)) {
+        if (key.startsWith("sc900-") && key !== VERSION_KEY) {
+          localStorage.removeItem(key);
+        }
+      }
+      localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
+    }
+  } catch {}
+}
 
 // -- Bookmarks --
 export function getBookmarks(): number[] {
   if (typeof window === "undefined") return [];
+  ensureStorageVersion();
   try {
     return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || "[]");
   } catch {
@@ -33,7 +51,7 @@ export function toggleBookmark(id: number): boolean {
 }
 
 export function isBookmarked(id: number): boolean {
-  return getBookmarks().includes(id);
+  return new Set(getBookmarks()).has(id);
 }
 
 // -- Quiz History --
@@ -46,6 +64,7 @@ export function saveQuizRecord(record: QuizRecord): void {
 
 export function getQuizHistory(): QuizRecord[] {
   if (typeof window === "undefined") return [];
+  ensureStorageVersion();
   try {
     return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
   } catch {
@@ -56,6 +75,7 @@ export function getQuizHistory(): QuizRecord[] {
 // -- Missed Questions --
 export function getMissedQuestions(): number[] {
   if (typeof window === "undefined") return [];
+  ensureStorageVersion();
   try {
     return JSON.parse(localStorage.getItem(MISSED_KEY) || "[]");
   } catch {
@@ -81,6 +101,7 @@ export function clearMissedQuestions(): void {
 // -- Flagged Questions --
 export function getFlagged(): number[] {
   if (typeof window === "undefined") return [];
+  ensureStorageVersion();
   try {
     return JSON.parse(localStorage.getItem(FLAGGED_KEY) || "[]");
   } catch {
@@ -103,7 +124,7 @@ export function toggleFlag(id: number): boolean {
 }
 
 export function isFlagged(id: number): boolean {
-  return getFlagged().includes(id);
+  return new Set(getFlagged()).has(id);
 }
 
 // -- Per-Question Attempt Tracking --
@@ -119,6 +140,7 @@ export function recordAttempt(id: number, correct: boolean): void {
 
 export function getAttempts(): Record<number, { correct: number; incorrect: number }> {
   if (typeof window === "undefined") return {};
+  ensureStorageVersion();
   try {
     return JSON.parse(localStorage.getItem(ATTEMPTS_KEY) || "{}");
   } catch {

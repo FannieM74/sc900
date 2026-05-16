@@ -41,7 +41,7 @@ export default function StudyPage() {
         <div className="space-y-4">
           {filtered.map((q) => {
             return (
-              <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+              <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5" style={{ contentVisibility: 'auto' }}>
                 <p className="text-gray-900 font-medium mb-2 break-words">{q.question}</p>
                 <div className="flex items-center gap-2 mb-3">
                   <TopicBadge topic={q.topic} />

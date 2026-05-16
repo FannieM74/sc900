@@ -29,18 +29,18 @@ function QuizContent() {
   const topic = searchParams.get("topic") || "";
   const count = parseInt(searchParams.get("count") || "10");
 
-  const [mounted, setMounted] = useState(false);
+  const [seed, setSeed] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [phase, setPhase] = useState<"quiz" | "review">("quiz");
   const daily = searchParams.get("daily") === "true";
 
   const qs = allQuestions as Question[];
-  const [seed, setSeed] = useState(0);
+  const mounted = seed !== 0;
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSeed(daily ? dateSeed() : Date.now());
-    setMounted(true);
   }, [daily]);
 
   const questions = useMemo(() => {

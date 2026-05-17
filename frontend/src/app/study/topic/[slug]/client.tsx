@@ -344,7 +344,7 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
                       <div className="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700">
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                           <Link
-                            href={`/quiz?topic=${slug}&section=${section.id}&returnTo=${encodeURIComponent(`/study/topic/${slug}`)}`}
+                            href={`/quiz?topic=${slug}&section=${section.id}&returnTo=${encodeURIComponent(`/study/topic/${slug}#${section.id}`)}`}
                             className="inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2 rounded-lg text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-800 hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors font-medium"
                           >
                             🎯 Practice Questions

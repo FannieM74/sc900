@@ -1,0 +1,117 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e98] [cursor=pointer]:
+    - img [ref=e99]
+  - alert [ref=e106]
+  - generic [ref=e173]:
+    - generic [ref=e174]:
+      - link "← Topics" [ref=e175] [cursor=pointer]:
+        - /url: /study/topics
+      - button "Toggle dark mode" [ref=e176]: ☀️
+    - generic [ref=e177]:
+      - generic [ref=e178]:
+        - generic [ref=e179]: 🛡️
+        - heading "Security, Compliance & Identity Concepts" [level=1] [ref=e180]
+        - generic [ref=e181]: 10-15%
+      - generic [ref=e182]:
+        - paragraph [ref=e183]: 8 sections · 1/8 completed
+        - generic [ref=e184]: 58% quiz accuracy
+    - generic [ref=e187]:
+      - button "Expand All" [ref=e188]
+      - button "Collapse All" [ref=e189]
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - button "1 Shared Responsibility Model 1 min Bookmark section ✓ ▼" [ref=e192]:
+          - generic [ref=e193]:
+            - generic [ref=e194]: "1"
+            - generic [ref=e195]: Shared Responsibility Model
+            - generic [ref=e196]: 1 min
+          - generic [ref=e197]:
+            - button "Bookmark section" [ref=e198] [cursor=pointer]: ☆
+            - generic [ref=e199]: ✓
+            - generic [ref=e200]: ▼
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - paragraph [ref=e204]: "The shared responsibility model defines how security responsibilities are divided between the cloud service provider (CSP) and the customer. The division of responsibility depends on the cloud deployment model:"
+            - generic [ref=e205]:
+              - generic [ref=e206]: "On-premises:"
+              - generic [ref=e207]: The customer is responsible for everything — physical security, hardware, networking, OS, applications, data, and identities.
+            - generic [ref=e208]:
+              - generic [ref=e209]: "Infrastructure as a Service (IaaS):"
+              - generic [ref=e210]: The CSP manages the physical infrastructure (datacenters, networking, physical hosts). The customer manages the OS, applications, data, identities, and network controls.
+            - generic [ref=e211]:
+              - generic [ref=e212]: "Platform as a Service (PaaS):"
+              - generic [ref=e213]: The CSP manages the infrastructure and the platform (OS, runtime, middleware). The customer manages applications, data, identities, and access.
+            - generic [ref=e214]:
+              - generic [ref=e215]: "Software as a Service (SaaS):"
+              - generic [ref=e216]: The CSP manages almost everything — infrastructure, platform, and applications. The customer is responsible for data, identities, and access management.
+            - paragraph [ref=e217]: "Key point: Regardless of the model, the customer is ALWAYS responsible for their data, identities, and access management. The CSP is never responsible for customer data."
+          - generic [ref=e218]:
+            - paragraph [ref=e219]: 💡 Exam Tip
+            - paragraph [ref=e220]: SaaS places the MOST responsibility on the cloud provider. IaaS places the MOST responsibility on the customer.
+          - generic [ref=e222]:
+            - link "🎯 Practice Questions" [ref=e223] [cursor=pointer]:
+              - /url: /quiz?topic=security-concepts&section=shared-responsibility&returnTo=%2Fstudy%2Ftopic%2Fsecurity-concepts%23shared-responsibility
+            - generic [ref=e224]:
+              - generic [ref=e225]: Marked as complete
+              - button "✓ Completed" [ref=e226]
+            - generic [ref=e227]:
+              - button "← Previous" [disabled] [ref=e228]
+              - button "Next →" [ref=e229]
+      - button "2 Defense in Depth 1 min Bookmark section ▼" [ref=e231]:
+        - generic [ref=e232]:
+          - generic [ref=e233]: "2"
+          - generic [ref=e234]: Defense in Depth
+          - generic [ref=e235]: 1 min
+        - generic [ref=e236]:
+          - button "Bookmark section" [ref=e237] [cursor=pointer]: ☆
+          - generic [ref=e238]: ▼
+      - button "3 Zero Trust Model 1 min Bookmark section ▼" [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e242]: "3"
+          - generic [ref=e243]: Zero Trust Model
+          - generic [ref=e244]: 1 min
+        - generic [ref=e245]:
+          - button "Bookmark section" [ref=e246] [cursor=pointer]: ☆
+          - generic [ref=e247]: ▼
+      - button "4 Encryption and Hashing 1 min Bookmark section ▼" [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]: "4"
+          - generic [ref=e252]: Encryption and Hashing
+          - generic [ref=e253]: 1 min
+        - generic [ref=e254]:
+          - button "Bookmark section" [ref=e255] [cursor=pointer]: ☆
+          - generic [ref=e256]: ▼
+      - button "5 Governance, Risk, and Compliance (GRC) 1 min Bookmark section ▼" [ref=e258]:
+        - generic [ref=e259]:
+          - generic [ref=e260]: "5"
+          - generic [ref=e261]: Governance, Risk, and Compliance (GRC)
+          - generic [ref=e262]: 1 min
+        - generic [ref=e263]:
+          - button "Bookmark section" [ref=e264] [cursor=pointer]: ☆
+          - generic [ref=e265]: ▼
+      - button "6 Identity as the Primary Security Perimeter 1 min Bookmark section ▼" [ref=e267]:
+        - generic [ref=e268]:
+          - generic [ref=e269]: "6"
+          - generic [ref=e270]: Identity as the Primary Security Perimeter
+          - generic [ref=e271]: 1 min
+        - generic [ref=e272]:
+          - button "Bookmark section" [ref=e273] [cursor=pointer]: ☆
+          - generic [ref=e274]: ▼
+      - button "7 Authentication vs Authorization 1 min Bookmark section ▼" [ref=e276]:
+        - generic [ref=e277]:
+          - generic [ref=e278]: "7"
+          - generic [ref=e279]: Authentication vs Authorization
+          - generic [ref=e280]: 1 min
+        - generic [ref=e281]:
+          - button "Bookmark section" [ref=e282] [cursor=pointer]: ☆
+          - generic [ref=e283]: ▼
+      - button "8 Identity Providers (IdP) 1 min Bookmark section ▼" [ref=e285]:
+        - generic [ref=e286]:
+          - generic [ref=e287]: "8"
+          - generic [ref=e288]: Identity Providers (IdP)
+          - generic [ref=e289]: 1 min
+        - generic [ref=e290]:
+          - button "Bookmark section" [ref=e291] [cursor=pointer]: ☆
+          - generic [ref=e292]: ▼
+    - link "← Back to All Study Topics" [ref=e294] [cursor=pointer]:
+      - /url: /study/topics

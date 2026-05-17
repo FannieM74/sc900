@@ -19,15 +19,15 @@ export default function StudyPage() {
   const filtered = selectedTopic ? qs.filter((q) => q.topic === selectedTopic) : qs;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block">
           ← Home
         </Link>
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">📖 Study Mode</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 text-balance">📖 Study Mode</h1>
             <p className="text-sm text-gray-500 mt-1">Study by reviewing questions with answers shown.</p>
           </div>
           <div className="flex gap-2">
@@ -44,7 +44,7 @@ export default function StudyPage() {
           </div>
         </div>
 
-        <p className="text-sm text-gray-500 mb-4">{filtered.length} question{filtered.length !== 1 ? "s" : ""}</p>
+        <p className="text-sm text-gray-500 mb-4"><span className="tabular-nums">{filtered.length}</span> question{filtered.length !== 1 ? "s" : ""}</p>
 
         <div className="space-y-4">
           {filtered.map((q) => {
@@ -77,6 +77,6 @@ export default function StudyPage() {
           })}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

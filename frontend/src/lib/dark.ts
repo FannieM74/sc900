@@ -16,4 +16,3 @@ export function setDarkMode(enabled: boolean): void {
   }
 }
 
-export { getDarkMode as getDarkModeForStorage, setDarkMode as setDarkModeForStorage };

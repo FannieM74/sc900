@@ -28,13 +28,13 @@ export default function FlaggedPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block">
           ← Home
         </Link>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">❓ Flagged Questions</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-balance">❓ Flagged Questions</h1>
 
         {questions.length === 0 && (
           <div className="text-center py-12">
@@ -43,7 +43,7 @@ export default function FlaggedPage() {
               Flag questions that seem incorrect during review to check them later.
             </p>
             <Link href="/"
-              className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
+              className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
               Home
             </Link>
           </div>
@@ -59,7 +59,7 @@ export default function FlaggedPage() {
                     <TopicBadge topic={q.topic} />
                   </div>
                   <button onClick={() => handleUnflag(q.id)}
-                    className="text-xs text-gray-400 hover:text-red-600 shrink-0 mt-1">
+                    className="text-xs text-gray-400 hover:text-red-600 shrink-0 mt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
                     Remove flag
                   </button>
                 </div>
@@ -83,6 +83,6 @@ export default function FlaggedPage() {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 }

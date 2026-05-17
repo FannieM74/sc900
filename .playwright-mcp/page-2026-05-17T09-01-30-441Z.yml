@@ -1,0 +1,13 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - link "← Home" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - heading "🔍 Search Questions" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Search questions and explanations by keyword.
+      - generic [ref=e7]:
+        - textbox "🔍" [ref=e8]:
+          - /placeholder: Search for anything...
+        - generic [ref=e9]: 🔍
+  - button "Open Next.js Dev Tools" [ref=e15] [cursor=pointer]:
+    - img [ref=e16]

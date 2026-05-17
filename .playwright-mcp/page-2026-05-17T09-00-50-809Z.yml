@@ -1,0 +1,81 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "SC-900 Quiz" [level=1] [ref=e5]
+        - paragraph [ref=e6]: Security, Compliance & Identity Fundamentals
+        - button "Toggle dark mode" [ref=e7]: 🌙
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - paragraph [ref=e10]: "131"
+          - paragraph [ref=e11]: Questions
+        - generic [ref=e12]:
+          - paragraph [ref=e13]: "0"
+          - paragraph [ref=e14]: Quizzes Taken
+        - generic [ref=e15]:
+          - paragraph [ref=e16]: —
+          - paragraph [ref=e17]: Best Score
+      - generic [ref=e18]:
+        - heading "Start Quiz" [level=2] [ref=e19]
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: Topic
+            - combobox "Topic" [ref=e23]:
+              - option "All Topics" [selected]
+              - option "Security Concepts"
+              - option "Compliance"
+              - option "Identity"
+              - option "Azure Security"
+          - generic [ref=e24]:
+            - generic [ref=e25]: Questions
+            - combobox "Questions" [ref=e26]:
+              - option "5"
+              - option "10" [selected]
+              - option "15"
+              - option "20"
+              - option "25"
+              - option "30"
+              - option "50"
+              - option "All (131)"
+        - link "Start Quiz" [ref=e27] [cursor=pointer]:
+          - /url: /quiz?count=10
+        - link "🏆 Daily Quiz" [ref=e28] [cursor=pointer]:
+          - /url: /quiz?daily=true
+      - generic [ref=e29]:
+        - heading "Topics" [level=2] [ref=e30]
+        - generic [ref=e31]:
+          - link "Security Concepts 33 questions" [ref=e32] [cursor=pointer]:
+            - /url: /quiz?topic=security-concepts&count=131
+            - generic [ref=e33]: Security Concepts
+            - generic [ref=e34]: 33 questions
+          - link "Compliance 24 questions" [ref=e35] [cursor=pointer]:
+            - /url: /quiz?topic=compliance&count=131
+            - generic [ref=e36]: Compliance
+            - generic [ref=e37]: 24 questions
+          - link "Identity 37 questions" [ref=e38] [cursor=pointer]:
+            - /url: /quiz?topic=identity&count=131
+            - generic [ref=e39]: Identity
+            - generic [ref=e40]: 37 questions
+          - link "Azure Security 37 questions" [ref=e41] [cursor=pointer]:
+            - /url: /quiz?topic=azure-security&count=131
+            - generic [ref=e42]: Azure Security
+            - generic [ref=e43]: 37 questions
+      - navigation "Main navigation" [ref=e44]:
+        - link "🔍 Search" [ref=e45] [cursor=pointer]:
+          - /url: /search
+        - link "📖 Study" [ref=e46] [cursor=pointer]:
+          - /url: /study
+        - link "📚 Study Topics" [ref=e47] [cursor=pointer]:
+          - /url: /study/topics
+        - link "❌ Review" [ref=e48] [cursor=pointer]:
+          - /url: /review
+        - link "★ Bookmarks" [ref=e49] [cursor=pointer]:
+          - /url: /bookmarks
+        - link "❓ Flagged" [ref=e50] [cursor=pointer]:
+          - /url: /flagged
+        - link "📈 Analysis" [ref=e51] [cursor=pointer]:
+          - /url: /analysis
+        - link "📊 History" [ref=e52] [cursor=pointer]:
+          - /url: /results
+  - button "Open Next.js Dev Tools" [ref=e58] [cursor=pointer]:
+    - img [ref=e59]

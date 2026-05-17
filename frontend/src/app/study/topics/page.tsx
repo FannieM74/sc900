@@ -87,7 +87,7 @@ export default function StudyTopicsPage() {
     : topics;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-950 dark:to-slate-900 transition-colors">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-950 dark:to-slate-900 transition-colors">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6">
           <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
@@ -99,13 +99,13 @@ export default function StudyTopicsPage() {
         </div>
 
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">📚 Study Topics</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">📚 Study Topics</h1>
           <p className="text-gray-600 dark:text-gray-400">Study the complete SC-900 curriculum by domain. Track your progress as you go through each section.</p>
         </div>
 
         {/* Study Plan */}
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-slate-700 p-5 mb-6">
-          <h2 className="font-semibold text-gray-900 dark:text-white mb-3">📅 Study Plan</h2>
+          <h2 className="font-semibold text-gray-900 dark:text-white mb-3 text-balance">📅 Study Plan</h2>
           {!plan ? (
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <div className="flex items-center gap-2">
@@ -114,7 +114,7 @@ export default function StudyTopicsPage() {
                 id="days-select"
                 value={selectedDays}
                 onChange={(e) => setSelectedDays(parseInt(e.target.value))}
-                className="rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 {DAY_OPTIONS.map((d) => (
                   <option key={d} value={d}>{d} days</option>
@@ -123,7 +123,7 @@ export default function StudyTopicsPage() {
             </div>
               <button
                 onClick={() => setShowPlanModal(true)}
-                className="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+                className="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 Start Study Plan
               </button>
@@ -132,7 +132,7 @@ export default function StudyTopicsPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  <span className="font-medium text-gray-900 dark:text-white">{totalCompleted}/{totalSections}</span> sections completed
+                  <span className="font-medium text-gray-900 dark:text-white tabular-nums">{totalCompleted}/{totalSections}</span> sections completed
                   {planStatus && (
                     <span className={`ml-2 font-medium ${planStatus.color}`}>· {planStatus.label}</span>
                   )}
@@ -143,7 +143,7 @@ export default function StudyTopicsPage() {
               </div>
               <button
                 onClick={handleResetPlan}
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
               >
                 Reset Plan
               </button>
@@ -155,7 +155,7 @@ export default function StudyTopicsPage() {
         {showPlanModal && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overscroll-contain" onClick={() => setShowPlanModal(false)} role="dialog" aria-modal="true">
             <div className="bg-white dark:bg-slate-800 rounded-xl p-6 max-w-sm w-full shadow-xl" onClick={(e) => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Start Study Plan</h3>
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 text-balance">Start Study Plan</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 You&apos;ll study <span className="font-medium">{totalSections} sections</span> in <span className="font-medium">{selectedDays} days</span>.
                 That&apos;s about <span className="font-medium">{Math.ceil(totalSections / selectedDays)} sections per day</span>.
@@ -163,13 +163,13 @@ export default function StudyTopicsPage() {
               <div className="flex gap-3">
                 <button
                   onClick={() => setShowPlanModal(false)}
-                  className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:text-white text-sm hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+                  className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:text-white text-sm hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleStartPlan}
-                  className="flex-1 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+                  className="flex-1 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
                   Start
                 </button>
@@ -183,7 +183,7 @@ export default function StudyTopicsPage() {
           <div className="flex items-center gap-3 mb-4">
             <button
               onClick={() => setShowBookmarksOnly(!showBookmarksOnly)}
-              className={`text-sm px-3 py-1.5 rounded-lg border transition-colors ${
+              className={`text-sm px-3 py-1.5 rounded-lg border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
                 showBookmarksOnly
                   ? "bg-yellow-50 dark:bg-yellow-900/20 border-yellow-300 dark:border-yellow-700 text-yellow-700 dark:text-yellow-400"
                   : "border-gray-300 dark:border-slate-600 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800"
@@ -195,16 +195,16 @@ export default function StudyTopicsPage() {
         )}
 
         {/* Domain Overview Table */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden mb-8">
+        <nav aria-label="Exam domains" className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden mb-8">
           <div className="px-5 py-4 border-b border-gray-200 dark:border-slate-700">
-            <h2 className="font-semibold text-gray-900 dark:text-white">Exam Domains</h2>
+            <h2 className="font-semibold text-gray-900 dark:text-white text-balance">Exam Domains</h2>
           </div>
           <div className="divide-y divide-gray-100 dark:divide-slate-700">
             {topics.map((topic) => (
               <Link
                 key={topic.slug}
                 href={`/study/topic/${topic.slug}`}
-                className="block px-5 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
+                className="block px-5 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 <div className="flex items-start gap-3">
                   <span className="text-2xl shrink-0 mt-0.5">{topic.icon}</span>
@@ -226,9 +226,9 @@ export default function StudyTopicsPage() {
                       )}
                     </div>
                     <div className="flex items-center gap-3 mt-1 justify-center">
-                      <span className="text-sm text-gray-500 dark:text-gray-400">{topic.viewedCount}/{topic.totalSections}</span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 tabular-nums">{topic.viewedCount}/{topic.totalSections}</span>
                       <span className="text-xs text-gray-400">-</span>
-                      <span className="text-sm font-semibold text-gray-900 dark:text-white">{topic.progress}%</span>
+                      <span className="text-sm font-semibold text-gray-900 dark:text-white tabular-nums">{topic.progress}%</span>
                     </div>
                   </div>
                 </div>
@@ -241,12 +241,12 @@ export default function StudyTopicsPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </nav>
 
         {/* Study Sections Breakdown */}
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden">
           <div className="px-5 py-4 border-b border-gray-200 dark:border-slate-700">
-            <h2 className="font-semibold text-gray-900 dark:text-white">Study Sections Breakdown</h2>
+            <h2 className="font-semibold text-gray-900 dark:text-white text-balance">Study Sections Breakdown</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Click any section to start studying that topic.</p>
           </div>
           <div className="divide-y divide-gray-100 dark:divide-slate-700">
@@ -266,7 +266,7 @@ export default function StudyTopicsPage() {
                       <Link
                         key={section.id}
                         href={`/study/topic/${topic.slug}#${section.id}`}
-                        className={`inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg border transition-colors ${
+                        className={`inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
                           isBookmarked
                             ? "border-yellow-300 dark:border-yellow-700 bg-yellow-50 dark:bg-yellow-900/20"
                             : "border-gray-200 dark:border-slate-600 hover:border-blue-300 hover:bg-blue-50 dark:hover:bg-slate-700"
@@ -292,6 +292,6 @@ export default function StudyTopicsPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

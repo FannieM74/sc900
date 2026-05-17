@@ -1,0 +1,236 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "← Home" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - button "Toggle dark mode" [ref=e6]: 🌙
+    - generic [ref=e7]:
+      - heading "📚 Study Topics" [level=1] [ref=e8]
+      - paragraph [ref=e9]: Study the complete SC-900 curriculum by domain. Track your progress as you go through each section.
+    - generic [ref=e10]:
+      - heading "📅 Study Plan" [level=2] [ref=e11]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "Duration:"
+          - combobox "Duration:" [ref=e15]:
+            - option "7 days"
+            - option "10 days"
+            - option "14 days"
+            - option "21 days" [selected]
+            - option "28 days"
+            - option "30 days"
+            - option "42 days"
+            - option "60 days"
+        - button "Start Study Plan" [ref=e16]
+    - navigation "Exam domains" [ref=e17]:
+      - heading "Exam Domains" [level=2] [ref=e19]
+      - generic [ref=e20]:
+        - link "🛡️ Security, Compliance & Identity Concepts 8 sections 10-15% 0/8 - 0%" [ref=e21] [cursor=pointer]:
+          - /url: /study/topic/security-concepts
+          - generic [ref=e22]:
+            - generic [ref=e23]: 🛡️
+            - generic [ref=e24]:
+              - heading "Security, Compliance & Identity Concepts" [level=3] [ref=e25]
+              - generic [ref=e26]:
+                - generic [ref=e27]: 8 sections
+                - generic [ref=e28]: 10-15%
+              - generic [ref=e29]:
+                - generic [ref=e30]: 0/8
+                - generic [ref=e31]: "-"
+                - generic [ref=e32]: 0%
+        - link "🔑 Microsoft Entra Capabilities 10 sections 25-30% 0/10 - 0%" [ref=e34] [cursor=pointer]:
+          - /url: /study/topic/identity
+          - generic [ref=e35]:
+            - generic [ref=e36]: 🔑
+            - generic [ref=e37]:
+              - heading "Microsoft Entra Capabilities" [level=3] [ref=e38]
+              - generic [ref=e39]:
+                - generic [ref=e40]: 10 sections
+                - generic [ref=e41]: 25-30%
+              - generic [ref=e42]:
+                - generic [ref=e43]: 0/10
+                - generic [ref=e44]: "-"
+                - generic [ref=e45]: 0%
+        - link "🔒 Microsoft Security Solutions 15 sections 35-40% 0/15 - 0%" [ref=e47] [cursor=pointer]:
+          - /url: /study/topic/azure-security
+          - generic [ref=e48]:
+            - generic [ref=e49]: 🔒
+            - generic [ref=e50]:
+              - heading "Microsoft Security Solutions" [level=3] [ref=e51]
+              - generic [ref=e52]:
+                - generic [ref=e53]: 15 sections
+                - generic [ref=e54]: 35-40%
+              - generic [ref=e55]:
+                - generic [ref=e56]: 0/15
+                - generic [ref=e57]: "-"
+                - generic [ref=e58]: 0%
+        - link "📋 Microsoft Compliance Solutions 9 sections 20-25% 0/9 - 0%" [ref=e60] [cursor=pointer]:
+          - /url: /study/topic/compliance
+          - generic [ref=e61]:
+            - generic [ref=e62]: 📋
+            - generic [ref=e63]:
+              - heading "Microsoft Compliance Solutions" [level=3] [ref=e64]
+              - generic [ref=e65]:
+                - generic [ref=e66]: 9 sections
+                - generic [ref=e67]: 20-25%
+              - generic [ref=e68]:
+                - generic [ref=e69]: 0/9
+                - generic [ref=e70]: "-"
+                - generic [ref=e71]: 0%
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - heading "Study Sections Breakdown" [level=2] [ref=e75]
+        - paragraph [ref=e76]: Click any section to start studying that topic.
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: 🛡️
+            - heading "Security, Compliance & Identity Concepts" [level=3] [ref=e81]
+            - generic [ref=e82]: 10-15%
+          - generic [ref=e83]:
+            - link "Shared Responsibility Model" [ref=e84] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#shared-responsibility
+              - generic [ref=e85]: Shared Responsibility Model
+            - link "Defense in Depth" [ref=e86] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#defense-in-depth
+              - generic [ref=e87]: Defense in Depth
+            - link "Zero Trust Model" [ref=e88] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#zero-trust
+              - generic [ref=e89]: Zero Trust Model
+            - link "Encryption and Hashing" [ref=e90] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#encryption-hashing
+              - generic [ref=e91]: Encryption and Hashing
+            - link "Governance, Risk, and Compliance (GRC)" [ref=e92] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#grc
+              - generic [ref=e93]: Governance, Risk, and Compliance (GRC)
+            - link "Identity as the Primary Security Perimeter" [ref=e94] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#identity-perimeter
+              - generic [ref=e95]: Identity as the Primary Security Perimeter
+            - link "Authentication vs Authorization" [ref=e96] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#authn-vs-authz
+              - generic [ref=e97]: Authentication vs Authorization
+            - link "Identity Providers (IdP)" [ref=e98] [cursor=pointer]:
+              - /url: /study/topic/security-concepts#identity-providers
+              - generic [ref=e99]: Identity Providers (IdP)
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: 🔑
+            - heading "Microsoft Entra Capabilities" [level=3] [ref=e103]
+            - generic [ref=e104]: 25-30%
+          - generic [ref=e105]:
+            - link "Microsoft Entra ID Overview" [ref=e106] [cursor=pointer]:
+              - /url: /study/topic/identity#entra-id-overview
+              - generic [ref=e107]: Microsoft Entra ID Overview
+            - link "Identity Types" [ref=e108] [cursor=pointer]:
+              - /url: /study/topic/identity#identity-types
+              - generic [ref=e109]: Identity Types
+            - link "Multi-Factor Authentication (MFA)" [ref=e110] [cursor=pointer]:
+              - /url: /study/topic/identity#mfa
+              - generic [ref=e111]: Multi-Factor Authentication (MFA)
+            - link "Passwordless Authentication" [ref=e112] [cursor=pointer]:
+              - /url: /study/topic/identity#passwordless
+              - generic [ref=e113]: Passwordless Authentication
+            - link "Conditional Access" [ref=e114] [cursor=pointer]:
+              - /url: /study/topic/identity#conditional-access
+              - generic [ref=e115]: Conditional Access
+            - link "Identity Protection" [ref=e116] [cursor=pointer]:
+              - /url: /study/topic/identity#identity-protection
+              - generic [ref=e117]: Identity Protection
+            - link "Privileged Identity Management (PIM)" [ref=e118] [cursor=pointer]:
+              - /url: /study/topic/identity#pim
+              - generic [ref=e119]: Privileged Identity Management (PIM)
+            - link "Access Reviews" [ref=e120] [cursor=pointer]:
+              - /url: /study/topic/identity#access-reviews
+              - generic [ref=e121]: Access Reviews
+            - link "Role-Based Access Control (RBAC)" [ref=e122] [cursor=pointer]:
+              - /url: /study/topic/identity#rbac
+              - generic [ref=e123]: Role-Based Access Control (RBAC)
+            - link "Hybrid Identities and External Identities" [ref=e124] [cursor=pointer]:
+              - /url: /study/topic/identity#hybrid-identities
+              - generic [ref=e125]: Hybrid Identities and External Identities
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e128]: 🔒
+            - heading "Microsoft Security Solutions" [level=3] [ref=e129]
+            - generic [ref=e130]: 35-40%
+          - generic [ref=e131]:
+            - link "Microsoft Defender for Cloud" [ref=e132] [cursor=pointer]:
+              - /url: /study/topic/azure-security#defender-for-cloud
+              - generic [ref=e133]: Microsoft Defender for Cloud
+            - link "Cloud Security Posture Management (CSPM)" [ref=e134] [cursor=pointer]:
+              - /url: /study/topic/azure-security#cspm
+              - generic [ref=e135]: Cloud Security Posture Management (CSPM)
+            - link "Cloud Workload Protection" [ref=e136] [cursor=pointer]:
+              - /url: /study/topic/azure-security#cloud-workload-protection
+              - generic [ref=e137]: Cloud Workload Protection
+            - link "Microsoft Sentinel (SIEM/SOAR)" [ref=e138] [cursor=pointer]:
+              - /url: /study/topic/azure-security#sentinel
+              - generic [ref=e139]: Microsoft Sentinel (SIEM/SOAR)
+            - link "Microsoft Defender XDR" [ref=e140] [cursor=pointer]:
+              - /url: /study/topic/azure-security#defender-xdr
+              - generic [ref=e141]: Microsoft Defender XDR
+            - link "Defender for Endpoint" [ref=e142] [cursor=pointer]:
+              - /url: /study/topic/azure-security#defender-endpoint
+              - generic [ref=e143]: Defender for Endpoint
+            - link "Defender for Office 365" [ref=e144] [cursor=pointer]:
+              - /url: /study/topic/azure-security#defender-office365
+              - generic [ref=e145]: Defender for Office 365
+            - link "Defender for Identity" [ref=e146] [cursor=pointer]:
+              - /url: /study/topic/azure-security#defender-identity
+              - generic [ref=e147]: Defender for Identity
+            - link "Defender for Cloud Apps" [ref=e148] [cursor=pointer]:
+              - /url: /study/topic/azure-security#defender-cloud-apps
+              - generic [ref=e149]: Defender for Cloud Apps
+            - link "Network Security Groups (NSGs)" [ref=e150] [cursor=pointer]:
+              - /url: /study/topic/azure-security#nsgs
+              - generic [ref=e151]: Network Security Groups (NSGs)
+            - link "Azure Firewall" [ref=e152] [cursor=pointer]:
+              - /url: /study/topic/azure-security#azure-firewall
+              - generic [ref=e153]: Azure Firewall
+            - link "Web Application Firewall (WAF)" [ref=e154] [cursor=pointer]:
+              - /url: /study/topic/azure-security#waf
+              - generic [ref=e155]: Web Application Firewall (WAF)
+            - link "Azure DDoS Protection" [ref=e156] [cursor=pointer]:
+              - /url: /study/topic/azure-security#ddos-protection
+              - generic [ref=e157]: Azure DDoS Protection
+            - link "Azure Bastion" [ref=e158] [cursor=pointer]:
+              - /url: /study/topic/azure-security#azure-bastion
+              - generic [ref=e159]: Azure Bastion
+            - link "Azure Key Vault" [ref=e160] [cursor=pointer]:
+              - /url: /study/topic/azure-security#key-vault
+              - generic [ref=e161]: Azure Key Vault
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - generic [ref=e164]: 📋
+            - heading "Microsoft Compliance Solutions" [level=3] [ref=e165]
+            - generic [ref=e166]: 20-25%
+          - generic [ref=e167]:
+            - link "Microsoft Purview Overview" [ref=e168] [cursor=pointer]:
+              - /url: /study/topic/compliance#purview-overview
+              - generic [ref=e169]: Microsoft Purview Overview
+            - link "Compliance Manager" [ref=e170] [cursor=pointer]:
+              - /url: /study/topic/compliance#compliance-manager
+              - generic [ref=e171]: Compliance Manager
+            - link "Sensitivity Labels" [ref=e172] [cursor=pointer]:
+              - /url: /study/topic/compliance#sensitivity-labels
+              - generic [ref=e173]: Sensitivity Labels
+            - link "Data Loss Prevention (DLP)" [ref=e174] [cursor=pointer]:
+              - /url: /study/topic/compliance#dlp
+              - generic [ref=e175]: Data Loss Prevention (DLP)
+            - link "Retention Policies and Labels" [ref=e176] [cursor=pointer]:
+              - /url: /study/topic/compliance#retention-policies
+              - generic [ref=e177]: Retention Policies and Labels
+            - link "Records Management" [ref=e178] [cursor=pointer]:
+              - /url: /study/topic/compliance#records-management
+              - generic [ref=e179]: Records Management
+            - link "Insider Risk Management" [ref=e180] [cursor=pointer]:
+              - /url: /study/topic/compliance#insider-risk
+              - generic [ref=e181]: Insider Risk Management
+            - link "eDiscovery and Audit" [ref=e182] [cursor=pointer]:
+              - /url: /study/topic/compliance#ediscovery
+              - generic [ref=e183]: eDiscovery and Audit
+            - link "Service Trust Portal and Microsoft Priva" [ref=e184] [cursor=pointer]:
+              - /url: /study/topic/compliance#service-trust-portal
+              - generic [ref=e185]: Service Trust Portal and Microsoft Priva
+    - link "← Back to Question Study Mode" [ref=e187] [cursor=pointer]:
+      - /url: /study

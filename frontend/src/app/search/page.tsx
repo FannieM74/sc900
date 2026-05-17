@@ -43,24 +43,25 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block">
           ← Home
         </Link>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">🔍 Search Questions</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 text-balance">🔍 Search Questions</h1>
         <p className="text-gray-500 text-sm mb-6">Search questions and explanations by keyword.</p>
 
         <div className="relative mb-6">
           <input
+            id="search-input"
             type="text"
             value={query}
             onChange={(e) => doSearch(e.target.value)}
             placeholder="Search for anything..."
-            className="w-full rounded-xl border border-gray-300 px-4 py-3 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full rounded-xl border border-gray-300 px-4 py-3 pl-10 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           />
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+          <label htmlFor="search-input" className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-text">🔍</label>
         </div>
 
         {loading && (
@@ -104,6 +105,6 @@ export default function SearchPage() {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 }

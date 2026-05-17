@@ -31,23 +31,23 @@ function ResultsContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block">
           ← Home
         </Link>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">📊 Quiz History</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-balance">📊 Quiz History</h1>
 
         {totalParam > 0 && (
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 text-center mb-8">
             <p className="text-5xl mb-2">{latestPct >= 80 ? "🎉" : latestPct >= 60 ? "👍" : "💪"}</p>
-            <h2 className={`text-xl font-bold ${latestPct >= 80 ? "text-green-600" : latestPct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
+            <h2 className={`text-lg sm:text-xl font-bold text-balance ${latestPct >= 80 ? "text-green-600" : latestPct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
               {latestMessage}
             </h2>
             <p className="text-gray-400 text-sm mt-1">{today}</p>
             <div className="flex items-center justify-center gap-1 my-4">
-              <span className="text-4xl font-bold text-gray-900">{scoreParam}</span>
+              <span className="text-4xl font-bold text-gray-900 tabular-nums">{scoreParam}</span>
               <span className="text-xl text-gray-400">/</span>
-              <span className="text-2xl text-gray-500">{totalParam}</span>
+              <span className="text-2xl text-gray-500 tabular-nums">{totalParam}</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3 mb-2 overflow-hidden max-w-xs mx-auto">
               <div className={`h-full rounded-full ${latestPct >= 80 ? "bg-green-500" : latestPct >= 60 ? "bg-blue-500" : "bg-yellow-500"}`}
@@ -71,7 +71,7 @@ function ResultsContent() {
         {history.length > 0 && (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="px-5 py-4 border-b border-gray-100">
-              <h3 className="font-semibold text-gray-900">Past Results</h3>
+              <h3 className="font-semibold text-gray-900 text-balance">Past Results</h3>
             </div>
             <div className="divide-y divide-gray-100">
               {history.map((r, i) => {
@@ -83,7 +83,7 @@ function ResultsContent() {
                         {pct >= 80 ? "🟢" : pct >= 60 ? "🟡" : "🔴"}
                       </span>
                       <div className="min-w-0">
-                        <p className="text-sm font-medium text-gray-900">
+                        <p className="text-sm font-medium text-gray-900 tabular-nums">
                           {r.score}/{r.total}
                         </p>
                         <p className="text-xs text-gray-400 truncate">
@@ -92,8 +92,8 @@ function ResultsContent() {
                         </p>
                       </div>
                     </div>
-                    <span className={`text-sm font-bold ${pct >= 80 ? "text-green-600" : pct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
-                      {pct}%
+                      <span className={`text-sm font-bold tabular-nums ${pct >= 80 ? "text-green-600" : pct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
+                        {pct}%
                     </span>
                   </div>
                 );
@@ -104,11 +104,11 @@ function ResultsContent() {
 
         <div className="mt-6 flex gap-3">
           <Link href="/quiz"
-            className="flex-1 text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
+            className="flex-1 text-center py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             New Quiz
           </Link>
           <Link href="/"
-            className="flex-1 text-center py-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+            className="flex-1 text-center py-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             Home
           </Link>
         </div>
@@ -119,7 +119,7 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+    <Suspense fallback={<main className="min-h-screen flex items-center justify-center">Loading...</main>}>
       <ResultsContent />
     </Suspense>
   );

@@ -48,10 +48,10 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
         <header className="text-center mb-8 relative">
-          <h1 className="text-3xl font-bold text-gray-900 text-balance">SC-900 Quiz</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 text-balance">SC-900 Quiz</h1>
           <p className="text-gray-500 mt-1">Security, Compliance & Identity Fundamentals</p>
           <button onClick={toggleDark} className="absolute top-0 right-0 text-xl rounded-lg p-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" aria-label="Toggle dark mode">
             {dark ? "☀️" : "🌙"}
@@ -76,7 +76,7 @@ export default function HomePage() {
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Start Quiz</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Start Quiz</h2>
           <div className="flex gap-3 mb-4">
             <div className="flex-1">
               <label htmlFor="topic-select" className="block text-xs font-medium text-gray-500 mb-1">Topic</label>
@@ -84,7 +84,7 @@ export default function HomePage() {
                 id="topic-select"
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 <option value="">All Topics</option>
                 {Object.keys(topicsTotal).map((t) => (
@@ -98,7 +98,7 @@ export default function HomePage() {
                 id="count-select"
                 value={count}
                 onChange={(e) => setCount(parseInt(e.target.value))}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 {COUNT_OPTIONS.map((c) => (
                   <option key={c} value={c}>{c === 131 ? `All (${c})` : c}</option>
@@ -108,26 +108,26 @@ export default function HomePage() {
           </div>
           <Link
             href={quizHref()}
-            className="block w-full py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors text-center"
+            className="block w-full py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             Start Quiz
           </Link>
           <Link
             href="/quiz?daily=true"
-            className="block w-full mt-2 py-3 rounded-lg border border-blue-300 text-blue-700 font-medium hover:bg-blue-50 transition-colors text-center"
+            className="block w-full mt-2 py-3 rounded-lg border border-blue-300 text-blue-700 font-medium hover:bg-blue-50 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             🏆 Daily Quiz
           </Link>
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Topics</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Topics</h2>
           <div className="grid grid-cols-2 gap-3">
             {Object.entries(topicsTotal).map(([key, cnt]) => (
               <Link
                 key={key}
                 href={`/quiz?topic=${key}&count=131`}
-                className="flex flex-col items-center gap-1 p-3 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors text-center"
+                className="flex flex-col items-center gap-1 p-3 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 <TopicBadge topic={key} />
                 <span className="text-xs text-gray-400">{cnt} questions</span>
@@ -136,33 +136,33 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <Link href="/search" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+        <nav aria-label="Main navigation" className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <Link href="/search" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             🔍 Search
           </Link>
-          <Link href="/study" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/study" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             📖 Study
           </Link>
-          <Link href="/study/topics" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/study/topics" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             📚 Study Topics
           </Link>
-          <Link href="/review" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/review" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             ❌ Review
           </Link>
-          <Link href="/bookmarks" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/bookmarks" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             ★ Bookmarks
           </Link>
-          <Link href="/flagged" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/flagged" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             ❓ Flagged
           </Link>
-          <Link href="/analysis" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/analysis" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             📈 Analysis
           </Link>
-          <Link href="/results" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+          <Link href="/results" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             📊 History
           </Link>
-        </div>
+        </nav>
       </div>
-    </div>
+    </main>
   );
 }

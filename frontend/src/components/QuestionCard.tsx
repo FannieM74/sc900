@@ -66,13 +66,13 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
         </div>
       </div>
 
-      <h2 className="text-lg font-semibold text-gray-900 mb-6 leading-relaxed">
+      <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-6 leading-relaxed text-balance">
         {question.question}
       </h2>
 
       <div className="space-y-3">
         {question.options.map((option, idx) => {
-          let classes = "w-full text-left break-words p-4 rounded-lg border-2 transition-all duration-200 text-sm font-medium ";
+          let classes = "w-full text-left break-words p-4 rounded-lg border-2 transition-colors duration-200 text-sm font-medium ";
 
           if (mode === "review") {
             if (idx === question.correctAnswer) {

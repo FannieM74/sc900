@@ -117,14 +117,14 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
 
   if (!topic) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-950 dark:to-slate-900 flex items-center justify-center">
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-950 dark:to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Topic Not Found</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 text-balance">Topic Not Found</h1>
           <Link href="/study/topics" className="text-blue-600 hover:text-blue-700 dark:text-blue-400">
             ← Back to Study Topics
           </Link>
         </div>
-      </div>
+      </main>
     );
   }
 
@@ -142,13 +142,16 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
     setExpandedSections(new Set());
   };
 
-  const handleComplete = (sectionId: string) => {
+  const handleComplete = (sectionId: string, sectionIndex: number) => {
     if (viewedSections.includes(sectionId)) {
       unmarkSection(slug, sectionId);
       setViewedSections((prev) => prev.filter((s) => s !== sectionId));
     } else {
       markSectionViewed(slug, sectionId);
       setViewedSections((prev) => [...prev, sectionId]);
+      if (sectionIndex < topic.sections.length - 1) {
+        navigateToSection("next", sectionIndex);
+      }
     }
   };
 
@@ -178,7 +181,7 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-3xl">{topic.icon}</span>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white text-balance">{topic.title}</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white text-balance">{topic.title}</h1>
             <span className={`text-sm font-medium px-3 py-1 rounded-full ${TOPIC_COLORS[topic.slug] || "bg-gray-100 text-gray-800"}`}>
               {topic.weight}
             </span>
@@ -207,13 +210,13 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
         <div className="flex gap-2 mb-6">
           <button
             onClick={expandAll}
-            className="text-sm px-3 py-1.5 rounded-lg border border-gray-300 dark:border-slate-600 dark:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+            className="text-sm px-3 py-1.5 rounded-lg border border-gray-300 dark:border-slate-600 dark:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             Expand All
           </button>
           <button
             onClick={collapseAll}
-            className="text-sm px-3 py-1.5 rounded-lg border border-gray-300 dark:border-slate-600 dark:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+            className="text-sm px-3 py-1.5 rounded-lg border border-gray-300 dark:border-slate-600 dark:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             Collapse All
           </button>
@@ -261,7 +264,7 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
                       tabIndex={0}
                       onClick={(e) => { e.stopPropagation(); handleBookmark(section.id); }}
                       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); e.preventDefault(); handleBookmark(section.id); } }}
-                      className={`text-sm cursor-pointer transition-colors ${isBookmarked ? "text-yellow-500" : "text-gray-300 dark:text-gray-600 hover:text-yellow-400"}`}
+                      className={`text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded ${isBookmarked ? "text-yellow-500" : "text-gray-300 dark:text-gray-600 hover:text-yellow-400"}`}
                       aria-label={isBookmarked ? "Remove bookmark" : "Bookmark section"}
                     >
                       {isBookmarked ? "⭐" : "☆"}
@@ -337,49 +340,49 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
                         </div>
                       )}
 
-                      {/* Practice Questions */}
-                      <div className="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700 flex justify-end">
-                        <Link
-                          href={`/quiz?topic=${slug}&section=${section.id}&returnTo=${encodeURIComponent(`/study/topic/${slug}`)}`}
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-800 hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors font-medium"
-                        >
-                          🎯 Practice Questions
-                        </Link>
-                      </div>
+                      {/* Practice Questions, Complete, Navigation */}
+                      <div className="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                          <Link
+                            href={`/quiz?topic=${slug}&section=${section.id}&returnTo=${encodeURIComponent(`/study/topic/${slug}`)}`}
+                            className="inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2 rounded-lg text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-800 hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors font-medium"
+                          >
+                            🎯 Practice Questions
+                          </Link>
 
-                      {/* Mark as Complete */}
-                      <div className="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700 flex justify-between items-center">
-                        <span className="text-sm text-gray-500 dark:text-gray-400">
-                          {mounted && isViewed ? "Marked as complete" : "Read this section?"}
-                        </span>
-                        <button
-                          onClick={() => handleComplete(section.id)}
-                          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                            mounted && isViewed
-                              ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50 border border-green-200 dark:border-green-800"
-                              : "bg-blue-600 text-white hover:bg-blue-700"
-                          }`}
-                        >
-                          {mounted && isViewed ? "✓ Completed" : "Mark as Complete"}
-                        </button>
-                      </div>
+                          <div className="flex items-center gap-3 flex-1 justify-center">
+                            <span className="text-sm text-gray-500 dark:text-gray-400">
+                              {mounted && isViewed ? "Marked as complete" : "Read this section?"}
+                            </span>
+                            <button
+                              onClick={() => handleComplete(section.id, index)}
+                              className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                                mounted && isViewed
+                                  ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50 border border-green-200 dark:border-green-800"
+                                  : "bg-blue-600 text-white hover:bg-blue-700"
+                              }`}
+                            >
+                              {mounted && isViewed ? "✓ Completed" : "Mark as Complete"}
+                            </button>
+                          </div>
 
-                      {/* Navigation */}
-                      <div className="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700 flex items-center gap-2">
-                        <button
-                          onClick={() => navigateToSection("prev", index)}
-                          disabled={index === 0}
-                          className="px-3 py-1.5 rounded-lg text-sm border border-gray-300 dark:border-slate-600 dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
-                        >
-                          ← Previous
-                        </button>
-                        <button
-                          onClick={() => navigateToSection("next", index)}
-                          disabled={index === topic.sections.length - 1}
-                          className="px-3 py-1.5 rounded-lg text-sm border border-gray-300 dark:border-slate-600 dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
-                        >
-                          Next →
-                        </button>
+                          <div className="flex items-center gap-2 justify-center sm:justify-end">
+                            <button
+                              onClick={() => navigateToSection("prev", index)}
+                              disabled={index === 0}
+                              className="px-3 py-1.5 rounded-lg text-sm border border-gray-300 dark:border-slate-600 dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                            >
+                              ← Previous
+                            </button>
+                            <button
+                              onClick={() => navigateToSection("next", index)}
+                              disabled={index === topic.sections.length - 1}
+                              className="px-3 py-1.5 rounded-lg text-sm border border-gray-300 dark:border-slate-600 dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                            >
+                              Next →
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

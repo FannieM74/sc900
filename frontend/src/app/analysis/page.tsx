@@ -159,13 +159,13 @@ export default function AnalysisPage() {
   const hasAttemptData = questionStats.length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-4 inline-block">
+        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block">
           ← Home
         </Link>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">📈 Analysis</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 text-balance">📈 Analysis</h1>
         <p className="text-gray-500 text-sm mb-6">
           Performance trends, topic breakdown, and specific questions to study.
         </p>
@@ -174,7 +174,7 @@ export default function AnalysisPage() {
           <div className="text-center py-12">
             <p className="text-gray-400 text-lg mb-2">No quiz data yet</p>
             <p className="text-gray-400 text-sm mb-4">Complete a quiz to start tracking your progress.</p>
-            <Link href="/" className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
+            <Link href="/"               className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
               Take a Quiz
             </Link>
           </div>
@@ -193,7 +193,7 @@ export default function AnalysisPage() {
                   Review these in <Link href="/review" className="underline font-medium">Review Mistakes</Link> or <Link href="/study" className="underline font-medium">Study Mode</Link>.
                 </div>
 
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">📚 Questions to Study</h2>
+                <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 text-balance">📚 Questions to Study</h2>
                 <div className="space-y-3">
                   {hardQuestions.map((q) => (
                     <div key={q.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
@@ -203,10 +203,10 @@ export default function AnalysisPage() {
                           <TopicBadge topic={q.topic} />
                         </div>
                         <div className="text-right shrink-0">
-                          <p className={`text-lg font-bold ${q.pct < 40 ? "text-red-600" : "text-yellow-600"}`}>
+                          <p className={`text-lg font-bold tabular-nums ${q.pct < 40 ? "text-red-600" : "text-yellow-600"}`}>
                             {q.pct}%
                           </p>
-                          <p className="text-xs text-gray-400">{q.correct}/{q.total}</p>
+                          <p className="text-xs text-gray-400 tabular-nums">{q.correct}/{q.total}</p>
                         </div>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1.5 mt-2 overflow-hidden">
@@ -228,7 +228,7 @@ export default function AnalysisPage() {
                   </div>
                 )}
 
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">By Topic</h2>
+                <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 text-balance">By Topic</h2>
                 <div className="space-y-4">
                   {topicAnalysis.map((a) => {
                     const barColor = a.avgPct >= 80 ? "bg-green-500" : a.avgPct >= 60 ? "bg-blue-500" : "bg-yellow-500";
@@ -244,15 +244,15 @@ export default function AnalysisPage() {
                         </div>
                         <div className="grid grid-cols-3 gap-3 text-center text-xs">
                           <div>
-                            <p className="text-gray-900 font-semibold">{a.totalScore}/{a.totalPossible}</p>
+                            <p className="text-gray-900 font-semibold tabular-nums">{a.totalScore}/{a.totalPossible}</p>
                             <p className="text-gray-400">Correct</p>
                           </div>
                           <div>
-                            <p className="text-gray-900 font-semibold">{a.attempts}</p>
+                            <p className="text-gray-900 font-semibold tabular-nums">{a.attempts}</p>
                             <p className="text-gray-400">Quizzes</p>
                           </div>
                           <div>
-                            <p className="text-gray-900 font-semibold">{a.totalQuestions}</p>
+                            <p className="text-gray-900 font-semibold tabular-nums">{a.totalQuestions}</p>
                             <p className="text-gray-400">Questions</p>
                           </div>
                         </div>
@@ -266,7 +266,7 @@ export default function AnalysisPage() {
             {/* Tips */}
             {(hasTopicData || hasAttemptData) && (
               <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">💡 Tips</h3>
+                <h3 className="font-semibold text-gray-900 mb-2 text-balance">💡 Tips</h3>
                 <ul className="text-sm text-gray-600 space-y-1.5">
                   <li>• <strong>Green</strong> (≥80%): You&apos;re doing well — maintain with occasional practice.</li>
                   <li>• <strong>Blue</strong> (60–79%): Decent but room for improvement — review weak areas.</li>
@@ -279,6 +279,6 @@ export default function AnalysisPage() {
           </>
         )}
       </div>
-    </div>
+    </main>
   );
 }

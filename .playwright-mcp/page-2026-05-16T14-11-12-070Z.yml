@@ -1,0 +1,41 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e152] [cursor=pointer]:
+    - img [ref=e128]
+  - alert [ref=e131]
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - link "← Back to Study" [ref=e156] [cursor=pointer]:
+        - /url: /study/topic/security-concepts
+      - generic [ref=e157]: · Security Concepts · 1/5
+    - generic [ref=e159]:
+      - generic [ref=e160]: Question 1 of 5
+      - generic [ref=e161]: 1 answered
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e167]: Question 57
+          - generic [ref=e168]: Security Concepts
+        - button "Bookmark question" [ref=e170]: ☆
+      - heading "What is the name of the unified data governance service that enables end-to-end data lineage?" [level=2] [ref=e171]
+      - generic [ref=e172]:
+        - button "A Entitlement Management" [ref=e173]:
+          - generic [ref=e174]: A
+          - text: Entitlement Management
+        - button "B Data Loss Prevention" [ref=e175]:
+          - generic [ref=e176]: B
+          - text: Data Loss Prevention
+        - button "C Microsoft Purview" [active] [ref=e177]:
+          - generic [ref=e178]: C
+          - text: Microsoft Purview
+        - button "D Microsoft 365 eDiscovery" [ref=e179]:
+          - generic [ref=e180]: D
+          - text: Microsoft 365 eDiscovery
+    - generic [ref=e181]:
+      - button "← Previous" [disabled] [ref=e182]
+      - button "Next →" [ref=e183]
+    - generic [ref=e184]:
+      - button [ref=e185]
+      - button [ref=e186]
+      - button [ref=e187]
+      - button [ref=e188]
+      - button [ref=e189]

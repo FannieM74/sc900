@@ -8,6 +8,11 @@
         "@playwright/mcp@latest"
       ],
       "enabled": true
+    },
+    "gitnexus": {
+      "type": "local",
+      "command": ["npx", "-y", "gitnexus@latest", "mcp"],
+      "enabled": true
     }
   }
 }

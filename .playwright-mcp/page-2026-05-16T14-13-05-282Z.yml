@@ -1,0 +1,87 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e152] [cursor=pointer]:
+    - img [ref=e128]
+  - alert [ref=e131]
+  - generic [ref=e334]:
+    - generic [ref=e335]:
+      - link "← Topics" [ref=e336] [cursor=pointer]:
+        - /url: /study/topics
+      - button "Toggle dark mode" [ref=e337]: ☀️
+    - generic [ref=e338]:
+      - generic [ref=e339]:
+        - generic [ref=e340]: 🛡️
+        - heading "Security, Compliance & Identity Concepts" [level=1] [ref=e341]
+        - generic [ref=e342]: 10-15%
+      - generic [ref=e343]:
+        - paragraph [ref=e344]: 8 sections · 0/8 completed
+        - generic [ref=e345]: 50% quiz accuracy
+    - generic [ref=e347]:
+      - button "Expand All" [ref=e348]
+      - button "Collapse All" [ref=e349]
+    - generic [ref=e350]:
+      - button "1 Shared Responsibility Model 1 min Bookmark section ▼" [ref=e352]:
+        - generic [ref=e353]:
+          - generic [ref=e354]: "1"
+          - generic [ref=e355]: Shared Responsibility Model
+          - generic [ref=e356]: 1 min
+        - generic [ref=e357]:
+          - button "Bookmark section" [ref=e358] [cursor=pointer]: ☆
+          - generic [ref=e359]: ▼
+      - button "2 Defense in Depth 1 min Bookmark section ▼" [ref=e361]:
+        - generic [ref=e362]:
+          - generic [ref=e363]: "2"
+          - generic [ref=e364]: Defense in Depth
+          - generic [ref=e365]: 1 min
+        - generic [ref=e366]:
+          - button "Bookmark section" [ref=e367] [cursor=pointer]: ☆
+          - generic [ref=e368]: ▼
+      - button "3 Zero Trust Model 1 min Bookmark section ▼" [ref=e370]:
+        - generic [ref=e371]:
+          - generic [ref=e372]: "3"
+          - generic [ref=e373]: Zero Trust Model
+          - generic [ref=e374]: 1 min
+        - generic [ref=e375]:
+          - button "Bookmark section" [ref=e376] [cursor=pointer]: ☆
+          - generic [ref=e377]: ▼
+      - button "4 Encryption and Hashing 1 min Bookmark section ▼" [ref=e379]:
+        - generic [ref=e380]:
+          - generic [ref=e381]: "4"
+          - generic [ref=e382]: Encryption and Hashing
+          - generic [ref=e383]: 1 min
+        - generic [ref=e384]:
+          - button "Bookmark section" [ref=e385] [cursor=pointer]: ☆
+          - generic [ref=e386]: ▼
+      - button "5 Governance, Risk, and Compliance (GRC) 1 min Bookmark section ▼" [ref=e388]:
+        - generic [ref=e389]:
+          - generic [ref=e390]: "5"
+          - generic [ref=e391]: Governance, Risk, and Compliance (GRC)
+          - generic [ref=e392]: 1 min
+        - generic [ref=e393]:
+          - button "Bookmark section" [ref=e394] [cursor=pointer]: ☆
+          - generic [ref=e395]: ▼
+      - button "6 Identity as the Primary Security Perimeter 1 min Bookmark section ▼" [ref=e397]:
+        - generic [ref=e398]:
+          - generic [ref=e399]: "6"
+          - generic [ref=e400]: Identity as the Primary Security Perimeter
+          - generic [ref=e401]: 1 min
+        - generic [ref=e402]:
+          - button "Bookmark section" [ref=e403] [cursor=pointer]: ☆
+          - generic [ref=e404]: ▼
+      - button "7 Authentication vs Authorization 1 min Bookmark section ▼" [ref=e406]:
+        - generic [ref=e407]:
+          - generic [ref=e408]: "7"
+          - generic [ref=e409]: Authentication vs Authorization
+          - generic [ref=e410]: 1 min
+        - generic [ref=e411]:
+          - button "Bookmark section" [ref=e412] [cursor=pointer]: ☆
+          - generic [ref=e413]: ▼
+      - button "8 Identity Providers (IdP) 1 min Bookmark section ▼" [ref=e415]:
+        - generic [ref=e416]:
+          - generic [ref=e417]: "8"
+          - generic [ref=e418]: Identity Providers (IdP)
+          - generic [ref=e419]: 1 min
+        - generic [ref=e420]:
+          - button "Bookmark section" [ref=e421] [cursor=pointer]: ☆
+          - generic [ref=e422]: ▼
+    - link "← Back to All Study Topics" [ref=e424] [cursor=pointer]:
+      - /url: /study/topics

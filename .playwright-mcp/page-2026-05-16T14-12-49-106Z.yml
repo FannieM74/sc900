@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e152] [cursor=pointer]:
+    - img [ref=e128]
+  - alert [ref=e131]
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - paragraph [ref=e213]: 🎉
+      - heading "Excellent!" [level=1] [ref=e214]
+      - paragraph [ref=e215]: Security Concepts · 5 questions
+      - generic [ref=e216]:
+        - generic [ref=e217]: "4"
+        - generic [ref=e218]: /
+        - generic [ref=e219]: "5"
+      - paragraph [ref=e222]: 80%
+      - generic [ref=e223]:
+        - link "Back to Study" [ref=e224] [cursor=pointer]:
+          - /url: /study/topic/security-concepts
+        - link "History" [ref=e225] [cursor=pointer]:
+          - /url: /results
+    - heading "Review Answers" [level=2] [ref=e226]
+    - generic [ref=e163]:
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - generic [ref=e230]: Question 57
+            - generic [ref=e231]: Security Concepts
+          - generic [ref=e232]:
+            - button "Flag question" [ref=e233]: ⚐
+            - button "Bookmark question" [ref=e234]: ☆
+        - heading "What is the name of the unified data governance service that enables end-to-end data lineage?" [level=2] [ref=e235]
+        - generic [ref=e236]:
+          - button "A Entitlement Management" [disabled] [ref=e237]:
+            - generic [ref=e238]: A
+            - text: Entitlement Management
+          - button "B Data Loss Prevention" [disabled] [ref=e239]:
+            - generic [ref=e240]: B
+            - text: Data Loss Prevention
+          - button "C Microsoft Purview" [disabled] [ref=e241]:
+            - generic [ref=e242]: C
+            - text: Microsoft Purview
+          - button "D Microsoft 365 eDiscovery" [disabled] [ref=e243]:
+            - generic [ref=e244]: D
+            - text: Microsoft 365 eDiscovery
+        - generic [ref=e245]:
+          - paragraph [ref=e246]: ✓ Correct
+          - paragraph [ref=e247]:
+            - text: Microsoft Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data. Easily create a holistic, up-to-date map of your data landscape with automated data discovery, sensitive data classification, and end-to-end data lineage. See “What is Azure Purview?”
+            - link "https://docs.microsoft.com/en-us/azure/purview/overview." [ref=e248] [cursor=pointer]:
+              - /url: https://docs.microsoft.com/en-us/azure/purview/overview.
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - generic [ref=e252]: Question 99
+            - generic [ref=e253]: Security Concepts
+          - generic [ref=e254]:
+            - button "Flag question" [ref=e255]: ⚐
+            - button "Bookmark question" [ref=e256]: ☆
+        - heading "In the shared responsibility model, who is responsible for the physical security of datacenters?" [level=2] [ref=e257]
+        - generic [ref=e258]:
+          - button "A The customer" [disabled] [ref=e259]:
+            - generic [ref=e260]: A
+            - text: The customer
+          - button "B Both customer and cloud provider" [disabled] [ref=e261]:
+            - generic [ref=e262]: B
+            - text: Both customer and cloud provider
+          - button "C The cloud provider" [disabled] [ref=e263]:
+            - generic [ref=e264]: C
+            - text: The cloud provider
+          - button "D A third-party security firm" [disabled] [ref=e265]:
+            - generic [ref=e266]: D
+            - text: A third-party security firm
+        - generic [ref=e267]:
+          - paragraph [ref=e268]: ✓ Correct
+          - paragraph [ref=e269]: Physical security of datacenters is always the cloud provider's responsibility, even in an IaaS deployment.
+      - generic [ref=e270]:
+        - generic [ref=e271]:
+          - generic [ref=e272]:
+            - generic [ref=e273]: Question 1
+            - generic [ref=e274]: Security Concepts
+          - generic [ref=e275]:
+            - button "Flag question" [ref=e276]: ⚐
+            - button "Bookmark question" [ref=e277]: ☆
+        - heading "According to the shared responsibility model, which of the following computing models places the most responsibility on the cloud service provider (CSP)?" [level=2] [ref=e278]
+        - generic [ref=e279]:
+          - button "A SaaS" [disabled] [ref=e280]:
+            - generic [ref=e281]: A
+            - text: SaaS
+          - button "B IaaS" [disabled] [ref=e282]:
+            - generic [ref=e283]: B
+            - text: IaaS
+          - button "C PaaS" [disabled] [ref=e284]:
+            - generic [ref=e285]: C
+            - text: PaaS
+          - button "D Private Cloud" [disabled] [ref=e286]:
+            - generic [ref=e287]: D
+            - text: Private Cloud
+        - generic [ref=e288]:
+          - paragraph [ref=e289]: ✓ Correct
+          - paragraph [ref=e290]: The SaaS model, implemented by services such as Office 365, the cloud service provider takes on service management responsibilities beyond configuring the customers desired user data and device configuration settings.
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - generic [ref=e293]:
+            - generic [ref=e294]: Question 95
+            - generic [ref=e295]: Security Concepts
+          - generic [ref=e296]:
+            - button "Flag question" [ref=e297]: ⚐
+            - button "Bookmark question" [ref=e298]: ☆
+        - heading "In an IaaS deployment, who manages the guest operating system and applications?" [level=2] [ref=e299]
+        - generic [ref=e300]:
+          - button "A The customer" [disabled] [ref=e301]:
+            - generic [ref=e302]: A
+            - text: The customer
+          - button "B Both customer and provider" [disabled] [ref=e303]:
+            - generic [ref=e304]: B
+            - text: Both customer and provider
+          - button "C The cloud service provider" [disabled] [ref=e305]:
+            - generic [ref=e306]: C
+            - text: The cloud service provider
+          - button "D A third-party managed service provider" [disabled] [ref=e307]:
+            - generic [ref=e308]: D
+            - text: A third-party managed service provider
+        - generic [ref=e309]:
+          - paragraph [ref=e310]: ✗ Incorrect
+          - paragraph [ref=e311]: In IaaS, the cloud provider manages the physical infrastructure while the customer manages the guest OS, applications, and network controls.
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - generic [ref=e314]:
+            - generic [ref=e315]: Question 94
+            - generic [ref=e316]: Security Concepts
+          - generic [ref=e317]:
+            - button "Flag question" [ref=e318]: ⚐
+            - button "Bookmark question" [ref=e319]: ☆
+        - heading "According to the shared responsibility model, who owns and is responsible for data and identities in all cloud deployment models?" [level=2] [ref=e320]
+        - generic [ref=e321]:
+          - button "A Both customer and provider share equal responsibility" [disabled] [ref=e322]:
+            - generic [ref=e323]: A
+            - text: Both customer and provider share equal responsibility
+          - button "B The cloud service provider" [disabled] [ref=e324]:
+            - generic [ref=e325]: B
+            - text: The cloud service provider
+          - button "C The customer" [disabled] [ref=e326]:
+            - generic [ref=e327]: C
+            - text: The customer
+          - button "D It depends on the specific cloud model" [disabled] [ref=e328]:
+            - generic [ref=e329]: D
+            - text: It depends on the specific cloud model
+        - generic [ref=e330]:
+          - paragraph [ref=e331]: ✓ Correct
+          - paragraph [ref=e332]: In all cloud models (SaaS, PaaS, IaaS), the customer always owns and is responsible for their data and identities.

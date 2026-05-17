@@ -26,14 +26,22 @@ export default function StudyPage() {
         </Link>
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">📖 Study Mode</h1>
-          <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)}
-            className="w-full sm:w-auto rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="">All Topics</option>
-            {topicsList.map((t) => (
-              <option key={t} value={t}>{TOPIC_LABELS[t] || t}</option>
-            ))}
-          </select>
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">📖 Study Mode</h1>
+            <p className="text-sm text-gray-500 mt-1">Study by reviewing questions with answers shown.</p>
+          </div>
+          <div className="flex gap-2">
+            <Link href="/study/topics" className="text-sm px-3 py-2 rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50 transition-colors whitespace-nowrap">
+              📚 Study Topics
+            </Link>
+            <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)}
+              className="w-full sm:w-auto rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">All Topics</option>
+              {topicsList.map((t) => (
+                <option key={t} value={t}>{TOPIC_LABELS[t] || t}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <p className="text-sm text-gray-500 mb-4">{filtered.length} question{filtered.length !== 1 ? "s" : ""}</p>

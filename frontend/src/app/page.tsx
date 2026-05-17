@@ -51,24 +51,24 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-8">
         <header className="text-center mb-8 relative">
-          <h1 className="text-3xl font-bold text-gray-900">SC-900 Quiz</h1>
+          <h1 className="text-3xl font-bold text-gray-900 text-balance">SC-900 Quiz</h1>
           <p className="text-gray-500 mt-1">Security, Compliance & Identity Fundamentals</p>
-          <button onClick={toggleDark} className="absolute top-0 right-0 text-xl" aria-label="Toggle dark mode">
+          <button onClick={toggleDark} className="absolute top-0 right-0 text-xl rounded-lg p-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500" aria-label="Toggle dark mode">
             {dark ? "☀️" : "🌙"}
           </button>
         </header>
 
         <div className="grid grid-cols-3 gap-4 mb-8">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center">
-            <p className="text-2xl font-bold text-blue-600">{qs.length}</p>
+            <p className="text-2xl font-bold text-blue-600 tabular-nums">{qs.length}</p>
             <p className="text-xs text-gray-500 mt-1">Questions</p>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center">
-            <p className="text-2xl font-bold text-green-600">{history.length}</p>
+            <p className="text-2xl font-bold text-green-600 tabular-nums">{history.length}</p>
             <p className="text-xs text-gray-500 mt-1">Quizzes Taken</p>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center">
-            <p className="text-2xl font-bold text-purple-600">
+            <p className="text-2xl font-bold text-purple-600 tabular-nums">
               {bestScore !== null ? `${bestScore}%` : "—"}
             </p>
             <p className="text-xs text-gray-500 mt-1">Best Score</p>
@@ -79,8 +79,9 @@ export default function HomePage() {
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Start Quiz</h2>
           <div className="flex gap-3 mb-4">
             <div className="flex-1">
-              <label className="block text-xs font-medium text-gray-500 mb-1">Topic</label>
+              <label htmlFor="topic-select" className="block text-xs font-medium text-gray-500 mb-1">Topic</label>
               <select
+                id="topic-select"
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -92,8 +93,9 @@ export default function HomePage() {
               </select>
             </div>
             <div className="w-28">
-              <label className="block text-xs font-medium text-gray-500 mb-1">Questions</label>
+              <label htmlFor="count-select" className="block text-xs font-medium text-gray-500 mb-1">Questions</label>
               <select
+                id="count-select"
                 value={count}
                 onChange={(e) => setCount(parseInt(e.target.value))}
                 className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -140,6 +142,9 @@ export default function HomePage() {
           </Link>
           <Link href="/study" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
             📖 Study
+          </Link>
+          <Link href="/study/topics" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
+            📚 Study Topics
           </Link>
           <Link href="/review" className="text-center p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors text-sm">
             ❌ Review

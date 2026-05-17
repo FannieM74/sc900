@@ -1,0 +1,286 @@
+[
+  {
+    "slug": "security-concepts",
+    "title": "Security, Compliance & Identity Concepts",
+    "weight": "10-15%",
+    "icon": "🛡️",
+    "sections": [
+      {
+        "id": "shared-responsibility",
+        "title": "Shared Responsibility Model",
+        "content": "The shared responsibility model defines how security responsibilities are divided between the cloud service provider (CSP) and the customer. The division of responsibility depends on the cloud deployment model:\n\n- **On-premises**: The customer is responsible for everything — physical security, hardware, networking, OS, applications, data, and identities.\n- **Infrastructure as a Service (IaaS)**: The CSP manages the physical infrastructure (datacenters, networking, physical hosts). The customer manages the OS, applications, data, identities, and network controls.\n- **Platform as a Service (PaaS)**: The CSP manages the infrastructure and the platform (OS, runtime, middleware). The customer manages applications, data, identities, and access.\n- **Software as a Service (SaaS)**: The CSP manages almost everything — infrastructure, platform, and applications. The customer is responsible for data, identities, and access management.\n\n**Key point**: Regardless of the model, the customer is ALWAYS responsible for their data, identities, and access management. The CSP is never responsible for customer data.",
+        "examTip": "SaaS places the MOST responsibility on the cloud provider. IaaS places the MOST responsibility on the customer."
+      },
+      {
+        "id": "defense-in-depth",
+        "title": "Defense in Depth",
+        "content": "Defense in depth is a layered security approach that uses multiple security controls at different levels to protect against threats. If one layer fails, other layers continue to provide protection.\n\nThe layers include:\n- **Physical**: Datacenter security, building access controls, environmental controls\n- **Identity & Access**: Multi-factor authentication, conditional access, privileged access management\n- **Perimeter**: DDoS protection, firewalls, WAF (Web Application Firewall)\n- **Network**: Network segmentation, NSGs (Network Security Groups), virtual networks\n- **Compute**: Endpoint protection, container security, VM hardening\n- **Application**: Secure coding practices, input validation, API security\n- **Data**: Encryption at rest and in transit, data classification, access controls\n\n**CIA Triad** — the three core principles of information security:\n- **Confidentiality**: Only authorized users can access data\n- **Integrity**: Data is accurate and has not been tampered with\n- **Availability**: Data and services are accessible when needed",
+        "examTip": "Defense in depth is about MULTIPLE layers of security, not a single control. If a question asks about layered security, the answer is defense in depth."
+      },
+      {
+        "id": "zero-trust",
+        "title": "Zero Trust Model",
+        "content": "Zero Trust is a security strategy that assumes no implicit trust based on network location. Every access request must be authenticated, authorized, and encrypted — regardless of where it originates.\n\n**Three guiding principles of Zero Trust:**\n1. **Verify explicitly** — Always authenticate and authorize based on all available data points (user identity, location, device health, service/workload, data classification, and anomalies).\n2. **Use least-privilege access** — Limit user access with just-in-time and just-enough-access (JIT/JEA), risk-based adaptive policies, and data protection.\n3. **Assume breach** — Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to detect threats.\n\n**Zero Trust pillars:**\n- **Identity**: Verify every user, service, and device\n- **Endpoints**: Secure all devices and ensure compliance\n- **Network**: Segment and encrypt all network traffic\n- **Applications**: Treat all apps as if they're on the internet\n- **Data**: Classify, label, and encrypt data\n- **Infrastructure**: Use analytics and monitoring to detect threats",
+        "examTip": "Zero Trust does NOT mean 'never trust, always verify' alone — remember the three principles: verify explicitly, least privilege, assume breach."
+      },
+      {
+        "id": "encryption-hashing",
+        "title": "Encryption and Hashing",
+        "content": "**Encryption** is the process of converting data into an unreadable format (ciphertext) that can only be read by someone with the decryption key.\n\n- **Encryption at rest**: Protects data stored on disks, databases, or cloud storage. Example: Azure Storage Service Encryption, Azure Disk Encryption.\n- **Encryption in transit**: Protects data as it travels across networks. Example: TLS/SSL protocols, HTTPS.\n\n**Hashing** is a one-way process that converts data into a fixed-size string of characters (hash). It is used to verify data integrity — if the original data changes, the hash changes.\n\n- Hashing is NOT encryption — you cannot reverse a hash to get the original data.\n- Common hashing algorithms: SHA-256, MD5 (deprecated for security use).\n\n**Key differences:**\n- Encryption is two-way (can be decrypted); hashing is one-way (cannot be reversed).\n- Encryption protects confidentiality; hashing protects integrity.",
+        "examTip": "Encryption = confidentiality (two-way). Hashing = integrity (one-way). If a question asks about verifying data hasn't been modified, the answer is hashing."
+      },
+      {
+        "id": "grc",
+        "title": "Governance, Risk, and Compliance (GRC)",
+        "content": "GRC is a structured approach to aligning IT governance with business goals while managing risk and meeting compliance requirements.\n\n- **Governance**: The overall strategy for managing IT resources, including policies, procedures, and organizational structures. Ensures IT supports business objectives.\n- **Risk Management**: The process of identifying, assessing, and mitigating risks to the organization. Includes risk assessment, risk treatment, and risk monitoring.\n- **Compliance**: Adhering to laws, regulations, standards, and internal policies. Examples: GDPR, HIPAA, ISO 27001, SOC 2.\n\n**Regulatory standards commonly tested:**\n- **GDPR**: General Data Protection Regulation — EU data privacy law\n- **HIPAA**: Health Insurance Portability and Accountability Act — US healthcare data protection\n- **ISO 27001**: International standard for information security management\n- **SOC 2**: Service Organization Control — auditing standard for service providers\n- **FedRAMP**: US government cloud security authorization program",
+        "examTip": "GRC is about the overall framework — governance sets the rules, risk management identifies threats, compliance ensures you follow the rules."
+      },
+      {
+        "id": "identity-perimeter",
+        "title": "Identity as the Primary Security Perimeter",
+        "content": "Traditionally, security was based on the network perimeter — firewalls protected the internal network, and anything inside was trusted. With cloud computing, the network perimeter has dissolved.\n\n**Why identity is the new security perimeter:**\n- Users access resources from anywhere, on any device\n- Cloud services are accessible over the internet\n- Remote work and BYOD (Bring Your Own Device) blur network boundaries\n- Data is no longer confined to a single location\n\n**Four pillars of identity management:**\n1. **Administration**: Creation and management of identities for users, devices, and services\n2. **Authentication (AuthN)**: Verifying that someone is who they claim to be\n3. **Authorization (AuthZ)**: Determining what an authenticated identity can access\n4. **Auditing**: Tracking who does what, when, where, and how",
+        "examTip": "Identity is the PRIMARY security perimeter in modern cloud environments. The old network perimeter model is no longer sufficient."
+      },
+      {
+        "id": "authn-vs-authz",
+        "title": "Authentication vs Authorization",
+        "content": "**Authentication (AuthN)** is the process of verifying the identity of a user, device, or service. It answers the question: 'Who are you?'\n\nAuthentication methods include:\n- Something you know (password, PIN)\n- Something you have (smart card, phone, security token)\n- Something you are (fingerprint, facial recognition)\n\n**Authorization (AuthZ)** is the process of determining what an authenticated identity is allowed to do. It answers the question: 'What can you access?'\n\nAuthorization methods include:\n- Role-based access control (RBAC)\n- Attribute-based access control (ABAC)\n- Access control lists (ACLs)\n\n**Key difference**: Authentication happens FIRST — you must prove who you are before the system can determine what you're allowed to do.",
+        "examTip": "Authentication = WHO you are. Authorization = WHAT you can do. AuthN always comes before AuthZ."
+      },
+      {
+        "id": "identity-providers",
+        "title": "Identity Providers (IdP)",
+        "content": "An **Identity Provider (IdP)** is a trusted service that creates, maintains, and manages identity information while providing authentication services.\n\n**Examples of identity providers:**\n- **Microsoft Entra ID** (formerly Azure AD): Cloud-based identity and access management service\n- **Active Directory Domain Services (AD DS)**: On-premises directory service for Windows environments\n- **Third-party IdPs**: Okta, Ping Identity, Google Workspace\n\n**Directory services** store information about network resources and users. Active Directory is the most common directory service in enterprise environments.\n\n**Federation** is a trust relationship between two or more identity providers that allows users to authenticate once and access resources across multiple systems (Single Sign-On, or SSO). Federation protocols include:\n- **SAML** (Security Assertion Markup Language): XML-based, commonly used for web-based SSO\n- **OIDC** (OpenID Connect): Built on OAuth 2.0, used for modern authentication\n- **WS-Federation**: Microsoft's federation protocol",
+        "examTip": "Federation enables SSO across organizations. SAML and OIDC are the most common federation protocols tested on the exam."
+      }
+    ]
+  },
+  {
+    "slug": "identity",
+    "title": "Microsoft Entra Capabilities",
+    "weight": "25-30%",
+    "icon": "🔑",
+    "sections": [
+      {
+        "id": "entra-id-overview",
+        "title": "Microsoft Entra ID Overview",
+        "content": "Microsoft Entra ID (formerly Azure Active Directory) is Microsoft's cloud-based identity and access management service. It helps employees sign in and access resources.\n\n**Key capabilities:**\n- **Authentication**: Verifies user identity when signing in\n- **Single Sign-On (SSO)**: Sign in once and access multiple applications without re-authenticating\n- **Multi-Factor Authentication (MFA)**: Adds an extra layer of security beyond passwords\n- **Conditional Access**: Enforces access policies based on conditions (location, device, risk)\n- **Self-Service Password Reset (SSPR)**: Allows users to reset their own passwords\n\n**Identity types in Microsoft Entra ID:**\n- **User accounts**: Represent individual people\n- **Group accounts**: Collections of users for easier management\n- **Service principals**: Identity for applications and services\n- **Managed identities**: Automatically managed identities for Azure resources\n\n**Microsoft Entra ID tiers:**\n- **Free**: Basic identity management, SSO, MFA for admins\n- **P1**: Conditional Access, hybrid identity, self-service password reset\n- **P2**: Identity Protection, Privileged Identity Management (PIM), access reviews",
+        "examTip": "Microsoft Entra ID was formerly called Azure Active Directory (Azure AD). The exam may use either name."
+      },
+      {
+        "id": "identity-types",
+        "title": "Identity Types",
+        "content": "Microsoft Entra ID supports several types of identities:\n\n**Cloud identities**: Created and managed entirely in Microsoft Entra ID. No on-premises dependency.\n\n**Synchronized identities**: Created on-premises in Active Directory and synchronized to Microsoft Entra ID using Microsoft Entra Connect (Azure AD Connect). Passwords can be synchronized or users can authenticate against on-premises AD (Pass-through Authentication).\n\n**Federated identities**: On-premises identities that authenticate against an on-premises federation service (like AD FS). Microsoft Entra ID trusts the federation service.\n\n**External identities (B2B)**: Guest accounts that allow external users (partners, vendors) to access your resources using their own identity provider.\n\n**Customer identities (B2C)**: Allows consumers to sign in to your applications using their preferred social or local account (Google, Facebook, email).\n\n**Hybrid identity**: Combines on-premises Active Directory with Microsoft Entra ID, providing a single identity for users across both environments.",
+        "examTip": "Know the difference between B2B (external partners) and B2C (consumers/customers). B2B uses guest accounts; B2C uses custom branding and social logins."
+      },
+      {
+        "id": "mfa",
+        "title": "Multi-Factor Authentication (MFA)",
+        "content": "Multi-Factor Authentication requires users to provide two or more verification methods to sign in. This significantly reduces the risk of credential-based attacks.\n\n**Three categories of authentication factors:**\n1. **Something you know**: Password, PIN, security question\n2. **Something you have**: Phone, hardware token, smart card\n3. **Something you are**: Fingerprint, facial recognition, voice\n\n**MFA methods in Microsoft Entra ID:**\n- **Microsoft Authenticator app**: Push notification or verification code (recommended)\n- **Phone call**: Automated call with verification code\n- **SMS**: Text message with verification code\n- **FIDO2 security keys**: Hardware-based passwordless authentication\n- **Windows Hello for Business**: Biometric or PIN-based authentication\n\n**Security defaults**: A set of basic identity security settings enabled by default in new Microsoft Entra ID tenants. Includes requiring MFA for all users and administrators, blocking legacy authentication protocols, and protecting privileged activities.",
+        "examTip": "MFA can block 99.9% of account compromise attacks. The Microsoft Authenticator app is the recommended method. Security defaults provide basic MFA for free."
+      },
+      {
+        "id": "passwordless",
+        "title": "Passwordless Authentication",
+        "content": "Passwordless authentication eliminates the need for passwords, providing a more secure and user-friendly sign-in experience.\n\n**Passwordless methods in Microsoft Entra ID:**\n- **Microsoft Authenticator app**: Users approve sign-in via push notification or biometric match on their phone\n- **FIDO2 security keys**: USB or NFC hardware keys that provide phishing-resistant authentication\n- **Windows Hello for Business**: Uses biometrics (fingerprint, facial recognition) or a PIN tied to a specific device\n\n**Benefits of passwordless:**\n- Eliminates password-related attacks (phishing, credential stuffing, brute force)\n- Improves user experience (no need to remember passwords)\n- Stronger security (phishing-resistant methods)\n\n**Phishing-resistant methods**: FIDO2 security keys and the Microsoft Authenticator app are considered phishing-resistant because they don't transmit reusable credentials.",
+        "examTip": "Passwordless methods that are phishing-resistant: FIDO2 keys and Microsoft Authenticator. Windows Hello for Business is device-bound, not phishing-resistant in the same way."
+      },
+      {
+        "id": "conditional-access",
+        "title": "Conditional Access",
+        "content": "Conditional Access is a policy-based access control system that evaluates signals (conditions) to decide whether to grant or deny access to resources.\n\n**Signals evaluated by Conditional Access:**\n- **User or group membership**: Who is trying to access\n- **IP location**: Where the request is coming from\n- **Device state**: Whether the device is compliant, hybrid joined, or marked as compliant\n- **Application**: Which cloud app or action is being accessed\n- **Sign-in risk level**: Risk detected by Identity Protection\n- **Platform**: Operating system (iOS, Android, Windows, macOS)\n\n**Access decisions:**\n- **Grant access**: Allow sign-in\n- **Grant with conditions**: Require MFA, require compliant device, require approved app\n- **Block access**: Deny sign-in\n\n**Conditional Access vs Security Defaults:**\n- Security defaults are basic, pre-configured settings for all users\n- Conditional Access provides granular, customizable policies (requires Microsoft Entra ID P1)",
+        "examTip": "Conditional Access requires Microsoft Entra ID P1 license. It evaluates signals (who, where, what device) and makes access decisions (grant, block, require MFA)."
+      },
+      {
+        "id": "identity-protection",
+        "title": "Identity Protection",
+        "content": "Microsoft Entra ID Identity Protection uses machine learning and heuristics to detect and remediate identity-based risks automatically.\n\n**Types of risk detections:**\n- **Risky sign-ins**: Sign-ins that show signs of being performed by someone other than the legitimate user\n  - Anonymous IP address\n  - Atypical travel (impossible travel)\n  - Unfamiliar sign-in properties\n  - Malware-linked IP address\n  - Password spray attacks\n- **Risky users**: Users whose accounts show signs of compromise\n  - Leaked credentials\n  - Multiple anomalous activities\n\n**Risk levels:**\n- **Low**: Unusual activity detected but not confirmed compromise\n- **Medium**: Higher confidence of compromise\n- **High**: Very high confidence of compromise\n\n**Automated remediation:**\n- Configure policies to automatically respond to risk (require password change, require MFA, block access)\n- Risky sign-ins and users can be investigated in the Identity Protection portal\n\n**Requires Microsoft Entra ID P2 license.**",
+        "examTip": "Identity Protection requires P2. It detects risky sign-ins and risky users, and can automatically remediate (require MFA, password change, or block)."
+      },
+      {
+        "id": "pim",
+        "title": "Privileged Identity Management (PIM)",
+        "content": "Privileged Identity Management (PIM) is a service that enables you to manage, control, and monitor access to important resources in your organization.\n\n**Key capabilities:**\n- **Just-in-time access**: Users request elevated privileges only when needed, rather than having them permanently\n- **Time-bound access**: Elevated privileges expire after a specified duration\n- **Approval workflows**: Require approval from a designated approver before granting access\n- **Access reviews**: Periodically review who has privileged access and remove unnecessary assignments\n- **Audit history**: Track all privileged role activations and assignments\n- **Eligible assignments**: Users are eligible for a role but must activate it (not permanently assigned)\n\n**PIM protects:**\n- Microsoft Entra ID roles (Global Administrator, User Administrator, etc.)\n- Azure RBAC roles (Owner, Contributor, etc.)\n- Microsoft 365 roles\n\n**Requires Microsoft Entra ID P2 license.**",
+        "examTip": "PIM provides just-in-time privileged access. Users are ELIGIBLE for roles and must ACTIVATE them. Requires P2 license."
+      },
+      {
+        "id": "access-reviews",
+        "title": "Access Reviews",
+        "content": "Access Reviews enable organizations to efficiently manage group memberships, access to enterprise applications, and role assignments.\n\n**Key capabilities:**\n- **Review group memberships**: Periodically verify that users still need access to groups\n- **Review application access**: Ensure users still need access to enterprise applications\n- **Review role assignments**: Verify privileged role assignments are still appropriate\n- **Automated decisions**: If reviewers don't respond, access can be automatically removed\n- **Multi-stage reviews**: Require multiple reviewers for high-sensitivity resources\n- **Guest access reviews**: Specifically review external/guest user access\n\n**Benefits:**\n- Reduces risk of excessive access\n- Helps meet compliance requirements\n- Removes stale access automatically\n- Provides audit trail for compliance reporting\n\n**Access reviews are part of Microsoft Entra ID Governance (requires P2 license).**",
+        "examTip": "Access reviews help ensure users have only the access they need. They can automatically remove access if reviewers don't respond."
+      },
+      {
+        "id": "rbac",
+        "title": "Role-Based Access Control (RBAC)",
+        "content": "Role-Based Access Control (RBAC) is an authorization system built on Microsoft Entra ID that manages access to Azure resources.\n\n**How RBAC works:**\n- **Security principal**: The identity that needs access (user, group, service principal, managed identity)\n- **Role definition**: A collection of permissions (what actions are allowed)\n- **Scope**: The level of access (management group, subscription, resource group, or individual resource)\n- **Role assignment**: Links a security principal to a role definition at a specific scope\n\n**Built-in roles:**\n- **Owner**: Full access to all resources, including the ability to delegate access\n- **Contributor**: Full access to all resources, but cannot delegate access\n- **Reader**: View-only access to resources\n- **User Access Administrator**: Manage access to Azure resources\n\n**Custom roles**: You can create custom roles with specific permissions when built-in roles don't meet your needs.\n\n**Principle of least privilege**: Assign only the permissions needed to perform a task — nothing more.",
+        "examTip": "Owner can delegate access; Contributor cannot. RBAC assignments are: Who (principal) + What (role) + Where (scope)."
+      },
+      {
+        "id": "hybrid-identities",
+        "title": "Hybrid Identities and External Identities",
+        "content": "**Hybrid Identity** connects on-premises Active Directory with Microsoft Entra ID:\n\n- **Microsoft Entra Connect**: Synchronizes on-premises AD objects to Microsoft Entra ID. Supports password hash sync, pass-through authentication, and federation.\n- **Password Hash Synchronization (PHS)**: Passwords from on-premises AD are hashed and synced to the cloud.\n- **Pass-through Authentication (PTA)**: Authentication requests are validated against on-premises AD in real-time.\n- **Federation (AD FS)**: On-premises AD FS handles authentication; Microsoft Entra ID trusts the federation.\n\n**External Identities:**\n- **B2B Collaboration**: Invite external users as guest accounts. They use their own identity to access your resources.\n- **B2B Direct Connect**: Establish a two-way trust with another organization for seamless collaboration.\n- **B2C**: Customer-facing identity service that allows consumers to sign in with social accounts or local accounts.\n\n**Microsoft Entra Connect Health**: Monitors the health of your hybrid identity infrastructure.",
+        "examTip": "PHS syncs password hashes to cloud. PTA validates against on-premises AD in real-time. Federation uses AD FS. B2B = partners, B2C = customers."
+      }
+    ]
+  },
+  {
+    "slug": "azure-security",
+    "title": "Microsoft Security Solutions",
+    "weight": "35-40%",
+    "icon": "🔒",
+    "sections": [
+      {
+        "id": "defender-for-cloud",
+        "title": "Microsoft Defender for Cloud",
+        "content": "Microsoft Defender for Cloud is a Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP) that helps protect hybrid cloud workloads.\n\n**CSPM (Cloud Security Posture Management):**\n- Continuously assesses your cloud environment against security benchmarks\n- Identifies misconfigurations and security gaps\n- Provides a **Secure Score** — a quantitative measure of your security posture\n- Generates security recommendations to improve your posture\n- Supports Azure, AWS, and Google Cloud Platform\n\n**CWPP (Cloud Workload Protection):**\n- Protects servers, containers, databases, storage, and other workloads\n- Provides threat detection and response capabilities\n- Includes plans for: virtual machines, containers, storage, SQL databases, Kubernetes, App Service\n\n**Key features:**\n- **Security recommendations**: Actionable guidance to improve security\n- **Secure Score**: Percentage-based score showing overall security posture\n- **Regulatory compliance**: Track compliance against standards (ISO, NIST, PCI-DSS)\n- **Workload protection plans**: Advanced threat protection for specific resource types",
+        "examTip": "Defender for Cloud = CSPM + CWPP. Secure Score measures your security posture. It works across Azure, AWS, and GCP."
+      },
+      {
+        "id": "cspm",
+        "title": "Cloud Security Posture Management (CSPM)",
+        "content": "CSPM is a category of cloud security tools that helps identify and remediate security misconfigurations across cloud environments.\n\n**What CSPM does:**\n- **Continuous assessment**: Monitors cloud resources against security best practices and compliance standards\n- **Misconfiguration detection**: Identifies insecure settings (public storage, open ports, missing encryption)\n- **Compliance monitoring**: Tracks compliance against regulatory frameworks (ISO 27001, NIST, PCI-DSS, GDPR)\n- **Remediation guidance**: Provides recommendations to fix identified issues\n- **Attack path analysis**: Identifies potential paths an attacker could take through your environment\n\n**CSPM in Microsoft Defender for Cloud:**\n- The 'Enhanced Security' feature provides advanced CSPM capabilities\n- Includes regulatory compliance dashboard\n- Provides cloud security explorer for querying resource configurations\n- Integrates with Microsoft Defender for Cloud Apps for SaaS posture management",
+        "examTip": "CSPM focuses on IDENTIFYING and REMEDIATING misconfigurations. It's about your cloud security POSTURE, not real-time threat detection."
+      },
+      {
+        "id": "cloud-workload-protection",
+        "title": "Cloud Workload Protection",
+        "content": "Cloud Workload Protection Platform (CWPP) provides security for workloads running in the cloud — virtual machines, containers, databases, and applications.\n\n**Defender for Cloud workload protection plans:**\n- **Defender for Servers**: Threat protection for Windows and Linux VMs (on-premises and cloud)\n- **Defender for Containers**: Security for containerized workloads and Kubernetes\n- **Defender for Storage**: Threat detection for Azure Storage accounts\n- **Defender for SQL**: Protection for Azure SQL databases and SQL servers\n- **Defender for App Service**: Protection for web applications running on Azure App Service\n- **Defender for Key Vault**: Detection of suspicious access patterns in Key Vault\n- **Defender for Resource Manager**: Detection of suspicious resource management operations\n\n**Capabilities:**\n- Real-time threat detection\n- Behavioral analysis\n- Integration with Microsoft Defender XDR for unified incident management\n- Vulnerability assessment\n- Just-in-time VM access",
+        "examTip": "CWPP protects specific workloads (VMs, containers, databases). Each workload type has its own Defender plan in Defender for Cloud."
+      },
+      {
+        "id": "sentinel",
+        "title": "Microsoft Sentinel (SIEM/SOAR)",
+        "content": "Microsoft Sentinel is a cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) solution.\n\n**SIEM capabilities:**\n- **Data collection**: Aggregates data from all sources across the enterprise — Azure, on-premises, other clouds, Microsoft 365, third-party solutions\n- **Threat detection**: Uses built-in analytics rules and machine learning to detect threats\n- **Investigation**: Provides investigation graph to visualize the full scope of an attack\n- **Hunting**: Proactively search for threats using Kusto Query Language (KQL)\n\n**SOAR capabilities:**\n- **Playbooks**: Automated response workflows using Azure Logic Apps\n- **Incident management**: Centralized incident tracking and response\n- **Automation**: Automate repetitive tasks and response actions\n\n**Key features:**\n- **Content Hub**: Pre-built content packages for data connectors, analytics rules, workbooks, and playbooks\n- **Workbooks**: Interactive dashboards for visualizing security data\n- **Watchlists**: Custom reference data for correlation\n- **Microsoft Security Copilot**: AI-powered security assistant integrated into Sentinel",
+        "examTip": "Sentinel = SIEM (collect and analyze) + SOAR (automate response). It's cloud-native and uses KQL for queries. Content Hub provides pre-built packages."
+      },
+      {
+        "id": "defender-xdr",
+        "title": "Microsoft Defender XDR",
+        "content": "Microsoft Defender XDR (Extended Detection and Response) is a unified threat protection platform that correlates signals across multiple Microsoft security products.\n\n**Components of Defender XDR:**\n- **Defender for Endpoint**: Protects devices (Windows, macOS, Linux, iOS, Android) from threats\n- **Defender for Office 365**: Protects against phishing, malware, and malicious links in email and collaboration tools\n- **Defender for Identity**: Detects threats using signals from Active Directory (on-premises)\n- **Defender for Cloud Apps**: Provides visibility and control over SaaS applications (CASB)\n\n**How XDR works:**\n- Correlates signals from all Defender products into a single incident\n- Provides a unified view of the attack chain\n- Automates investigation and remediation\n- Reduces alert fatigue by grouping related alerts\n\n**Key concepts:**\n- **Incidents**: A collection of related alerts that together indicate an attack\n- **Alerts**: Individual detections of suspicious activity\n- **Automated investigation and remediation (AIR)**: Automatically investigates and remediates threats",
+        "examTip": "Defender XDR correlates signals across endpoints, email, identity, and cloud apps. An INCIDENT is a collection of related ALERTS."
+      },
+      {
+        "id": "defender-endpoint",
+        "title": "Defender for Endpoint",
+        "content": "Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.\n\n**Key capabilities:**\n- **Endpoint Detection and Response (EDR)**: Detects and investigates suspicious activities on endpoints\n- **Threat and Vulnerability Management**: Identifies and prioritizes vulnerabilities on endpoints\n- **Attack Surface Reduction (ASR)**: Reduces the attack surface by blocking risky behaviors\n- **Next-Generation Protection**: Real-time antivirus, cloud-delivered protection, and network protection\n- **Automated Investigation and Remediation**: Automatically investigates and remediates threats\n\n**Supported platforms:**\n- Windows, macOS, Linux, iOS, Android\n\n**How it works:**\n- Sensors on endpoints collect telemetry data\n- Cloud-based analytics analyze the data for threats\n- Alerts are generated and correlated into incidents\n- Automated or manual remediation actions can be taken",
+        "examTip": "Defender for Endpoint = EDR + threat/vulnerability management + attack surface reduction. It works across Windows, macOS, Linux, iOS, and Android."
+      },
+      {
+        "id": "defender-office365",
+        "title": "Defender for Office 365",
+        "content": "Microsoft Defender for Office 365 protects organizations against threats in email, collaboration tools, and applications.\n\n**Key capabilities:**\n- **Safe Attachments**: Scans email attachments and files in real-time using detonation chamber technology\n- **Safe Links**: Scans URLs in emails and Office documents at click time\n- **Anti-phishing**: Uses machine learning to detect and block phishing attempts\n- **Impersonation protection**: Detects attempts to impersonate executives or trusted senders\n- **Threat intelligence**: Provides insights into threat actors and campaigns\n- **Investigation and response**: Automated investigation and remediation of threats\n\n**Plans:**\n- **Plan 1**: Safe Attachments, Safe Links, anti-phishing, real-time detections\n- **Plan 2**: Adds automated investigation and remediation (AIR), threat explorer, campaign views\n\n**Protects:**\n- Exchange Online, Teams, SharePoint Online, OneDrive for Business",
+        "examTip": "Safe Attachments uses a detonation chamber (sandbox) to analyze files. Safe Links scans URLs at click time, not just when the email is received."
+      },
+      {
+        "id": "defender-identity",
+        "title": "Defender for Identity",
+        "content": "Microsoft Defender for Identity (formerly Azure ATP) uses on-premises Active Directory signals to identify, detect, and investigate advanced threats.\n\n**Key capabilities:**\n- **Identity threat detection**: Detects suspicious activities targeting Active Directory\n- **Lateral movement detection**: Identifies attempts to move laterally through the network\n- **Reconnaissance detection**: Detects attempts to gather information about AD (enumeration, LDAP queries)\n- **Compromised entity detection**: Identifies compromised user accounts and devices\n- **Sensitive data access monitoring**: Tracks access to sensitive data stores\n\n**How it works:**\n- Sensors are deployed on domain controllers to collect AD signals\n- Cloud-based analytics analyze the signals for threats\n- Alerts are generated and correlated into incidents in Defender XDR\n\n**Protects:**\n- On-premises Active Directory environments\n- Works alongside Microsoft Entra ID Identity Protection for hybrid environments",
+        "examTip": "Defender for Identity protects ON-PREMISES Active Directory. It uses sensors on domain controllers. It's part of the Defender XDR suite."
+      },
+      {
+        "id": "defender-cloud-apps",
+        "title": "Defender for Cloud Apps",
+        "content": "Microsoft Defender for Cloud Apps (formerly Microsoft Cloud App Security) is a Cloud Access Security Broker (CASB) that provides visibility and control over SaaS applications.\n\n**Key capabilities:**\n- **Shadow IT discovery**: Identifies unsanctioned cloud applications being used in the organization\n- **App governance**: Monitor and control how sanctioned apps are used\n- **Data loss prevention (DLP)**: Detect and prevent sensitive data from being shared inappropriately\n- **Threat protection**: Detect anomalous user behavior and potential account compromise\n- **Session controls**: Control what users can do within cloud apps in real-time\n- **Information protection**: Apply sensitivity labels and encryption to files in cloud apps\n\n**How it works:**\n- Connects to cloud apps via APIs to collect activity logs\n- Analyzes user behavior to detect anomalies\n- Applies policies to control access and data sharing\n- Can integrate with Microsoft Defender XDR for unified incident management",
+        "examTip": "Defender for Cloud Apps = CASB. Key features: shadow IT discovery, DLP, session controls, and threat protection for SaaS apps."
+      },
+      {
+        "id": "nsgs",
+        "title": "Network Security Groups (NSGs)",
+        "content": "Network Security Groups (NSGs) are Azure's basic firewall that filters network traffic to and from Azure resources in a virtual network.\n\n**How NSGs work:**\n- Contain a list of security rules that allow or deny traffic\n- Rules are evaluated in order of priority (lower number = higher priority)\n- Can be associated with subnets or individual network interfaces (NICs)\n- Rules can filter based on: source/destination IP, port, and protocol\n\n**Default rules:**\n- Every NSG has default rules that allow traffic within the virtual network and from Azure load balancers\n- Default rules also deny all inbound traffic from the internet and all outbound traffic\n\n**Service tags**: Predefined groups of IP addresses (e.g., VirtualNetwork, Internet, AzureLoadBalancer) that simplify rule creation.\n\n**Application security groups**: Group VMs by application role for easier NSG rule management.",
+        "examTip": "NSGs filter traffic at the subnet or NIC level. Rules are evaluated by priority (lower number = higher priority). Service tags simplify rule creation."
+      },
+      {
+        "id": "azure-firewall",
+        "title": "Azure Firewall",
+        "content": "Azure Firewall is a managed, cloud-based network firewall service that provides network-level protection for Azure virtual network resources.\n\n**Key capabilities:**\n- **Built-in high availability**: No need to configure load balancers\n- **Unlimited scalability**: Automatically scales to handle traffic spikes\n- **Application FQDN filtering**: Allow or deny traffic based on fully qualified domain names\n- **Network traffic filtering**: Filter based on IP addresses, ports, and protocols\n- **Threat intelligence**: Alert and deny traffic from/to known malicious IP addresses and domains\n- **TLS inspection**: Inspect encrypted traffic for threats\n- **DNS proxy**: Resolve DNS queries for backend resources\n\n**Azure Firewall vs NSG:**\n- NSGs operate at the subnet/NIC level and are basic stateful firewalls\n- Azure Firewall is a centralized, managed firewall with advanced features (FQDN filtering, threat intelligence, TLS inspection)\n- Use both together for defense in depth",
+        "examTip": "Azure Firewall is a MANAGED, cloud-based firewall with high availability built-in. It supports FQDN filtering, threat intelligence, and TLS inspection."
+      },
+      {
+        "id": "waf",
+        "title": "Web Application Firewall (WAF)",
+        "content": "A Web Application Firewall (WAF) provides centralized protection for web applications against common exploits and vulnerabilities.\n\n**Where WAF is available:**\n- **Azure Application Gateway**: WAF is a feature of Application Gateway\n- **Azure Front Door**: WAF protects globally distributed web applications\n- **Azure CDN**: WAF protects content delivered through Azure CDN\n\n**What WAF protects against:**\n- **SQL injection (SQLi)**: Attacks that attempt to manipulate database queries\n- **Cross-site scripting (XSS)**: Attacks that inject malicious scripts into web pages\n- **OWASP Top 10**: The most critical web application security risks\n- **Bot protection**: Detect and block malicious bots\n- **DDoS attacks**: Works in conjunction with Azure DDoS Protection\n\n**WAF modes:**\n- **Prevention mode**: Blocks detected attacks\n- **Detection mode**: Logs detected attacks but does not block them",
+        "examTip": "WAF protects web applications (Layer 7), not network-level traffic. It's available on Application Gateway, Front Door, and CDN. Prevention mode blocks attacks; Detection mode only logs."
+      },
+      {
+        "id": "ddos-protection",
+        "title": "Azure DDoS Protection",
+        "content": "Azure DDoS Protection provides enhanced mitigation features against Distributed Denial of Service (DDoS) attacks.\n\n**What is a DDoS attack:**\n- An attack that overwhelms a target with traffic from multiple sources, making it unavailable to legitimate users\n- Types: volumetric (bandwidth exhaustion), protocol (resource exhaustion), application layer (targeting specific apps)\n\n**DDoS Protection tiers:**\n- **Basic (free)**: Automatically enabled for all Azure services. Provides always-on traffic monitoring and mitigation using machine learning.\n- **Standard (paid)**: Enhanced protection with:\n  - Real-time telemetry and metrics via Azure Monitor\n  - DDoS protection plans for specific virtual networks\n  - Attack analytics and reporting\n  - Access to DDoS rapid response team\n  - Cost credits for scaling during attacks\n\n**How it works:**\n- Monitors traffic patterns using machine learning\n- Identifies and drops malicious traffic\n- Allows legitimate traffic to reach the target",
+        "examTip": "DDoS Protection Basic is FREE and always-on. Standard provides real-time telemetry, attack analytics, and DDoS response team access."
+      },
+      {
+        "id": "azure-bastion",
+        "title": "Azure Bastion",
+        "content": "Azure Bastion provides secure and seamless RDP/SSH connectivity to virtual machines directly from the Azure portal over TLS.\n\n**Key benefits:**\n- **No public IP needed**: VMs don't need public IP addresses, reducing exposure to attacks\n- **TLS-based**: All connections are over TLS, even RDP and SSH traffic\n- **No client software needed**: Connect from the Azure portal using a browser\n- **Protected against port scanning**: Since there's no public IP, attackers can't scan for open ports\n\n**How it works:**\n- Deployed in a virtual network as a managed PaaS service\n- Connects to VMs using their private IP addresses\n- Users connect through the Azure portal\n\n**Azure Bastion vs Just-in-Time (JIT) VM access:**\n- Bastion provides browser-based RDP/SSH connectivity over TLS\n- JIT temporarily opens ports on the NSG for direct RDP/SSH connections\n- Both reduce the attack surface by eliminating permanent public IP exposure",
+        "examTip": "Azure Bastion = browser-based RDP/SSH over TLS, no public IP needed. It's a PaaS service deployed in your VNet."
+      },
+      {
+        "id": "key-vault",
+        "title": "Azure Key Vault",
+        "content": "Azure Key Vault is a cloud service for securely storing and accessing secrets, keys, and certificates.\n\n**What Key Vault stores:**\n- **Secrets**: Passwords, connection strings, API keys, and other sensitive data\n- **Keys**: Cryptographic keys used for encryption, signing, and wrapping\n- **Certificates**: X.509 certificates and their private keys\n\n**Key capabilities:**\n- **Centralized secret management**: Single location for all secrets\n- **Secure storage**: Secrets are encrypted at rest using Microsoft-managed or customer-managed keys\n- **Access control**: RBAC and access policies control who can access secrets\n- **Logging and monitoring**: All access is logged via Azure Monitor\n- **Automatic rotation**: Certificates can be automatically renewed\n- **HSM-backed keys**: Keys can be protected by Hardware Security Modules (FIPS 140-2 Level 2 validated)\n\n**Use cases:**\n- Storing database connection strings for applications\n- Managing SSL/TLS certificates for web applications\n- Encrypting data in Azure Storage using customer-managed keys",
+        "examTip": "Key Vault stores secrets, keys, and certificates. It supports RBAC for access control and HSM-backed keys for enhanced security."
+      }
+    ]
+  },
+  {
+    "slug": "compliance",
+    "title": "Microsoft Compliance Solutions",
+    "weight": "20-25%",
+    "icon": "📋",
+    "sections": [
+      {
+        "id": "purview-overview",
+        "title": "Microsoft Purview Overview",
+        "content": "Microsoft Purview is a comprehensive set of solutions that help organizations govern, protect, and manage their entire data estate. It combines data governance, data protection, and risk management.\n\n**Key components:**\n- **Purview Compliance Portal**: Central hub for managing compliance, information protection, and risk\n- **Compliance Manager**: Tracks and manages compliance posture across regulations\n- **Information Protection**: Classify and protect data with sensitivity labels\n- **Data Loss Prevention (DLP)**: Prevent sensitive data from being shared inappropriately\n- **Insider Risk Management**: Detect and investigate insider risks\n- **eDiscovery**: Find and export content for legal and regulatory purposes\n- **Audit**: Track user and admin activities across Microsoft 365\n- **Records Management**: Manage the lifecycle of records for compliance\n\n**Purview unifies:**\n- Microsoft 365 compliance capabilities\n- Azure data governance\n- On-premises data scanning and classification",
+        "examTip": "Microsoft Purview = data governance + data protection + risk management. The Purview Compliance Portal is the central hub."
+      },
+      {
+        "id": "compliance-manager",
+        "title": "Compliance Manager",
+        "content": "Compliance Manager is a workflow-based tool in the Microsoft Purview compliance portal that helps organizations manage and track their compliance posture.\n\n**Key capabilities:**\n- **Compliance Score**: A quantitative measure of your organization's compliance posture\n- **Assessments**: Pre-built templates for regulations and standards (GDPR, ISO 27001, NIST, HIPAA)\n- **Improvement actions**: Specific steps to improve your compliance score\n- **Shared responsibility tracking**: Shows which actions are managed by Microsoft vs. the customer\n- **Custom assessments**: Create custom compliance assessments for internal policies\n\n**How Compliance Score works:**\n- Each improvement action has a point value\n- Your score is calculated based on completed actions vs. total possible points\n- Higher score = better compliance posture\n\n**Benefits:**\n- Simplifies compliance management across multiple regulations\n- Provides actionable guidance to improve compliance\n- Helps demonstrate compliance to auditors",
+        "examTip": "Compliance Manager provides a Compliance Score. It tracks improvement actions and shows shared responsibility between Microsoft and the customer."
+      },
+      {
+        "id": "sensitivity-labels",
+        "title": "Sensitivity Labels",
+        "content": "Sensitivity labels are used to classify and protect data based on its sensitivity level. They can be applied to documents, emails, containers (Teams, SharePoint, Microsoft 365 groups), and Power BI datasets.\n\n**What sensitivity labels can do:**\n- **Visual markings**: Add headers, footers, or watermarks to documents\n- **Encryption**: Encrypt documents and emails to restrict access\n- **Content marking**: Add watermarks to indicate sensitivity level\n- **Auto-labeling**: Automatically apply labels based on content conditions (sensitive information types)\n- **Container labels**: Apply labels to Teams sites, SharePoint sites, and Microsoft 365 groups to control access and sharing settings\n\n**Common label examples:**\n- Confidential — All Employees\n- Highly Confidential — Specific Users Only\n- General — No Restrictions\n- Public — For External Sharing\n\n**How labels are applied:**\n- **Manually**: Users select a label when creating or editing content\n- **Automatically**: Labels are applied based on predefined conditions (e.g., documents containing credit card numbers)\n- **Recommended**: The system suggests a label, and the user confirms",
+        "examTip": "Sensitivity labels can classify AND protect (encrypt) data. They apply to documents, emails, containers, and Power BI. Auto-labeling uses sensitive information types."
+      },
+      {
+        "id": "dlp",
+        "title": "Data Loss Prevention (DLP)",
+        "content": "Data Loss Prevention (DLP) helps organizations identify and protect sensitive data from being shared inappropriately.\n\n**What DLP protects:**\n- **Sensitive information types**: Credit card numbers, social security numbers, health records, financial data\n- **Custom sensitive information types**: Define your own patterns (e.g., employee IDs)\n- **Trainable classifiers**: Machine learning-based classifiers that learn to detect specific content types\n\n**Where DLP works:**\n- Exchange Online (email)\n- SharePoint Online and OneDrive for Business\n- Teams (chat and channel messages)\n- Endpoint devices (Windows, macOS)\n- Third-party cloud apps (via Defender for Cloud Apps)\n- On-premises file shares\n\n**DLP actions:**\n- **Block**: Prevent the sharing of sensitive content\n- **Notify**: Alert the user when they're about to share sensitive content\n- **Override with justification**: Allow the user to override the policy with a business reason\n- **Audit**: Log the activity for later review\n\n**DLP policies**: Collections of rules that define what sensitive data to protect and what actions to take.",
+        "examTip": "DLP prevents sensitive data from being shared inappropriately. It works across Exchange, SharePoint, Teams, endpoints, and third-party apps."
+      },
+      {
+        "id": "retention-policies",
+        "title": "Retention Policies and Labels",
+        "content": "Retention policies and labels help organizations manage the lifecycle of their data — keeping it for as long as needed and disposing of it when no longer required.\n\n**Retention policies:**\n- Apply to entire locations (mailboxes, SharePoint sites, OneDrive accounts, Teams)\n- Can retain content, delete content, or both\n- Can be based on age, events, or adaptive scopes\n- **Adaptive scopes**: Automatically include or exclude content based on conditions (department, location, etc.)\n\n**Retention labels:**\n- Applied to individual items (documents, emails, folders)\n- Can trigger retention or deletion based on specific events\n- Can be auto-applied based on content conditions\n- **Event-based retention**: Retention starts when a specific event occurs (e.g., end of a project)\n\n**Key concepts:**\n- **Retention wins over deletion**: If a retention policy says keep and another says delete, retention wins\n- **Shortest retention wins**: If multiple retention policies apply, the one with the shortest period wins\n- **Longest deletion wins**: If multiple deletion policies apply, the one with the longest period wins",
+        "examTip": "Retention wins over deletion. Shortest retention period wins. Longest deletion period wins. Labels apply to individual items; policies apply to entire locations."
+      },
+      {
+        "id": "records-management",
+        "title": "Records Management",
+        "content": "Records management in Microsoft Purview helps organizations manage their regulatory obligations for retaining and disposing of records.\n\n**Key capabilities:**\n- **Records declaration**: Declare content as a record, which applies stricter retention and deletion rules\n- **Disposition reviews**: Review records that are eligible for deletion before they are permanently removed\n- **File plan management**: Organize records using a hierarchical file plan (categories, subcategories)\n- **Regulatory records**: Manage records for specific regulations (e.g., SEC, FINRA)\n\n**How records differ from regular content:**\n- Records cannot be edited or deleted by users\n- Records are subject to retention policies and labels\n- Records require a disposition review before deletion\n- Records can be declared manually or automatically based on conditions\n\n**File plan**: A hierarchical structure that organizes records by category, subcategory, and authority. It helps manage records consistently across the organization.",
+        "examTip": "Records cannot be edited or deleted. They require disposition review before deletion. File plans organize records hierarchically."
+      },
+      {
+        "id": "insider-risk",
+        "title": "Insider Risk Management",
+        "content": "Insider Risk Management helps organizations detect, investigate, and act on risks posed by people within the organization.\n\n**Types of insider risks:**\n- **Data theft**: Employees copying or sharing sensitive data before leaving the organization\n- **Data leaks**: Accidental sharing of sensitive information\n- **Compliance violations**: Violations of regulatory requirements or organizational policies\n- **Harassment and threats**: Inappropriate behavior detected in communications\n- **Security policy violations**: Violations of security policies\n\n**How it works:**\n- **Signals**: Collects signals from various sources (DLP alerts, HR system, Azure AD, Defender for Cloud Apps)\n- **Policies**: Define policies to detect specific risk patterns\n- **Alerts**: Generate alerts when risk patterns are detected\n- **Investigations**: Investigate alerts with a case management workflow\n- **Actions**: Take actions (notify managers, restrict access, escalate to HR)\n\n**Privacy by design:**\n- Insider Risk Management is designed to protect employee privacy\n- Only authorized investigators can access case details\n- Data is pseudonymized to protect identities during initial analysis",
+        "examTip": "Insider Risk Management detects risks from WITHIN the organization. It collects signals from DLP, HR systems, and other sources. Privacy is built in."
+      },
+      {
+        "id": "ediscovery",
+        "title": "eDiscovery and Audit",
+        "content": "**eDiscovery (Electronic Discovery)** is the process of identifying, collecting, and exporting content for legal and regulatory purposes.\n\n**eDiscovery capabilities:**\n- **Content Search**: Search across Exchange, SharePoint, OneDrive, Teams, and other locations\n- **eDiscovery (Standard)**: Create cases, place holds, search, and export content\n- **eDiscovery (Premium)**: Advanced capabilities including:\n  - Advanced eDiscovery processing (deduplication, threading, OCR)\n  - Review sets for document review\n  - Analytics (topic clustering, email threading, near-duplicate detection)\n  - Custodian management\n\n**Audit capabilities:**\n- **Audit log search**: Search the unified audit log for user and admin activities\n- **Audit records**: Track activities across Microsoft 365 services\n- **Audit retention**: Audit records are retained for 90 days (Microsoft 365 E5) or 1 year (with add-on)\n- **Audit policies**: Configure audit settings and retention\n\n**Unified audit log**: A single log that captures activities across all Microsoft 365 services, providing a comprehensive view of user and admin activities.",
+        "examTip": "eDiscovery Standard = basic search, hold, export. eDiscovery Premium = advanced processing, review sets, analytics. The unified audit log captures activities across all M365 services."
+      },
+      {
+        "id": "service-trust-portal",
+        "title": "Service Trust Portal and Microsoft Priva",
+        "content": "**Service Trust Portal (STP)**:\n- Provides access to Microsoft's compliance documentation and audit reports\n- Includes audit reports (SOC 1, SOC 2, ISO 27001, FedRAMP)\n- Provides the Trust Documents section for compliance evidence\n- Helps customers understand how Microsoft protects their data\n\n**Microsoft Priva**:\n- A privacy risk management solution that helps organizations meet privacy obligations\n- **Privacy Risk Management**: Identify and mitigate privacy risks related to personal data\n- **Subject Rights Requests (SRR)**: Manage data subject requests under GDPR, CCPA, and other privacy regulations\n- **Privacy policies**: Create and manage privacy policies\n- **Data discovery**: Find personal data across the organization\n\n**Key difference:**\n- Service Trust Portal = Microsoft's compliance evidence and audit reports\n- Microsoft Priva = Privacy risk management and subject rights requests\n- Microsoft Purview = Data governance, protection, and risk management",
+        "examTip": "Service Trust Portal = Microsoft's audit reports and compliance docs. Priva = privacy risk management and subject rights requests. Purview = data governance and protection."
+      }
+    ]
+  }
+]

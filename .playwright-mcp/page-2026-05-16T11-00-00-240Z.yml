@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Topics" [ref=e5] [cursor=pointer]:
+      - /url: /study/topics
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: 🛡️
+        - heading "Security, Compliance & Identity Concepts" [level=1] [ref=e9]
+        - generic [ref=e10]: 10-15%
+      - paragraph [ref=e11]: 8 sections · 0/8 completed
+    - generic [ref=e13]:
+      - button "Expand All" [ref=e14]
+      - button "Collapse All" [ref=e15]
+    - generic [ref=e16]:
+      - button "1 Shared Responsibility Model ▼" [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: "1"
+          - generic [ref=e21]: Shared Responsibility Model
+        - generic [ref=e23]: ▼
+      - button "2 Defense in Depth ▼" [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: "2"
+          - generic [ref=e28]: Defense in Depth
+        - generic [ref=e30]: ▼
+      - button "3 Zero Trust Model ▼" [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: "3"
+          - generic [ref=e35]: Zero Trust Model
+        - generic [ref=e37]: ▼
+      - button "4 Encryption and Hashing ▼" [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: "4"
+          - generic [ref=e42]: Encryption and Hashing
+        - generic [ref=e44]: ▼
+      - button "5 Governance, Risk, and Compliance (GRC) ▼" [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: "5"
+          - generic [ref=e49]: Governance, Risk, and Compliance (GRC)
+        - generic [ref=e51]: ▼
+      - button "6 Identity as the Primary Security Perimeter ▼" [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: "6"
+          - generic [ref=e56]: Identity as the Primary Security Perimeter
+        - generic [ref=e58]: ▼
+      - button "7 Authentication vs Authorization ▼" [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: "7"
+          - generic [ref=e63]: Authentication vs Authorization
+        - generic [ref=e65]: ▼
+      - button "8 Identity Providers (IdP) ▼" [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: "8"
+          - generic [ref=e70]: Identity Providers (IdP)
+        - generic [ref=e72]: ▼
+    - link "← Back to All Study Topics" [ref=e74] [cursor=pointer]:
+      - /url: /study/topics
+  - button "Open Next.js Dev Tools" [ref=e80] [cursor=pointer]:
+    - img [ref=e81]
+  - alert [ref=e84]

@@ -5,6 +5,7 @@ export interface Question {
   correctAnswer: number;
   explanation: string;
   topic: string;
+  section: string;
 }
 
 export interface QuizRecord {

@@ -1,0 +1,41 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e152] [cursor=pointer]:
+    - img [ref=e128]
+  - alert [ref=e131]
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - link "← Back to Study" [ref=e156] [cursor=pointer]:
+        - /url: /study/topic/security-concepts
+      - generic [ref=e157]: · Security Concepts · 2/5
+    - generic [ref=e159]:
+      - generic [ref=e160]: Question 3 of 5
+      - generic [ref=e161]: 2 answered
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e167]: Question 1
+          - generic [ref=e168]: Security Concepts
+        - button "Bookmark question" [ref=e170]: ☆
+      - heading "According to the shared responsibility model, which of the following computing models places the most responsibility on the cloud service provider (CSP)?" [level=2] [ref=e196]
+      - generic [ref=e172]:
+        - button "A SaaS" [ref=e197]:
+          - generic [ref=e174]: A
+          - text: SaaS
+        - button "B IaaS" [ref=e198]:
+          - generic [ref=e176]: B
+          - text: IaaS
+        - button "C PaaS" [ref=e199]:
+          - generic [ref=e178]: C
+          - text: PaaS
+        - button "D Private Cloud" [ref=e200]:
+          - generic [ref=e180]: D
+          - text: Private Cloud
+    - generic [ref=e181]:
+      - button "← Previous" [ref=e182]
+      - button "Next →" [active] [ref=e183]
+    - generic [ref=e184]:
+      - button [ref=e185]
+      - button [ref=e186]
+      - button [ref=e187]
+      - button [ref=e188]
+      - button [ref=e189]

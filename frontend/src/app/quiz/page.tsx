@@ -27,7 +27,9 @@ function shuffleOptions(q: Question): Question {
 function QuizContent() {
   const searchParams = useSearchParams();
   const topic = searchParams.get("topic") || "";
+  const section = searchParams.get("section") || "";
   const count = parseInt(searchParams.get("count") || "10");
+  const returnTo = searchParams.get("returnTo") || "";
 
   const [seed, setSeed] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,11 +46,13 @@ function QuizContent() {
   }, [daily]);
 
   const questions = useMemo(() => {
-    const all = topic ? qs.filter((q) => q.topic === topic) : qs;
+    let all = qs;
+    if (topic) all = all.filter((q) => q.topic === topic);
+    if (section) all = all.filter((q) => q.section === section);
     const shuffled = shuffleArray(all, seed);
     return shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [topic, count, seed]);
+  }, [topic, section, count, seed]);
 
   const handleSelect = (optionIndex: number) => {
     if (!questions[currentIndex]) return;
@@ -148,8 +152,8 @@ function QuizContent() {
             </div>
             <p className="text-2xl font-bold text-gray-800 mb-6">{pct}%</p>
             <div className="flex gap-3 justify-center">
-              <Link href="/" className="px-6 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
-                New Quiz
+              <Link href={returnTo || "/"} className="px-6 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
+                {returnTo ? "Back to Study" : "New Quiz"}
               </Link>
               <Link href="/results" className="px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
                 History
@@ -180,8 +184,8 @@ function QuizContent() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-2xl mx-auto px-4 py-6">
         <div className="flex items-center justify-between gap-2 mb-3">
-          <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 shrink-0">
-            ← Quit
+          <Link href={returnTo || "/"} className="text-sm text-gray-500 hover:text-gray-700 shrink-0">
+            ← {returnTo ? "Back to Study" : "Quit"}
           </Link>
           <span className="text-sm text-gray-500 text-right truncate">
             {topicLabel} · {answered}/{questions.length}

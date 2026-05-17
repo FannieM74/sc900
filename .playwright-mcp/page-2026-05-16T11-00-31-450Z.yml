@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "← Topics" [ref=e5] [cursor=pointer]:
+      - /url: /study/topics
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: 🔑
+        - heading "Microsoft Entra Capabilities" [level=1] [ref=e9]
+        - generic [ref=e10]: 25-30%
+      - paragraph [ref=e11]: 10 sections · 0/10 completed
+    - generic [ref=e13]:
+      - button "Expand All" [ref=e14]
+      - button "Collapse All" [ref=e15]
+    - generic [ref=e16]:
+      - button "1 Microsoft Entra ID Overview ▼" [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]: "1"
+          - generic [ref=e21]: Microsoft Entra ID Overview
+        - generic [ref=e23]: ▼
+      - button "2 Identity Types ▼" [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: "2"
+          - generic [ref=e28]: Identity Types
+        - generic [ref=e30]: ▼
+      - button "3 Multi-Factor Authentication (MFA) ▼" [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: "3"
+          - generic [ref=e35]: Multi-Factor Authentication (MFA)
+        - generic [ref=e37]: ▼
+      - button "4 Passwordless Authentication ▼" [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: "4"
+          - generic [ref=e42]: Passwordless Authentication
+        - generic [ref=e44]: ▼
+      - button "5 Conditional Access ▼" [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: "5"
+          - generic [ref=e49]: Conditional Access
+        - generic [ref=e51]: ▼
+      - button "6 Identity Protection ▼" [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: "6"
+          - generic [ref=e56]: Identity Protection
+        - generic [ref=e58]: ▼
+      - button "7 Privileged Identity Management (PIM) ▼" [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: "7"
+          - generic [ref=e63]: Privileged Identity Management (PIM)
+        - generic [ref=e65]: ▼
+      - button "8 Access Reviews ▼" [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: "8"
+          - generic [ref=e70]: Access Reviews
+        - generic [ref=e72]: ▼
+      - button "9 Role-Based Access Control (RBAC) ▼" [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: "9"
+          - generic [ref=e77]: Role-Based Access Control (RBAC)
+        - generic [ref=e79]: ▼
+      - button "10 Hybrid Identities and External Identities ▼" [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: "10"
+          - generic [ref=e84]: Hybrid Identities and External Identities
+        - generic [ref=e86]: ▼
+    - link "← Back to All Study Topics" [ref=e88] [cursor=pointer]:
+      - /url: /study/topics
+  - button "Open Next.js Dev Tools" [ref=e94] [cursor=pointer]:
+    - img [ref=e95]
+  - alert [ref=e98]

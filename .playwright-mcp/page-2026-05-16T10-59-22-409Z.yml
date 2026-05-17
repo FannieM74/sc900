@@ -1,0 +1,8 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e58] [cursor=pointer]:
+    - img [ref=e59]
+  - alert [ref=e62]
+  - generic [ref=e241]:
+    - heading "Topic Not Found" [level=1] [ref=e242]
+    - link "← Back to Study Topics" [ref=e243] [cursor=pointer]:
+      - /url: /study/topics

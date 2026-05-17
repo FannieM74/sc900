@@ -1,0 +1,41 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e14]:
+      - link "← Quit" [ref=e15] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e16]: · Security Concepts · 1/5
+    - generic [ref=e18]:
+      - generic [ref=e19]: Question 1 of 5
+      - generic [ref=e20]: 1 answered
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Question 58
+          - generic [ref=e27]: Security Concepts
+        - button "Bookmark question" [ref=e29]: ☆
+      - heading "You need to prevent accidental deletion of Azure resources in your subscription. Which feature will meet this requirements? (choose the best answer)" [level=2] [ref=e30]
+      - generic [ref=e31]:
+        - button "A Azure policies" [ref=e32]:
+          - generic [ref=e33]: A
+          - text: Azure policies
+        - button "B Resource locks" [active] [ref=e34]:
+          - generic [ref=e35]: B
+          - text: Resource locks
+        - button "C RBAC" [ref=e36]:
+          - generic [ref=e37]: C
+          - text: RBAC
+        - button "D Security groups" [ref=e38]:
+          - generic [ref=e39]: D
+          - text: Security groups
+    - generic [ref=e40]:
+      - button "← Previous" [disabled] [ref=e41]
+      - button "Next →" [ref=e42]
+    - generic [ref=e43]:
+      - button [ref=e44]
+      - button [ref=e45]
+      - button [ref=e46]
+      - button [ref=e47]
+      - button [ref=e48]
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]

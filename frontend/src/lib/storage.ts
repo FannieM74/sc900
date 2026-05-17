@@ -1,6 +1,8 @@
 "use client";
 
 import type { QuizRecord } from "@/lib/types";
+import allQuestions from "@/lib/questions.json";
+import type { Question } from "@/lib/types";
 
 const BOOKMARKS_KEY = "sc900-bookmarks";
 const HISTORY_KEY = "sc900-history";
@@ -152,5 +154,134 @@ export function clearAttempts(): void {
   try {
     localStorage.setItem(ATTEMPTS_KEY, "{}");
   } catch {}
+}
+
+// -- Study Progress Tracking --
+const STUDY_PROGRESS_KEY = "sc900-study-progress";
+
+export function getStudyProgress(): Record<string, string[]> {
+  if (typeof window === "undefined") return {};
+  ensureStorageVersion();
+  try {
+    return JSON.parse(localStorage.getItem(STUDY_PROGRESS_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+export function markSectionViewed(topicSlug: string, sectionId: string): void {
+  const progress = getStudyProgress();
+  if (!progress[topicSlug]) progress[topicSlug] = [];
+  if (!progress[topicSlug].includes(sectionId)) {
+    progress[topicSlug].push(sectionId);
+  }
+  localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(progress));
+}
+
+export function unmarkSection(topicSlug: string, sectionId: string): void {
+  const progress = getStudyProgress();
+  if (progress[topicSlug]) {
+    progress[topicSlug] = progress[topicSlug].filter((s) => s !== sectionId);
+    localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(progress));
+  }
+}
+
+export function getTopicProgress(topicSlug: string): string[] {
+  return getStudyProgress()[topicSlug] || [];
+}
+
+export function clearStudyProgress(): void {
+  localStorage.setItem(STUDY_PROGRESS_KEY, "{}");
+}
+
+// -- Study Bookmarks --
+const STUDY_BOOKMARKS_KEY = "sc900-study-bookmarks";
+
+export function getStudyBookmarks(): string[] {
+  if (typeof window === "undefined") return [];
+  ensureStorageVersion();
+  try {
+    return JSON.parse(localStorage.getItem(STUDY_BOOKMARKS_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+export function toggleStudyBookmark(sectionId: string): boolean {
+  const bookmarks = getStudyBookmarks();
+  const idx = bookmarks.indexOf(sectionId);
+  if (idx >= 0) {
+    bookmarks.splice(idx, 1);
+    localStorage.setItem(STUDY_BOOKMARKS_KEY, JSON.stringify(bookmarks));
+    return false;
+  } else {
+    bookmarks.push(sectionId);
+    localStorage.setItem(STUDY_BOOKMARKS_KEY, JSON.stringify(bookmarks));
+    return true;
+  }
+}
+
+export function isStudyBookmarked(sectionId: string): boolean {
+  return getStudyBookmarks().includes(sectionId);
+}
+
+// -- Study Plan --
+const STUDY_PLAN_KEY = "sc900-study-plan";
+
+export function getStudyPlan(): { startDate: string; targetDate: string; days: number } | null {
+  if (typeof window === "undefined") return null;
+  ensureStorageVersion();
+  try {
+    const raw = localStorage.getItem(STUDY_PLAN_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function setStudyPlan(days: number): void {
+  const startDate = new Date().toISOString().split("T")[0];
+  const targetDate = new Date(Date.now() + days * 86400000).toISOString().split("T")[0];
+  localStorage.setItem(STUDY_PLAN_KEY, JSON.stringify({ startDate, targetDate, days }));
+}
+
+export function clearStudyPlan(): void {
+  localStorage.setItem(STUDY_PLAN_KEY, "null");
+}
+
+export function getStudyPlanProgress(): Record<string, number> {
+  if (typeof window === "undefined") return {};
+  ensureStorageVersion();
+  try {
+    return JSON.parse(localStorage.getItem("sc900-study-plan-progress") || "{}");
+  } catch {
+    return {};
+  }
+}
+
+export function recordStudyDayProgress(date: string, count: number): void {
+  const progress = getStudyPlanProgress();
+  progress[date] = count;
+  localStorage.setItem("sc900-study-plan-progress", JSON.stringify(progress));
+}
+
+// -- Weakness Recommendations --
+export function getTopicAccuracy(topicSlug: string): { correct: number; incorrect: number; accuracy: number } | null {
+  const attempts = getAttempts();
+  const qs = allQuestions as Question[];
+  const topicQuestionIds = qs.filter((q) => q.topic === topicSlug).map((q) => q.id);
+
+  let correct = 0;
+  let incorrect = 0;
+  for (const id of topicQuestionIds) {
+    const a = attempts[id];
+    if (a) {
+      correct += a.correct;
+      incorrect += a.incorrect;
+    }
+  }
+
+  if (correct + incorrect === 0) return null;
+  return { correct, incorrect, accuracy: Math.round((correct / (correct + incorrect)) * 100) };
 }
 

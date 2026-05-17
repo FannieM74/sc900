@@ -1,0 +1,41 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e13]:
+      - link "← Quit" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e15]: · Security Concepts · 0/5
+    - generic [ref=e17]:
+      - generic [ref=e18]: Question 2 of 5
+      - generic [ref=e19]: 0 answered
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: Question 99
+          - generic [ref=e26]: Security Concepts
+        - button "Bookmark question" [ref=e28]: ☆
+      - heading "In the shared responsibility model, who is responsible for the physical security of datacenters?" [level=2] [ref=e49]
+      - generic [ref=e30]:
+        - button "A A third-party security firm" [ref=e50]:
+          - generic [ref=e32]: A
+          - text: A third-party security firm
+        - button "B The customer" [ref=e51]:
+          - generic [ref=e34]: B
+          - text: The customer
+        - button "C Both customer and cloud provider" [ref=e52]:
+          - generic [ref=e36]: C
+          - text: Both customer and cloud provider
+        - button "D The cloud provider" [ref=e53]:
+          - generic [ref=e38]: D
+          - text: The cloud provider
+    - generic [ref=e39]:
+      - button "← Previous" [ref=e40]
+      - button "Next →" [active] [ref=e41]
+    - generic [ref=e42]:
+      - button [ref=e43]
+      - button [ref=e44]
+      - button [ref=e45]
+      - button [ref=e46]
+      - button [ref=e47]
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e48]

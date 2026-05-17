@@ -1,0 +1,152 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e14]:
+      - paragraph [ref=e72]: 💪
+      - heading "Keep practicing!" [level=1] [ref=e73]
+      - paragraph [ref=e74]: Security Concepts · 5 questions
+      - generic [ref=e75]:
+        - generic [ref=e76]: "1"
+        - generic [ref=e77]: /
+        - generic [ref=e78]: "5"
+      - paragraph [ref=e81]: 20%
+      - generic [ref=e82]:
+        - link "New Quiz" [ref=e83] [cursor=pointer]:
+          - /url: /
+        - link "History" [ref=e84] [cursor=pointer]:
+          - /url: /results
+    - heading "Review Answers" [level=2] [ref=e85]
+    - generic [ref=e22]:
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]: Question 58
+            - generic [ref=e90]: Security Concepts
+          - generic [ref=e91]:
+            - button "Flag question" [ref=e92]: ⚐
+            - button "Bookmark question" [ref=e93]: ☆
+        - heading "You need to prevent accidental deletion of Azure resources in your subscription. Which feature will meet this requirements? (choose the best answer)" [level=2] [ref=e94]
+        - generic [ref=e95]:
+          - button "A Azure policies" [disabled] [ref=e96]:
+            - generic [ref=e97]: A
+            - text: Azure policies
+          - button "B Resource locks" [disabled] [ref=e98]:
+            - generic [ref=e99]: B
+            - text: Resource locks
+          - button "C RBAC" [disabled] [ref=e100]:
+            - generic [ref=e101]: C
+            - text: RBAC
+          - button "D Security groups" [disabled] [ref=e102]:
+            - generic [ref=e103]: D
+            - text: Security groups
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: ✓ Correct
+          - paragraph [ref=e106]:
+            - text: Resource locks can prevent unwanted changes or accidental deletion at the subscription, resource group, or even the resource level. See “Lock resources to prevent unexpected changes”
+            - link "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json" [ref=e107] [cursor=pointer]:
+              - /url: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: Question 1
+            - generic [ref=e112]: Security Concepts
+          - generic [ref=e113]:
+            - button "Flag question" [ref=e114]: ⚐
+            - button "Bookmark question" [ref=e115]: ☆
+        - heading "According to the shared responsibility model, which of the following computing models places the most responsibility on the cloud service provider (CSP)?" [level=2] [ref=e116]
+        - generic [ref=e117]:
+          - button "A IaaS" [disabled] [ref=e118]:
+            - generic [ref=e119]: A
+            - text: IaaS
+          - button "B Private Cloud" [disabled] [ref=e120]:
+            - generic [ref=e121]: B
+            - text: Private Cloud
+          - button "C PaaS" [disabled] [ref=e122]:
+            - generic [ref=e123]: C
+            - text: PaaS
+          - button "D SaaS" [disabled] [ref=e124]:
+            - generic [ref=e125]: D
+            - text: SaaS
+        - generic [ref=e126]:
+          - paragraph [ref=e127]: ✗ Incorrect
+          - paragraph [ref=e128]: The SaaS model, implemented by services such as Office 365, the cloud service provider takes on service management responsibilities beyond configuring the customers desired user data and device configuration settings.
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: Question 71
+            - generic [ref=e133]: Security Concepts
+          - generic [ref=e134]:
+            - button "Flag question" [ref=e135]: ⚐
+            - button "Bookmark question" [ref=e136]: ☆
+        - heading "Which of the following tools help to deliver intelligent, automated, and integrated security across an organization’s domains, such as identities, endpoints, applications, and email?" [level=2] [ref=e137]
+        - generic [ref=e138]:
+          - button "A SAML" [disabled] [ref=e139]:
+            - generic [ref=e140]: A
+            - text: SAML
+          - button "B SOAR" [disabled] [ref=e141]:
+            - generic [ref=e142]: B
+            - text: SOAR
+          - button "C SIEM" [disabled] [ref=e143]:
+            - generic [ref=e144]: C
+            - text: SIEM
+          - button "D XDR" [disabled] [ref=e145]:
+            - generic [ref=e146]: D
+            - text: XDR
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: ✗ Incorrect
+          - paragraph [ref=e149]: An XDR system is designed to deliver intelligent, automated, and integrated security across an organization’s domain. It helps prevent, detect, and respond to threats across identities, endpoints, applications, email, IoT, infrastructure, and cloud platforms.
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: Question 60
+            - generic [ref=e154]: Security Concepts
+          - generic [ref=e155]:
+            - button "Flag question" [ref=e156]: ⚐
+            - button "Bookmark question" [ref=e157]: ☆
+        - heading "Which of the following Azure services is used to monitor Azure resources to ensure new and existing deployments are in compliance with the organization’s standards and regulatory requirements?" [level=2] [ref=e158]
+        - generic [ref=e159]:
+          - button "A Azure Firewall" [disabled] [ref=e160]:
+            - generic [ref=e161]: A
+            - text: Azure Firewall
+          - button "B Azure Policy" [disabled] [ref=e162]:
+            - generic [ref=e163]: B
+            - text: Azure Policy
+          - button "C Azure Blueprint" [disabled] [ref=e164]:
+            - generic [ref=e165]: C
+            - text: Azure Blueprint
+          - button "D Azure RBAC" [disabled] [ref=e166]:
+            - generic [ref=e167]: D
+            - text: Azure RBAC
+        - generic [ref=e168]:
+          - paragraph [ref=e169]: ✗ Incorrect
+          - paragraph [ref=e170]:
+            - text: Azure Policy continuously monitors Azure resources to ensure compliance. The evaluation and reporting cycle is every 24 hours. See “What is Azure Policy?”
+            - link "https://docs.microsoft.com/en-us/azure/governance/policy/overview" [ref=e171] [cursor=pointer]:
+              - /url: https://docs.microsoft.com/en-us/azure/governance/policy/overview
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - generic [ref=e175]: Question 97
+            - generic [ref=e176]: Security Concepts
+          - generic [ref=e177]:
+            - button "Flag question" [ref=e178]: ⚐
+            - button "Bookmark question" [ref=e179]: ☆
+        - heading "What is the concept of Defense in Depth?" [level=2] [ref=e180]
+        - generic [ref=e181]:
+          - button "A Encrypting all data in transit" [disabled] [ref=e182]:
+            - generic [ref=e183]: A
+            - text: Encrypting all data in transit
+          - button "B Using only physical security controls" [disabled] [ref=e184]:
+            - generic [ref=e185]: B
+            - text: Using only physical security controls
+          - button "C A single strong perimeter defense" [disabled] [ref=e186]:
+            - generic [ref=e187]: C
+            - text: A single strong perimeter defense
+          - button "D Multiple layered security mechanisms" [disabled] [ref=e188]:
+            - generic [ref=e189]: D
+            - text: Multiple layered security mechanisms
+        - generic [ref=e190]:
+          - paragraph [ref=e191]: ✗ Incorrect
+          - paragraph [ref=e192]: Defense in Depth uses multiple layered security mechanisms - if one layer fails, another layer provides protection.
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]

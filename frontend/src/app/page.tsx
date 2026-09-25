@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import allQuestions from "@/lib/questions.json";
 import type { Question } from "@/lib/types";
-import { getQuizHistory } from "@/lib/storage";
+import { getQuizHistory, getMissedQuestions } from "@/lib/storage";
 import { getDarkMode, setDarkMode } from "@/lib/dark";
 import type { QuizRecord } from "@/lib/types";
 import { TOPIC_LABELS } from "@/lib/topics";
@@ -19,6 +19,7 @@ const COUNT_OPTIONS = [5, 10, 15, 20, 25, 30, 50, 131];
 
 export default function HomePage() {
   const [history, setHistory] = useState<QuizRecord[]>([]);
+  const [missedCount, setMissedCount] = useState(0);
   const [topic, setTopic] = useState("");
   const [count, setCount] = useState(10);
   const [dark, setDark] = useState(false);
@@ -26,6 +27,7 @@ export default function HomePage() {
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect */
     setHistory(getQuizHistory());
+    setMissedCount(getMissedQuestions().length);
     setDark(getDarkMode());
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
@@ -77,6 +79,11 @@ export default function HomePage() {
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Start Quiz</h2>
+          {history.length === 0 && (
+            <p className="text-xs text-gray-400 mb-3">
+              New here? Take the 10-question quiz or the Daily Quiz, then review your mistakes under “Review”.
+            </p>
+          )}
           <div className="flex gap-3 mb-4">
             <div className="flex-1">
               <label htmlFor="topic-select" className="block text-xs font-medium text-gray-500 mb-1">Topic</label>
@@ -118,6 +125,14 @@ export default function HomePage() {
           >
             🏆 Daily Quiz
           </Link>
+          {missedCount > 0 && (
+            <Link
+              href="/review"
+              className="block w-full mt-2 py-2.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-800 font-medium hover:bg-amber-100 transition-colors text-center text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+            >
+              ▶ Continue studying — review {missedCount} missed question{missedCount === 1 ? "" : "s"}
+            </Link>
+          )}
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">

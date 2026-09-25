@@ -107,7 +107,17 @@ function QuizContent() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 gap-4 px-4">
         <p className="text-gray-500 text-lg">No questions found</p>
-        <Link href="/" className="text-blue-600 hover:underline">Back home</Link>
+        <p className="text-gray-400 text-sm text-center">
+          The selected topic or section has no questions yet — try another topic or start a general quiz.
+        </p>
+        <div className="flex gap-3">
+          <Link href="/" className="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
+            Back home
+          </Link>
+          <Link href="/quiz?count=10" className="px-4 py-2 rounded-lg border border-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-50 transition-colors">
+            Start a 10-question quiz
+          </Link>
+        </div>
       </div>
     );
   }
@@ -132,6 +142,9 @@ function QuizContent() {
                 style={{ width: `${pct}%` }} />
             </div>
             <p className="text-2xl font-bold text-gray-800 mb-6">{pct}%</p>
+            <p className="sr-only" aria-live="polite">
+              Quiz finished. You scored {score} out of {questions.length}, {pct} percent.
+            </p>
             <div className="flex gap-3 justify-center">
               <Link href={returnTo || "/"} className="px-6 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                 {returnTo ? "Back to Study" : "New Quiz"}

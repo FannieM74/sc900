@@ -96,6 +96,7 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
               onClick={() => mode === "quiz" && onSelect(idx)}
               disabled={mode === "review"}
               className={classes}
+              aria-pressed={mode === "quiz" ? idx === selected : undefined}
             >
               <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full border text-xs font-bold mr-3 shrink-0 ${
                 mode === "review" && idx === question.correctAnswer
@@ -109,6 +110,12 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
                 {optionLetter(idx)}
               </span>
               <span className="break-words">{option}</span>
+              {mode === "review" && idx === question.correctAnswer && (
+                <span className="sr-only">(correct answer)</span>
+              )}
+              {mode === "review" && idx === selected && !isCorrect && (
+                <span className="sr-only">(your answer)</span>
+              )}
             </button>
           );
         })}

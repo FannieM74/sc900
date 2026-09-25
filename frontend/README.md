@@ -2,7 +2,7 @@
 
 Practice quiz for Microsoft SC-900 Security, Compliance & Identity Fundamentals exam.
 
-91 questions bundled directly in the frontend — no backend needed. Fully offline after first load.
+131 questions bundled directly in the frontend — no backend needed. Fully offline after first load.
 
 ## Pages
 
@@ -20,6 +20,13 @@ Practice quiz for Microsoft SC-900 Security, Compliance & Identity Fundamentals 
 ```bash
 npm install
 npm run dev
+```
+
+## Test
+
+```bash
+npm test        # vitest, single run
+npm run test:watch
 ```
 
 ## Build for static deploy

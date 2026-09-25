@@ -3,26 +3,12 @@
 import { useEffect, useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import allQuestions from "@/lib/questions.json";
-import type { Question } from "@/lib/types";
 import { saveQuizRecord, addMissedQuestions, recordAttempt } from "@/lib/storage";
-import { shuffleArray, dateSeed } from "@/lib/random";
+import { dateSeed } from "@/lib/random";
+import { buildQuiz } from "@/lib/quiz";
 import { TOPIC_LABELS } from "@/lib/topics";
 import QuestionCard from "@/components/QuestionCard";
 import ProgressBar from "@/components/ProgressBar";
-
-function shuffleOptions(q: Question): Question {
-  const paired = q.options.map((opt, i) => ({ opt, i }));
-  for (let i = paired.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [paired[i], paired[j]] = [paired[j], paired[i]];
-  }
-  return {
-    ...q,
-    options: paired.map(p => p.opt),
-    correctAnswer: paired.findIndex(p => p.i === q.correctAnswer),
-  };
-}
 
 function QuizContent() {
   const searchParams = useSearchParams();
@@ -37,7 +23,6 @@ function QuizContent() {
   const [phase, setPhase] = useState<"quiz" | "review">("quiz");
   const daily = searchParams.get("daily") === "true";
 
-  const qs = allQuestions as Question[];
   const mounted = seed !== 0;
 
   useEffect(() => {
@@ -45,14 +30,10 @@ function QuizContent() {
     setSeed(daily ? dateSeed() : Date.now());
   }, [daily]);
 
-  const questions = useMemo(() => {
-    let all = qs;
-    if (topic) all = all.filter((q) => q.topic === topic);
-    if (section) all = all.filter((q) => q.section === section);
-    const shuffled = shuffleArray(all, seed);
-    return shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [topic, section, count, seed]);
+  const questions = useMemo(
+    () => buildQuiz({ topic, section, count, seed }),
+    [topic, section, count, seed]
+  );
 
   const handleSelect = (optionIndex: number) => {
     if (!questions[currentIndex]) return;
